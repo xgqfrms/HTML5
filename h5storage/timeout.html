@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="MobileOptimized" content="320">
+    <title>timeout demo</title>
+</head>
+<body>
+<script type="text/javascript">
+    function set(key,v){
+        var curTime = new Date().getTime();
+        localStorage.setItem(key,JSON.stringify({data:v,time:curTime}));
+    }
+    function get(key,exp){
+        var data = localStorage.getItem(key);
+        var dataObj = JSON.parse(data);
+        if(new Date().getTime() - dataObj.time > exp){
+            console.log('expires');
+        }else{
+            console.log("data=" + dataObj.data);
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 New Elements</title>
+	<style>
+	.pgs{
+		background-color: #269abc;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<h1>HTML5 增强的页面元素</h1>
+		<pre>
+			在 HTML5 中，不仅增加了很多表单中的元素，同时也增加和改良了可以应用在整个页面中的元素。
+			重点包含 figure、figcaption、details、summary、mark、progress、meter、ol、dl、cite 元素。
+
+			核心内容：
+			1.figure
+			2.figcaption
+			3.details
+			4.summary
+			5.mark
+			6.progress
+			7.meter
+			8.ol
+			9.dl
+			10.cite
+			11.small
+		</pre>
+	</div>
+	<div>
+		<figure>
+			<img src="../images/favicon.png" alt=""/>
+			<img src="../images/favicon.png" alt=""/>
+			<img src="../images/favicon.png" alt=""/>
+			<figcaption>favicon.png</figcaption>
+		</figure>
+	</div>
+	<div>
+		<details>
+		<!-- <details open> -->
+			<summary>read more</summary>
+			<p>
+				details标签规定了用户可见的或者隐藏的需求的补充细节。
+
+				details标签用来供用户开启关闭的交互式控件。任何形式的内容都能被放在 details 标签里边。
+
+				details元素的内容对用户是不可见的，除非设置了 open 属性。
+			</p>
+		</details>
+	</div>
+	<div>
+		<mark>mark yellow</mark>
+	</div>
+	<div>
+		<progress value="22" max="100"></progress>
+		<progress max="100"></progress>
+		<!-- progress -->
+		<section>
+			<h2>progress</h2>
+			<p>
+				percent<span>?</span>%
+				<progress id="pgs" class="pgs" max="100"></progress>
+			</p>
+			<input type="button" onclick="my_progress();" value="click">
+		</section>
+	</div>
+	<div>
+	    <!-- 001~100 -->
+	    <label for="">30 out of 100</label>
+		<meter form="form_id" value="30" min="0" max="100" optimum="70" high="50" low="30"></meter><br/>
+		<label for="">50 out of 100</label>
+		<meter form="form_id" value="50" min="0" max="100" optimum="70" high="50" low="30"></meter><br/>
+		<label for="">70 out of 100</label>
+		<meter form="form_id" value="70" min="0" max="100" optimum="70" high="50" low="30"></meter><br/>
+		<label for="">90 out of 100</label>
+		<meter form="form_id" value="90" min="0" max="100" optimum="70" high="50" low="30"></meter><br/>
+		<!-- 0.0~1.0 -->
+		<label for="">percent 60%</label>
+		<meter value="0.6"></meter> 
+	</div>
+	<div>
+		<!-- ol、dl、cite 和 smal l元素 -->
+	</div>
+	<div></div>
+	<div>
+		<script>
+			// <details id="detail" onclick="detials_onclick(this);">
+			// <p id="p_c" style="visibility: hidden;">
+			function detials_onclick(detail){
+				var show = getElementById('p_c');
+				if (detail.open) {
+					p.style.visibility = "hidden";
+				} else {
+					p.style.visibility = "visible";
+				}
+			};
+		</script>
+		<script>
+			function my_progress(){
+				var i = 0;
+				function thread_one(){
+					if (i<=100) {
+						i++;
+						update_progress(i);
+					}
+				}
+				setInterval(thread_one,100);
+			};
+			function update_progress(new_value){
+				var progress_bar = document.getElementById("pgs");
+				progress_bar.value = new_value;
+				progress_bar.getElementByTagName("span")[0].textContent = new_value;
+				// percent<span>0</span>% 不好使？
+			}
+		</script>
+	</div>
+</body>
+</html>
