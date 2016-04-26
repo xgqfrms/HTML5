@@ -1,4 +1,4 @@
-# Respond.js
+# Respond.js 1.42 version
 ### A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
 
  - Copyright 2011: Scott Jehl, scottjehl.com
