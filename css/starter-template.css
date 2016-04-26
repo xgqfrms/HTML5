@@ -10,3 +10,6 @@ body {
 	margin:3px auto;
 	border:1px solid #ff0000;
 }
+hr{
+	border-top: 1px solid #00ff00;
+}
