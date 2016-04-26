@@ -1,0 +1,12 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.col-bg{
+	background-color: #8e8e8e;
+	margin:3px auto;
+	border:1px solid #ff0000;
+}
