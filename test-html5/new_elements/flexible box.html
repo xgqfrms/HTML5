@@ -26,6 +26,7 @@
 </head>
 <body>
   <div class="container">
+    <h1>弹性子元素通常在弹性盒子内一行显示。默认情况每个容器只有一行。以下元素展示了弹性子元素在一行内显示，从左到右:</h1>
     <div class="flex-container">
       <div class="flex-item">flex item 1</div>
       <div class="flex-item">flex item 2</div>
@@ -33,6 +34,7 @@
     </div>
 
     <div class="body2">
+      <h1>当然我们可以修改排列方式。如果我们设置 direction 属性为 rtl (right-to-left),弹性子元素的排列方式也会改变，页面布局也跟着改变:</h1>
       <div class="flex-container">
         <div class="flex-item">flex item 1</div>
         <div class="flex-item">flex item 2</div>
@@ -40,15 +42,197 @@
       </div>
     </div>
 
-    <div class="1"></div>
-    <div class="2"></div>
-    <div class="3"></div>
+    <div class="1">
+      <h1>以下实例演示了 row-reverse 的使用:</h1>
+    </div>
+    <div class="2">
+      <h1>以下实例演示了 column 的使用:</h1>
+    </div>
+    <div class="3">
+      <h1>以下实例演示了 column-reverse 的使用:</h1>
+    </div>
+<!--  -->
+    <div class="1">
+      <h1>以下实例演示了 flex-end 的使用:</h1>
+    </div>
+    <div class="2">
+      <h1>以下实例演示了 center 的使用:</h1>
+    </div>
+    <div class="3">
+      <h1>以下实例演示了 space-between 的使用:</h1>
+    </div>
+    
+    <div class="4">
+      <h1>以下实例演示了 space-around 的使用:</h1>
+    </div>
 
     <div>
       https://www.w3.org/TR/css-flexbox-1/
       CSS Flexible Box Layout Module Level 1
       W3C Candidate Recommendation, 1 March 2016
     </div>
+    <pre>
+      flex-direction
+
+      flex-direction 顺序指定了弹性子元素在父容器中的位置。
+      语法
+
+      flex-direction: row | row-reverse | column | column-reverse
+
+      flex-direction的值有:
+
+          row：横向从左到右排列（左对齐），默认的排列方式。
+          row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面。
+          column：纵向排列。
+          row-reverse：反转纵向排列，从后往前排，最后一项排在最上面。
+    </pre>
+
+    <pre>
+      justify-content 属性
+
+      内容对齐（justify-content）属性应用在弹性容器上，把弹性项沿着弹性容器的主轴线（main axis）对齐。
+
+      justify-content 语法如下：
+
+      justify-content: flex-start | flex-end | center | space-between | space-around
+
+      各个值解析:
+
+          flex-start：
+
+          弹性项目向行头紧挨着填充。这个是默认值。第一个弹性项的main-start外边距边线被放置在该行的main-start边线，而后续弹性项依次平齐摆放。
+          flex-end：
+
+          弹性项目向行尾紧挨着填充。第一个弹性项的main-end外边距边线被放置在该行的main-end边线，而后续弹性项依次平齐摆放。
+          center：
+
+          弹性项目居中紧挨着填充。（如果剩余的自由空间是负的，则弹性项目将在两个方向上同时溢出）。
+          space-between：
+
+          弹性项目平均分布在该行上。如果剩余空间为负或者只有一个弹性项，则该值等同于flex-start。否则，第1个弹性项的外边距和行的main-start边线对齐，而最后1个弹性项的外边距和行的main-end边线对齐，然后剩余的弹性项分布在该行上，相邻项目的间隔相等。
+          space-around：
+
+          弹性项目平均分布在该行上，两边留有一半的间隔空间。如果剩余空间为负或者只有一个弹性项，则该值等同于center。否则，弹性项目沿该行分布，且彼此间隔相等（比如是20px），同时首尾两边和弹性容器之间留有一半的间隔（1/2*20px=10px）。
+    </pre>
+    <img src="../../images/flexible box-justify-content.jpg" alt="flexible box-justify-content.jpg">
+    <pre>
+      align-items 属性
+
+      align-items 设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式。
+      语法
+
+      align-items: flex-start | flex-end | center | baseline | stretch
+
+      各个值解析:
+
+          flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+          flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+          center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+          baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+          stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+    </pre>
+    <pre>
+      flex-wrap 属性
+
+      flex-wrap 属性用于指定弹性盒子的子元素换行方式。
+      语法
+
+      flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+
+      各个值解析:
+
+          nowrap - 默认， 弹性容器为单行。该情况下弹性子项可能会溢出容器。
+          wrap - 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
+          wrap-reverse -反转 wrap 排列。
+    </pre>
+    <pre>
+      align-content 属性
+
+      align-content 属性用于修改 flex-wrap 属性的行为。类似于 align-items, 但它不是设置弹性子元素的对齐，而是设置各个行的对齐。
+      语法
+
+      align-content: flex-start | flex-end | center | space-between | space-around | stretch
+
+      各个值解析:
+
+          stretch - 默认。各行将会伸展以占用剩余的空间。
+          flex-start - 各行向弹性盒容器的起始位置堆叠。
+          flex-end - 各行向弹性盒容器的结束位置堆叠。
+          center -各行向弹性盒容器的中间位置堆叠。
+          space-between -各行在弹性盒容器中平均分布。
+          space-around - 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。
+    </pre>
+    <pre>
+      弹性子元素属性
+      排序
+      语法
+
+      order: &lt;integer&gt;
+
+      各个值解析:
+
+          &lt;integer&gt;：用整数值来定义排列顺序，数值小的排在前面。可以为负值。
+      对齐
+
+      设置"margin"值为"auto"值，自动获取弹性容器中剩余的空间。所以设置垂直方向margin值为"auto"，可以使弹性子元素在弹性容器的两上轴方向都完全集中。
+
+      完美的居中
+
+      以下实例将完美解决我们平时碰到的居中问题。
+
+      使用弹性盒子，居中变的很简单，只想要设置 margin: auto; 可以使得弹性子元素在两上轴方向上完全居中:
+
+    </pre>
+    <pre>
+      align-self
+
+      align-self 属性用于设置弹性元素自身在侧轴（纵轴）方向上的对齐方式。
+      语法
+
+      align-self: auto | flex-start | flex-end | center | baseline | stretch
+
+      各个值解析:
+
+          auto：如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'。
+          flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。
+          flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。
+          center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。
+          baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。
+          stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。
+    </pre>
+    <pre>
+      flex
+
+      flex 属性用于指定弹性子元素如何分配空间。
+      语法
+
+      flex：none | [ flex-grow ] || [ flex-shrink ] || [ flex-basis ]
+
+      各个值解析:
+
+          none：none关键字的计算值为: 0 0 auto
+          [ flex-grow ]：定义弹性盒子元素的扩展比率。
+          [ flex-shrink ]：定义弹性盒子元素的收缩比率。
+          [ flex-basis ]：定义弹性盒子元素的默认基准值。
+    </pre>
+    <pre>
+      CSS3 弹性盒子属性
+
+      下表列出了在弹性盒子中常用到的属性:
+      属性  描述
+      display   指定 HTML 元素盒子类型。
+      flex-direction  指定了弹性容器中子元素的排列方式
+      justify-content   设置弹性盒子元素在主轴（横轴）方向上的对齐方式。
+      align-items   设置弹性盒子元素在侧轴（纵轴）方向上的对齐方式。
+      flex-wrap   设置弹性盒子的子元素超出父容器时是否换行。
+      align-content   修改 flex-wrap 属性的行为，类似 align-items, 但不是设置子元素对齐，而是设置行对齐
+      flex-flow   flex-direction 和 flex-wrap 的简写
+      order   设置弹性盒子的子元素排列顺序。
+      align-self  在弹性子元素上使用。覆盖容器的 align-items 属性。
+      flex  设置弹性盒子的子元素如何分配空间。
+    </pre>
+
+
   </div>
 </body>
 </html>

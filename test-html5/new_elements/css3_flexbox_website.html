@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用弹性盒子创建响应式页面</title>
+	<style> 
+		.flex-container {
+		    display: -webkit-flex;
+		    display: flex;  
+		    -webkit-flex-flow: row wrap;
+		    flex-flow: row wrap;
+		    font-weight: bold;
+		    text-align: center;
+		}
+
+		.flex-container > * {
+		    padding: 10px;
+		    flex: 1 100%;
+		}
+
+		.main {
+		    text-align: left;
+		    background: cornflowerblue;
+		}
+
+		.header {background: coral;}
+		.footer {background: lightgreen;}
+		.aside1 {background: moccasin;}
+		.aside2 {background: violet;}
+
+		@media all and (min-width: 600px) {
+		    .aside { flex: 1 auto; }
+		}
+
+		@media all and (min-width: 800px) {
+		    .main    { flex: 3 0px; }
+		    .aside1 { order: 1; } 
+		    .main    { order: 2; }
+		    .aside2 { order: 3; }
+		    .footer  { order: 4; }
+		}
+	</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <header class="header">头部</header>
+  <article class="main">
+    <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程(www.runoob.com)提供了最全的编程技术基础教程, 介绍了HTML、CSS、Javascript、Python，Java，Ruby，C，PHP , MySQL等各种编程语言的基础知识。 同时本站中也提供了大量的在线实例，通过实例，您可以更好的学习编程。</p>
+  </article>
+  <aside class="aside aside1">边栏 1</aside>
+  <aside class="aside aside2">边栏 2</aside>
+  <footer class="footer">底部</footer>
+</div>
+
+</body>
+</html>
