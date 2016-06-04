@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D grapher.js</title>
+</head>
+<body>
+	<div class="container">
+		<div class="01">
+			<div></div>
+		</div>
+	</div>
+	<script src="grapher.js"></script>
+	<script>
+		var surface = new grapher.Surface(canvas, {
+		    color: ['green', 'red'],
+		    xAxis: {
+		        data: new grapher.generator.Sequence(-1, 1, 0.1)
+		    },
+		    yAxis: {
+		        data: new grapher.generator.Sequence(-1, 1, 0.1)
+		    },
+		    zAxis: {
+		        range: [-2, 2],
+		        data: function (x, y) {
+		            return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
+		        }
+		    },
+		    autoRotate: false
+		});
+	</script>
+</body>
+</html>
