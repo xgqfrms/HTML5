@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>smoke</title>
+	<style>
+		.smoke {
+		    height: 500px;
+		    background: #333 url(smoke.jpg);
+		    /*背景色*/
+		    background-size: cover;
+		    position: relative;
+		}
+		.smoke canvas {
+		    height: 100%;
+		    width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="smoke">
+    	<canvas id="smokeCanvas" width="1345" height="500"></canvas>
+    </div>
+	<!-- JS -->
+	<script>
+	// canvas烟雾缭绕效果
+	var canvasSmoke = function(canvas, options) {
+		var defaults = {
+			count: 30,
+			velocity: 2,
+			fps: 30,
+			url: 'smoke.jpg'
+			// 前景色
+		};
+		
+		options = options || {};
+		
+		// 参数合并
+		var params = {};
+		
+		for (var key in defaults) {
+			params[key] = options[key] || defaults[key];
+		}
+		
+		// 创建存储粒子的数组
+		var particles = [];
+
+		// 渲染的粒子数目
+		var particleCount = params.count;
+
+		// 每个方向的最大速度
+		var maxVelocity = params.velocity;
+
+		// 每秒多少帧
+		var targetFPS = params.fps;
+
+		// canvas元素
+		var eleCanvas = canvas;
+
+		if (!eleCanvas) {
+			return this;
+		}
+
+		// 画布的尺寸
+		var canvasWidth = eleCanvas.clientWidth;
+		var canvasHeight = eleCanvas.clientHeight;
+		
+		eleCanvas.width = canvasWidth;
+		eleCanvas.height = canvasHeight;
+
+		// 创建图片对象
+		var imageObj = new Image();
+
+		// 一旦图像被下载，然后在所有的颗粒上设置图像
+		imageObj.onload = function() {
+			particles.forEach(function(particle) {
+				  particle.setImage(imageObj);
+			});
+		};
+
+		// 烟雾图片地址
+		imageObj.src = params.url;
+
+		// 粒子实例方法
+		function Particle(context) {
+
+			// 设置初始位置
+			this.x = 0;
+			this.y = 0;
+
+			// 纵横速度
+			this.xVelocity = 0;
+			this.yVelocity = 0;
+
+			// 圆角大小
+			this.radius = 2;
+
+			// 存储上下文，绘制的时候需要
+			this.context = context;
+
+			// 绘制粒子的具体方法
+			this.draw = function() {
+				// 如果图片，则绘制
+				if(this.image){
+					this.context.globalAlpha = this.alpha;
+					// 烟雾缭绕就看这里了
+					// 这是宽度，是动态的
+					var fillWidth = canvasWidth/2, fillHeight = fillWidth - fillWidth * (this.x/canvasWidth * this.y/canvasHeight);
+					
+					this.context.drawImage(this.image, 0, 0, this.imageWidth, this.imageHeight, this.x, this.y, fillWidth, fillHeight); 
+				}
+			};
+
+			// 刷新粒子
+			this.update = function() {
+				// 改变粒子的
+				this.x += this.xVelocity;
+				this.y += this.yVelocity;
+
+				// 如果到了右边缘
+				if (this.x >= canvasWidth) {
+					this.xVelocity = -this.xVelocity;
+					this.x = canvasWidth;
+				}
+				// 检测是否到了左边缘
+				else if (this.x <= 0) {
+					this.xVelocity = -this.xVelocity;
+					this.x = 0;
+				}
+
+				// 底边缘
+				if (this.y >= canvasHeight) {
+					this.yVelocity = -this.yVelocity;
+					this.y = canvasHeight;
+				}
+				
+				// 是否上边缘
+				else if (this.y <= 0) {
+					this.yVelocity = -this.yVelocity;
+					this.y = 0;
+				}
+
+				// 越靠近边缘，透明度越低
+				// 纵向透明度变化要比横向的明显
+				this.alpha = (1 - Math.abs(canvasWidth*0.5 - this.x) / canvasWidth) * (0.7 - Math.abs(canvasHeight*0.5 - this.y) / canvasHeight);
+			};
+
+			// 设置粒子位置方法
+			this.setPosition = function(x, y) {
+				this.x = x;
+				this.y = y;
+			};
+
+			// 设置速度方法
+			this.setVelocity = function(x, y) {
+				this.xVelocity = x;
+				this.yVelocity = y;
+			};
+			
+			this.setImage = function(image){
+				this.imageWidth = image.width;
+				this.imageHeight = image.height;
+				this.image = image;
+			}
+		}
+
+		// 生成一个min,max大小之间的随机数
+		function generateRandom(min, max){
+			return Math.random() * (max - min) + min;
+		}
+
+		// canvas上下文
+		var context;
+
+		// 初始化常见
+		function init() {
+			var canvas = eleCanvas;
+			if (canvas.getContext) {
+
+				// 绘图都需要这条语句
+				context = canvas.getContext('2d');
+
+				// 创建粒子，并设置他们的位置什么的，当然都是随机的
+				for(var i=0; i < particleCount; ++i){
+					var particle = new Particle(context);
+					
+					// 随机位置
+					particle.setPosition(generateRandom(0, canvasWidth), generateRandom(0, canvasHeight));
+					
+					// 设置随机速度
+					particle.setVelocity(generateRandom(-maxVelocity, maxVelocity), generateRandom(-maxVelocity, maxVelocity));
+					particles.push(particle);            
+				}
+			}
+		}
+		
+		// 初始化
+		init();
+
+		// 绘制方法
+		function draw() {
+			// 清除绘制
+			//context.fillStyle = "rgba(0, 0, 0, 0)";
+			context.clearRect(0, 0, canvasWidth, canvasHeight);
+
+			// 绘制所有粒子
+			particles.forEach(function(particle) {
+				particle.draw();
+			});
+		}
+
+		// 刷新
+		function update() {
+			particles.forEach(function(particle) {
+				particle.update();
+			});
+		}
+
+		// 开始绘制
+		if (context) {
+			setInterval(function() {
+				// 绘制前先更新位置什么的
+				update();
+
+				// 绘制
+				draw();
+			}, 1000 / targetFPS);
+		}	
+	};
+
+
+	// IE9+烟雾效果走起
+	if ([].map) {
+		canvasSmoke(document.querySelector('#smokeCanvas'));
+	}
+	</script>
+</body>
+</html>
