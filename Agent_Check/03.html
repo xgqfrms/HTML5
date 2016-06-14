@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>03</title>
+	<script src="js/agent_check.js"></script>
+</head>
+<body>
+	<div></div>
+	<script>
+		// 区分浏览器
+		if (client.engine.webkit) {
+		  if (client.browser.chrome) {
+		    // 执行针对 chrome 的代码
+		  } else if (client.browser.safari) {
+		    // 执行针对 safari 的代码
+		    }
+		} else if (client.engine.gecko) {
+		    if (client.browser.firefox) {
+		        // 执行针对 firefox 的代码
+		    } else {
+		        // 执行针对其他 gecko 的浏览器代码
+		    }
+		  }
+
+		// 区分系统
+		if (client.system.win) {
+		  if (client.system.win == "XP") {
+		    // 说明是 XP
+		  } else if (client.system.win == "Vista") {
+		    // 说明是 Vista
+		  }
+		}
+
+		// 移动端
+		if (client.system.webkit) {
+		  if (client.system.ios) {
+
+		  } else if (client.system.android) {
+
+		  }
+		}
+	</script>
+</body>
+</html>

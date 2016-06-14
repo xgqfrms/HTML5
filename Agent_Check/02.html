@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02</title>
+</head>
+<body>
+	      <script id=clientEventHandlersJS language=javascript>
+	<!--
+	function Button2_onclick() {//CPU 信息
+	      var locator = new ActiveXObject ("WbemScripting.SWbemLocator");
+	      var service = locator.ConnectServer(".");
+	      var properties = service.ExecQuery("SELECT * FROM Win32_Processor");
+	      var e = new Enumerator (properties);
+	      document.write("<table border=1>");
+	      for (;!e.atEnd();e.moveNext ())
+	      {
+	            var p = e.item ();
+	            document.write("<tr>");
+	            document.write("<td>" + p.Caption + "</td>");
+	            document.write("<td>" + p.DeviceID + "</td>");
+	            document.write("<td>" + p.Name + "</td>");
+	            document.write("<td>" + p.CpuStatus + "</td>");
+	            document.write("<td>" + p.Availability + "</td>");
+	            document.write("<td>" + p.Level + "</td>");
+	            document.write("<td>" + p.ProcessorID + "</td>");
+	            document.write("<td>" + p.SystemName + "</td>");
+	            document.write("<td>" + p.ProcessorType + "</td>");
+	            document.write("</tr>");
+	      }
+	      document.write("</table>");
+	}
+
+	function Button1_onclick() {//主板信息
+	      var locator = new ActiveXObject ("WbemScripting.SWbemLocator");
+	      var service = locator.ConnectServer(".");
+	      var properties = service.ExecQuery("SELECT * FROM Win32_BaseBoard");
+	      var e = new Enumerator (properties);
+	      document.write("<table border=1>");
+	      for (;!e.atEnd();e.moveNext ())
+	      {
+	            var p = e.item ();
+	            document.write("<tr>");
+	            document.write("<td>" + p.HostingBoard + "</td>");
+	            document.write("<td>" + p.Manufacturer + "</td>");
+	            document.write("<td>" + p.PoweredOn + "</td>");
+	            document.write("<td>" + p.Product + "</td>");
+	            document.write("<td>" + p.SerialNumber + "</td>");
+	            document.write("<td>" + p.Version + "</td>");
+	            document.write("</tr>");
+	      }
+	      document.write("</table>");
+	}
+
+	function Button3_onclick() {//网络信息
+	      var locator = new ActiveXObject ("WbemScripting.SWbemLocator");
+	      var service = locator.ConnectServer(".");
+	      var properties = service.ExecQuery("SELECT * FROM win32_networkadapterconfiguration");
+	      var e = new Enumerator (properties);
+	      document.write("<table border=1>");
+	      for (;!e.atEnd();e.moveNext ())
+	      {
+	            var p = e.item ();
+	            if (p.IPAddress==null) {
+	                 continue;
+	            }
+
+	            document.write("<tr>");
+	            document.write("<td>" + p.Caption + "</td>");
+	            document.write("<td>" + p.IPAddress(0) + "</td>");
+	            document.write("<td>" + p.MACAddress + "</td>");
+	            document.write("</tr>");
+	      }
+	      document.write("</table>");
+	}
+
+	function Button4_onclick() {//系统信息
+	      var locator = new ActiveXObject ("WbemScripting.SWbemLocator");
+	      var service = locator.ConnectServer(".");
+	      var properties = service.ExecQuery("SELECT * FROM Win32_ComputerSystem");
+	      var e = new Enumerator (properties);
+	      document.write("<table border=1>");
+	      for (;!e.atEnd();e.moveNext ())
+	      {
+	            var p = e.item ();
+
+	            document.write("<tr>");
+	            document.write("<td>" + p.Caption + "</td>");
+	            document.write("<td>" + p.UserName + "</td>");
+	            document.write("<td>" + p.Name + "</td>");
+	            document.write("<td>" + p.PrimaryOwnerName + "</td>");
+	            document.write("<td>" + p.Manufacturer + "</td>");    
+	            document.write("<td>" + p.DNSHostName + "</td>");              
+	            document.write("</tr>");
+	      }
+	      document.write("</table>");
+	}
+	//-->
+	</script>
+
+	            <INPUT id="Button1" type="button" value="主板信息"
+	name="Button1" language=javascript onclick="return Button1_onclick()">
+	            <INPUT id="Button3" type="button" value="网络信息"
+	name="Button3" language=javascript onclick="return Button3_onclick()">
+	            <INPUT id="Button4" type="button" value="系统信息"
+	name="Button4" language=javascript onclick="return Button4_onclick()">
+</body>
+</html>

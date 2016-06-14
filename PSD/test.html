@@ -18,8 +18,8 @@
 		var ua = navigator.userAgent;
 		var div = document.getElementById('info');
 		var a[] = Array();
-		a[3] = {Chrome;Firefox;IE;Edge;Safari;}
-		var browser = 
+		a[] = ['Chrome','Firefox','IE','Edge','Safari']
+		var browser = 'X';
 		function userClientInfo (){
 			if (true) {
 				// 
@@ -28,6 +28,108 @@
 			}
 		}
 		// console.log(ua);
+		if(client.engine.ie){
+		    //针对 IE 的代码
+		     div.innerHTMLL="IE";
+		}else if (client.engine.gecko > 0){
+		    if (client.engine.ver == "1.8.1"){
+		        //针对这个版本执行某些操作
+		    }
+		}
 	</script>
+	<!-- 1 识别呈现引擎 -->
+	<script>
+		//确切知道浏览器的名字和版本号不如确切知道它实用的是什么呈现引擎。
+		//目前只要检测五大呈现引擎即可：IE、Gecko、WebKit、KHTML 和 Opera。
+		var client = function(){
+
+		    var engine = {
+		        
+		        ie: 0,
+		        gecko: 0,
+		        webkit: 0,
+		        khtml: 0,
+		        opera: 0,
+		        
+		        ver: null //完整的版本
+		    };
+		    
+		    return {
+		        engine: engine
+		    };
+		}();
+		// 
+		if(client.engine.ie){
+		    //针对 IE 的代码
+		}else if (client.engine.gecko > 0){
+		    if (client.engine.ver == "1.8.1"){
+		        //针对这个版本执行某些操作
+		    }
+		}
+	</script>
+	<!-- 2 检测顺序 -->
+	<script>
+		// 第一步要识别 Opera：
+		if (window.opera){
+		    engine.ver = window.opera.version();
+		    engine.opera = parseFloat(engine.ver);
+		}
+		// 第二步是 WebKit (检测字符串中的“AppleWebKit”)：
+		var ua = navigator.userAgent;
+		if (window.opera){
+		    engine.ver = window.opera.version();
+		    engine.opera = parseFloat(engine.ver);
+		}else if (/AppleWebKit\/(\S+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.webkit = parseFloat(engine.ver);
+		}
+		// 第三步是 KHTML：
+		var ua = navigator.userAgent;
+		if (window.opera){
+		    engine.ver = window.opera.version();
+		    engine.opera = parseFloat(engine.ver);
+		}else if (/AppleWebKit\/(\S+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.webkit = parseFloat(engine.ver);
+		}else if (/KHTML\/(\S+)/.test(ua) || /Konqueror\/([^;]+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.khtml = parseFloat(engine.ver);
+		}
+		// 第四步是 Gecko：
+		var ua = navigator.userAgent;
+		if (window.opera){
+		    engine.ver = window.opera.version();
+		    engine.opera = parseFloat(engine.ver);
+		}else if (/AppleWebKit\/(\S+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.webkit = parseFloat(engine.ver);
+		}else if (/KHTML\/(\S+)/.test(ua) || /Konqueror\/([^;]+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.khtml = parseFloat(engine.ver);
+		}else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.gecko = parseFloat(engine.ver);
+		}
+		// 第五步是 IE：
+		var ua = navigator.userAgent;
+		if (window.opera){
+		    engine.ver = window.opera.version();
+		    engine.opera = parseFloat(engine.ver);
+		}else if (/AppleWebKit\/(\S+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.webkit = parseFloat(engine.ver);
+		}else if (/KHTML\/(\S+)/.test(ua) || /Konqueror\/([^;]+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.khtml = parseFloat(engine.ver);
+		}else if (/rv:([^\)]+)\) Gecko\/\d{8}/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.gecko = parseFloat(engine.ver);
+		}else if (/MSIE ([^;]+)/.test(ua)){
+		    engine.ver = RegExp["$1"];
+		    engine.ie = parseFloat(engine.ver);
+		}
+	</script>
+	<!--  -->
+	<script></script>
 </body>
 </html>
