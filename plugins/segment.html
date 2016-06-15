@@ -9,10 +9,107 @@
 	<div>
 		<pre>
 			<!-- https://segment.com/xgqfrms-xgqfrms/sources/javascript/overview -->
+			<!-- https://segment.com/docs/libraries/analytics.js/ -->
+			<!-- https://segment.com/docs/libraries/analytics.js/quickstart/ -->
+			<h1>Quickstart: Analytics.js</h1>
+
+			What is Segment?
+			Segment is a customer data hub. You send us your data from any device or platform. We translate and forward it to your apps in a language they understand.
+
+			This tutorial will help you start sending data from your website to Segment and any of our integrations, using our Analytics.js library. As soon as you’re setup you’ll be able to turn on any new integrations with the flip of a switch!
+
+			If you want to dive deeper at any point, check out the Analytics.js reference.
+
+			What’s Next?
+			We just walked through the quickest way to get started with Segment using Analytics.js. You might also want to check out our full Analytics.js reference to see what else is possible, or read about the Tracking API methods to get a sense for the bigger picture.
+
+			If you’re running an Ecommerce site or app you should also check out our Ecommerce API reference to make sure your products and checkout experience are instrumented properly!
+
+			If you ever have any questions, or see anywhere we can improve our documentation, feel free to contact us!
 		</pre>
+		<hr>
+		<pre>
+			<h1>Step 1: Copy the Snippet</h1>
+			<section>
+				Installing Segment is easy, just paste this snippet into the header of your site:
+
+				<script type="text/javascript">
+				  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+				  analytics.load("YOUR_WRITE_KEY");
+				  analytics.page()
+				  }}();
+				</script>
+				Minified Non-minified
+				When you paste it, you’ll need to replace YOUR_WRITE_KEY with your Segment project’s Write Key, which you can find in your project setup guide or settings.
+
+				That snippet will load Analytics.js onto the page asynchronously, so it won’t affect your page load speed. As soon as that snippet is running on your site, you can start turning on any integrations on your Segment integrations page and they will start loading on your site automatically!
+
+				Note that you’ll want to remove other native 3rd party integration code that you have on your site since it may cause issues if you turn on those same integrations (e.g. Google Analytics, Mixpanel, Customer.io, etc.) via Segment.
+
+				Fun fact: if you only want the most basic Google Analytics setup you can stop reading right now. You’re done! Just switch on Google Analytics in our interface.
+
+				However, lots of analytics and marketing tools will need to record who each user is on your site. If you’re looking to use any tool that deals with the identity of your users, read on about the identify method…
+			</section>
+			<h1>Step 2: Identify Users</h1>
+			<section>
+				The identify method is how you tell Segment who the current user is. It includes a unique User ID and any optional traits you know about them. You can read more about it in the identify reference.
+
+				Note: You won’t need to call identify for anonymous visitors to your site. We’ll automatically assign them an anonymousId, so just calling page and track will still work just fine without identify.
+
+				Here’s what a basic call to identify might look like:
+
+				analytics.identify('f4ca124298', {
+				  name: 'Michael Bolton',
+				  email: 'mbolton@initech.com'
+				});
+				That’s identifying Michael by his unique User ID (the one you know him by in your database) and labeling him with name and email traits.
+
+				Hold up though! When you actually put that code on your site, you’ll need to replace all those hard-coded strings with details about the currently logged-in user.
+
+				To do that, we recommend using a backend template to inject an identify call straight into the footer of every page of your site where the user is logged in. That way, no matter what page the user first lands on, they will always be identified. You don’t need to call identify if your unique identifier (userId) is not known.
+
+				Depending on your templating language, that would look something like this:
+
+				analytics.identify('{{ user.id }}', {
+				  name: '{{ user.fullname }}',
+				  email: '{{ user.email }}'
+				});
+				With that call on your page, you’re now successfully identifying every user that visits your site.
+
+				Second fun fact: if you only want to use a basic CRM setup, you can call it a day right now. Just switch on Salesforce, Intercom, or any other CRM you’d like to use from our interface and we’ll start sending all of your user data to it!
+
+				Of course, lots of analytics tools record more than just identities… they record the actions each user performs too! If you’re looking for a complete event tracking analytics setup, keep reading…
+			</section>
+			<h1>Step 3: Track Actions</h1>
+			<section>
+				The track method is how you tell Segment about which actions your users are performing on your site. Every action triggers what we call an “event”, which can also have associated properties. You can read more about track in the track reference.
+
+				Here’s what a call to track might look like when a user signs up:
+
+				analytics.track('Signed Up', {
+				  plan: 'Enterprise'
+				});
+				That’s just telling us that your user just triggered the Signed Up event and chose your hypothetical 'Enterprise' plan. Properties can be anything you want to record, for example:
+
+				analytics.track('Bookmarked Article', {
+				  title: 'Snow Fall',
+				  subtitle: 'The Avalanche at Tunnel Creek',
+				  author: 'John Branch'
+				});
+				You’ll want to track events that are indicators of success for your site, like Signed Up, Purchased Item or Bookmarked Article.
+
+				To get started, we recommend tracking just a few important events. You can always add more later!
+
+				Once you’ve added a few track calls, you’re done! You successfully installed Analytics.js tracking. Now you’re ready to turn on any integration you fancy from our interface, margarita in hand.
+			</section>
+		</pre>
+
 	</div>
 	<!-- js  https://segment.com/docs/libraries/analytics.js/quickstart/ -->
 	<!-- key: hEIP4SSb6rI0MQqN9kAhryjBy3d8guQ9 -->
+	<pre>
+		Atom is a free and open-source[4][5] text and source code editor for OS X, Linux, and Windows[6] with support for plug-ins written in Node.js, and embedded Git Control, developed by GitHub. Atom is a desktop application built using web technologies.[7] Most of the extending packages have free software licenses and are community-built and maintained.[8] Atom is based on Electron (formerly known as Atom Shell),[9] a framework that enables cross-platform desktop applications using Chromium and Node.js.[10][11] It is written in CoffeeScript and Less.[12] It can also be used as an IDE. Atom was released from beta, as version 1.0, on June 25, 2015.[13] Its developers call it a "hackable text editor for the 21st Century".[14]
+	</pre>
 
 </body>
 </html>
