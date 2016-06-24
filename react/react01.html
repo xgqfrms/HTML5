@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello React!</title>
+	<!--1.引入React库-->
+	<script src="lib/react.min.js"></script>
+	<style>
+		p{font:italic bold 50px verdana;}
+	</style>
+</head>
+<body>
+	<!--2.在真实DOM上定义容器-->
+	<div id="content"></div>
+	<script>
+	
+		//3.在虚拟DOM上创建p元素
+		var el = React.createElement("p",null,"Hello React!");
+	
+		//4.将虚拟DOM上的p元素渲染到真实DOM上的#content容器
+		React.render(el,document.querySelector("#content"));
+	</script>
+</body>
+</html>
