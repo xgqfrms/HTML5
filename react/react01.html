@@ -5,6 +5,9 @@
 	<title>Hello React!</title>
 	<!--1.引入React库-->
 	<script src="lib/react.min.js"></script>
+	<script src="lib/react-dom.min.js"></script>
+	<!-- <script src="lib/react-dom-server.min.js"></script> -->
+	<script src="lib/browser.min.js"></script>
 	<style>
 		p{font:italic bold 50px verdana;}
 	</style>
@@ -21,5 +24,14 @@
 		//4.将虚拟DOM上的p元素渲染到真实DOM上的#content容器
 		React.render(el,document.querySelector("#content"));
 	</script>
+	<hr>
+	<!-- https://github.com/ruanyf/react-demos/blob/master/demo01/index.html -->
+	<div id="example"></div>
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    </script>
 </body>
 </html>
