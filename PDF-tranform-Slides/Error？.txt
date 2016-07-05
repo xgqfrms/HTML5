@@ -9,13 +9,13 @@
 </div>
 
 
-		<!-- 相对路径
+		<!-- 鐩稿璺緞
 		    src="//speakerdeck.com/assets/embed.js" 
 		    https: Error: 
 		    http:  ???
 		-->
 
-                <!-- 绝对路径
+                <!-- 缁濆璺緞
 		    src="https//speakerdeck.com/assets/embed.js" 
 		    https: Right 
 		    http:  Right
