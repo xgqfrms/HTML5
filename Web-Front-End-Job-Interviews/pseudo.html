@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: rgba(0,0,0,0.7);
+		}
+		.bottle{
+			width:100px; 
+			position:relative;
+		}
+		.bottle_top{
+			position:relative; 
+			width:80px; 
+			height:30px; 
+			border:1px solid rgba(255,255,255,0.5);
+			border-bottom:0 none; 
+			border-top:0 none; 
+			margin:0 auto;
+		}
+		.bottle_top:after,.bottle_top:before{
+			content:''; 
+			display:block; 
+			height:10px; 
+			width:78px; 
+			border-radius:46px/10px; 
+			border:2px solid rgba(255,255,255,.5);
+			border-bottom:2px solid rgba(255,255,255,.4);
+			border-top:1px solid rgba(255,255,255,.6); 
+			position:absolute; 
+			left:-1px;
+			box-shadow:0px 0px 6px rgba(255,255,255,0.6) inset;
+		}
+		.bottle_top:after{
+			top:-6px;
+			box-shadow:0px 0px 6px rgba(255,255,255,0.6) inset,0px 3px 3px -1px rgba(255,255,255,0.3);
+		}
+		.bottle_top:before{
+			top:24px;box-shadow:0px 0px 6px rgba(255,255,255,.4) inset;
+		}
+		.bottle_mouth{
+			height:52px; 
+			width:44px; 
+			margin:0 auto; 
+			position:relative; 
+			background:none; 
+			border:1px solid rgba(0,0,0,0.04);
+			border-top:none; 
+			border-bottom:none;
+			background:-moz-linear-gradient(left,rgba(255,255,255,0.3),rgba(255,255,255,0) 5%,rgba(255,255,255,0) 95%,rgba(255,255,255,0.3)); 
+			box-shadow:0px 0px 6px rgba(255,255,255,0.3);
+		}
+		.bottle_mouth:after{
+			height:6px; 
+			width:44px; 
+			content:''; 
+			display:block; 
+			border-radius:25px/6px;
+			border:1px solid rgba(255,255,255,.4); 
+			position:absolute; 
+			left:-1px; 
+			top:-4px;z-index:1; 
+			box-shadow:0px 0px 3px rgba(255,255,255,0.3);
+		}
+		.bottle_top .highlight{
+			width:20px; 
+			height:30px; 
+			display:block; 
+			position:absolute; 
+			left:5px; 
+			top:5px; 
+			-moz-transform:skew(0deg,5deg);
+			background:-moz-linear-gradient(left,rgba(255,255,255,0.1),rgba(255,255,255,0.6) 4%,rgba(255,255,255,0.2) 98%,rgba(255,255,255,0));
+		}
+		.bottle_top .highlight:after{
+			content:''; 
+			display:block; 
+			width:2px; 
+			height:30px; 
+			position:absolute; 
+			top:-1px; 
+			left:-3px; 
+			-moz-transform:skew(0deg,5deg); 
+			background:rgba(255,255,255,.3);
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+	   <div class="bottle">
+	  <div class="bottle_top">
+	    <div class="bottle_mouth"></div>
+	    <div class="highlight"></div>
+	  </div>
+	 </div>
+	</div>
+</body>
+</html>

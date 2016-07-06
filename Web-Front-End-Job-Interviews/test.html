@@ -2,41 +2,77 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CSS 定位：relative &&  absolute</title>
+	<title>CSS 定位：relative &&  absolute && Fixed && Static</title>
 	<style>		
 		.relative{			
 			background-color: #0f0;
 			width: 100px;
 			height: 100px;
-			position: relative;
+			position: relative;			
+		}
+		.r1{
+			top: 200px;
+			left: 200px;
+		}
+		.r2{
 			right: 200px;
 			bottom: 200px;
-			margin-left: 0px;
-			margin-top: 0px;
 		}
 		.absolute{
 			background-color: #00f;
 			width: 100px;
 			height: 100px;
 			position: absolute;
+		}
+		.a1{
 			right: 100px;
 			bottom: 100px;
 		}
-		.container{
+		.a2{
+			left: 100px;
+			top: 100px;
+		}
+		.fixed{
+			background-color: #f0f;
+			width: 100px;
+			height: 100px;
+			position: fixed;			
+		}
+		.f1{
+			right: 50%;
+			bottom: 50%;
+		}
+		.f2{
+			left: 50%;
+			top: 50%;
+		}		
+		/*.container{
 			width: 100%;
 			height: 100%;
 			background-color: #000;
 			opacity: 0.5;
-		}		
+		}*/		
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="relative">
-			<mark>relative</mark>
+		<div class="relative r1">
+			<mark>relative 1</mark>
 		</div>
-		<div class="absolute">
-			<mark>absolute</mark>
+		<div class="relative r2">
+			<mark>relative 2</mark>
+		</div>
+		<div class="absolute a1">
+			<mark>absolute 1</mark>
+	    </div>
+	    <div class="absolute a2">
+			<mark>absolute 2</mark>
+	    </div>
+	    <div class="fixed f1">
+	    	<mark>fixed 1</mark>
+	    </div>
+	    <div class="fixed f2">
+	    	<mark>fixed 2</mark>
 	    </div>
 	</div>
 </body>
