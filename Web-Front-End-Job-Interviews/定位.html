@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS 定位：relative &&  absolute</title>
+	<!-- css reset -->
+	<!-- <style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+	</style> -->
+	<!-- my css -->
+	<style>
+		/*.container{
+			background-color: #000;
+			border: 1px solid red;
+			width: 100%;
+			height: 100%;
+		}*/
+		/*.relative{
+			background-color: #f00;
+			width: 200px;
+			height: 200px;
+			position: relative;
+			left: 100px;
+			top: 100px;			
+		}*/
+		.relative_1{
+			/* 不清除flaot导致 <===> top:-200px,left:-200px;*/
+			/*clear: both;
+			float: right;*/
+			background-color: #0f0;
+			width: 100px;
+			height: 100px;
+			position: relative;			
+			right: 200px;
+			bottom: 200px;
+		}
+		/*.absolute{
+			background-color: #00f;
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			left: 50%;
+			bottom: 50%;
+			margin-left: -150px;
+			margin-top: -150px;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="relative">
+			<!-- relative 只可以使用 top/bottom与left/right 属性组合！-->
+		</div>
+		<div class="relative_1">
+			<!-- relative 同时使用top,bottom,left,right 时候，只有top,left 有效果！-->
+		</div>
+		<div class="absolute">
+			<!--  -->
+		</div>
+	</div>
+</body>
+</html>
