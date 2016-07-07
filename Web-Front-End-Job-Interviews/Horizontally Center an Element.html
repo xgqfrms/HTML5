@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Horizontally Center an Element</title>
+	<style>
+		.div{
+		  height: 400px;
+		  width: 400px;
+		  background: #eee;
+		  margin: auto;
+		}
+		p {
+		  width: 60%;
+		  margin: auto;
+		  font: 14px/1.5 Helvetica, sans-serif;
+		}
+		.is-Transformed { 
+		  background-color: red;  
+		  width: 50%;  
+		  margin: auto;  
+		  position: absolute;  
+		  top: 50%; left: 50%;  
+		  -webkit-transform: translate(-50%,-50%);
+		     -moz-transform: translate(-50%,-50%);
+		      -ms-transform: translate(-50%,-50%);
+		       -o-transform: translate(-50%,-50%);
+		          transform: translate(-50%,-50%);  
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<h1>Things To Keep In Mind</h1>
+		<p>		
+			&nbsp;&nbsp;There are some important things to remember about using the auto margins trick. First of all, you must have a specific width declared for the element that you’re centering. The height declaration is not necessary, you can allow the content to determine the height if you wish, which is the default setting, but the width must always be set.
+        </p>
+		<p>
+			&nbsp;&nbsp;As you can see, I have auto margins set both on the paragraph and its parent div. This centered everything nicely horizontally, but it didn’t have any effect on the vertical position.
+		</p>
+	</div>
+	<div class="is-Transformed">
+		<!-- content -->
+		<p>
+			CSS3 变形（Transforms）
+
+			这是最简单的方法，不近能实现绝对居中同样的效果，也支持联合可变高度方式使用。内容块定义transform: translate(-50%,-50%)必须带上浏览器厂商的前缀，还要加上
+
+			top: 50%; left: 50%;
+			代码类：
+
+			    .is-Transformed {   
+			      width: 50%;  
+			      margin: auto;  
+			      position: absolute;  
+			      top: 50%; left: 50%;  
+			      -webkit-transform: translate(-50%,-50%);  
+			          -ms-transform: translate(-50%,-50%);  
+			              transform: translate(-50%,-50%);  
+			    }  
+		</p>
+		<span>
+			-webkit- (Chrome, Safari, newer versions of Opera.)
+			-moz- (Firefox)
+			-o- (Old versions of Opera)
+			-ms- (Internet Explorer)
+		</span>
+	</div>
+	<hr>
+</body>
+</html>
