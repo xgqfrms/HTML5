@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome against localhost, with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://www.xgqfrms.xyz/HTML5/Web-Front-End-Job-Interviews/absolutely-center/",
+            "sourceMaps": true,
+            "webRoot": "${wwwroot}"
+        },
+        {
+            "name": "Attach to Chrome, with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true,
+            "webRoot": "${wwwroot}"
+        }
+    ]
+}

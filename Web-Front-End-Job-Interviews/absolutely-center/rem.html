@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rem 兼容性: IE8- 不支持</title>
+    <style>
+        .html{
+            font-size: 1rem;
+            /* 浏览器默认字体大小为16px，则1*16=16px，所以html根元素字体大小为16px */
+            /*1rem = 16px*/
+        }
+        .container{
+            /* div 绝对居中*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -10rem;
+            margin-left: -20rem;
+            border-radius: 15em;
+            border: 1px solid red;
+            font-size: 1rem;
+            background-color: #0f0;
+        }
+        .rem{
+            font-size: 2rem;
+            /* 相对于html根元素的font-size，所以2rem = 2*16px = 32px */
+            /* rem = 16px*/
+            height: 20rem;
+            /* 相对于本身元素的font-size，所以10rem = 120*16px = 320px */
+            width: 40rem;
+            /* 相对于本身元素的font-size，所以20rem = 40*16px = 640px */
+            background-color: #000;
+            color: #0f0;
+            opacity: 0.5;
+            /* IE8 and lower */ 
+            filter: alpha(opacity=50);             
+            /*文字水平居中：text-align*/
+            text-align: center;
+            /*文字垂直居中：line-height = height*/
+            line-height: 20rem;
+        }
+    </style>
+</head>
+<body>
+    <!--rem是相对于根元素html的font-size属性的计算值-->
+    <div class="container">
+        <p class="rem">div绝对居中 && rem字体大小</p>
+    </div>
+</body>
+</html>
