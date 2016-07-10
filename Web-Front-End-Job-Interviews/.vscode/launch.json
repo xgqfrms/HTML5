@@ -5,9 +5,11 @@
             "name": "Launch Chrome against localhost, with sourcemaps",
             "type": "chrome",
             "request": "launch",
-            "url": "http://www.xgqfrms.xyz/HTML5/Web-Front-End-Job-Interviews/absolutely-center/",
+            // "url": "http://www.xgqfrms.xyz/HTML5/Web-Front-End-Job-Interviews/absolutely-center/",
+            // "url": "file:///G:/wwwRoot/HTML5/Web-Front-End-Job-Interviews/absolutely-center/",
+            "url": "file:///G:/wwwRoot/HTML5/Web-Front-End-Job-Interviews/absolutely-center/",
             "sourceMaps": true,
-            "webRoot": "${wwwroot}"
+            "webRoot": "${wwwRoot}"
         },
         {
             "name": "Attach to Chrome, with sourcemaps",
