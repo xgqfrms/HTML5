@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>word-break && wrap-word</title>
+    <style> 
+        html{
+            font-size: 1em;
+        }
+        .box{
+            background-color: rgba(255,0,255,0.3);
+            padding: 2em 5em;
+            border: 1px solid red;
+            margin-bottom: 1em;
+            margin-right: 1em;
+            width: 30em;
+            border-radius: 5em;
+            float: left;
+        }
+        .test{
+            /*CSS优化: 提取common 属性*/
+            width:10em; 
+        }
+        .test1 {
+            border:1px solid #000;
+            word-break:hyphenate;
+        }
+        .test2{
+            border:1px solid #f00;
+            word-break:normal;
+        }
+        .test3{
+            border:1px solid #0f0;
+            word-break:break-all;
+        }
+        .test4{ 
+            border:1px solid #00f;
+            word-break:keep-all;
+        }
+        .test5{
+            border:1px solid #000;
+            word-wrap:normal;
+        }
+        .test6{ 
+            border:1px solid #f00;
+            word-wrap:break-word;
+        }
+        .label{
+            color:#0f0;
+            font-size: 2em;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.7);
+            /*text-shadow: h-shadow v-shadow blur color;*/
+            text-align: center;
+        }
+        .map{
+            background-color: rgba(0,0,0,0.3);
+            border: 1px solid red;
+            border-radius: 3em;
+            /*text-align: left;*/
+            clear: both;
+        }
+        .h1{
+            color: rgba(0,255,0,0.7);
+            font-size: 2rem;
+            text-align: center;
+        }
+        .pre{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label class="label" for="">word-break:hyphenate;</label><br>
+        <p class="test test1">This is a veryveryveryveryveryveryveryveryveryvery long paragraph.</p>
+        <label class="label" for="">word-break:normal;</label><br>
+        <p class="test test2">This is a veryveryveryveryveryveryveryveryveryvery long paragraph.</p>
+        <label class="label" for="">word-break:break-all;</label><br>
+        <p class="test test3">This is a veryveryveryveryveryveryveryveryveryvery long paragraph.</p>
+        <label class="label" for="">word-break:keep-all;</label><br>
+        <p class="test test4">This is a veryveryveryveryveryveryveryveryveryvery long paragraph.</p>
+    </div>
+    <!-- 
+        语法
+        word-break: normal|break-all|keep-all;
+
+        值          描述
+        normal      使用浏览器默认的换行规则。
+        break-all   允许在单词内换行。
+        keep-all    只能在半角空格或连字符处换行。
+     -->
+    <div class="box">        
+        <label class="label" for="">word-wrap:normal;</label><br>
+        <p class="test test5">This is a veryveryveryveryveryveryveryveryveryvery long paragraph.</p>
+        <label class="label" for="">word-wrap:break-word;</label><br>
+        <p class="test test6">This is a veryveryveryveryveryveryveryveryveryvery long paragraph.</p>
+    </div>
+    <!-- 
+        语法
+        word-wrap: normal|break-word;
+
+        值          描述
+        normal      只在允许的断字点换行（浏览器保持默认处理）。
+        break-word  在长单词或 URL 地址内部进行换行。
+     -->
+    <div class="map">
+        <h1 class="h1">jquery-3.0.0.min .map 格式分析:</h1>
+        <pre class="pre">            
+            {
+            "version":3,
+            <mark>JavaScript Source Maps版本</mark>
+            "sources":["jquery.js"],
+            <mark>源文件</mark>
+            "names":["global","factory","module",...,"_jQuery","_$","$","noConflict"],
+            <mark>变量名列表</mark>
+            "mappings":";
+            <mark>映射</mark>
+            CAaE,SAAUA,EAAQC,GAEnB,...,OAAS9B,EAAO6pC,EAAI/nC,GAIrBA",
+            <mark>映射后的Base64值列表</mark>
+            "file":"jquery.min.js"
+            <mark>目标文件</mark>
+            }
+        </pre>
+    </div>
+</body>
+</html>
