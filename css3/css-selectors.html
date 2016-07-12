@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 selectors</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		/* *universal selector*/
+		html{
+			border: 1px solid red;
+			border-radius: 3em;
+			background: url(./browser.png) repeat-x;
+			background-color: rgba(255,0,255,0.2);
+		}
+		.container{
+			background-color: rgba(255,0,0,0.5);
+			margin: 5em;
+			padding: 3em;
+			border-radius: 7em;
+		}
+		.mydiv{
+			margin: 1em;
+			background-color: rgba(0,255,0,0.5);
+		}
+		.mydiv p{
+			color: rgba(0,255,255,1);
+			font-size: 1.5em;
+		}
+		.mydiv.div1{
+			text-align: right;
+			color:rgba(0,0,255,0.7);
+		}
+		.mydiv.div2{
+			text-align: center;
+			color:red;
+		}
+		.mydiv.div3 h1{
+			text-shadow: 5px 5px 5px rgba(255,0,0,1);
+			color: #00f;
+			margin-left: 4em;
+		}
+		.mydiv.div3>p{
+			text-shadow: 5px 5px 3px rgba(0,0,255,0.5);
+			color: #f00;
+		}
+		.p>span:first-child{
+			text-shadow: 5px 5px 3px rgba(0,0,0,1);
+			color: #fff;
+		}
+		a:link{
+			text-decoration: none;
+		}
+		a.link1 mark:hover{
+			color: #f00;
+			font-size: 2em;
+		}
+		a.link2 mark:active{
+			color: #0f0;
+			font-size: 2em;
+		}
+		a.link3:visited{
+			color: #f0f;
+		}
+		#id-box{
+			background-color: rgba(0,0,0,0.6);
+			margin: 5em;
+			padding: 3em;
+			border-radius: 7em;
+		}
+		.id h3+span{
+			color: rgba(255,0,0,0.5);
+		}
+		div#id1{
+			/**/
+		}
+		div[id="id2"]{
+			/**/
+		}
+		div[class~="id"]{
+			/**/
+		}
+		div.id3{
+			/**/
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="mydiv div1">
+			<h1>H1 title</h1>
+			<p>This is a veryveryvery long paragraph!</p>
+			<a href="https://www.w3.org/TR/2016/WD-CSS22-20160412/selector.html" target="_blank" class="link1">
+				<mark>Read More...</mark>
+			</a>			
+		</div>
+		<div class="mydiv div2">
+			<h1>H1 title</h1>
+			<p>This is a veryveryvery long paragraph!</p>
+			<a href="https://www.w3.org/TR/2016/WD-CSS22-20160412/selector.html" target="_blank" class="link2">
+				<mark>Read More...</mark>
+			</a>
+		</div>
+		<div class="mydiv div3">
+			<h1>H1 title</h1>
+			<p>This is a veryveryvery long paragraph!</p>
+			<p class="p" id="p"><span>This</span> is a <span>veryveryvery</span> long <span>paragraph</span>!</p>
+			<p>This is a veryveryvery long paragraph!</p>
+			<mark>
+			<a href="https://www.w3.org/TR/2016/WD-CSS22-20160412/selector.html" target="_blank" class="link3">
+				Read More...
+			</a>
+			</mark>
+		</div>
+	</div>
+	<div id="id-box">
+		<div class="id id1" id="id1">
+			<label for="">this is a label</label><br>
+			<input type="text" placeholder="text" alt="input text" autocomplete="" autofocus="">
+			<h3>H3</h3>
+			<span>this is a span</span>
+			<pre>this is a pre</pre>
+		</div>
+		<div class="id id2" id="id2">
+			<label for="">this is a label</label><br>
+			<input type="text" placeholder="text" alt="input text" autocomplete="" accesskey="1">
+			<span>this is a span</span>
+			<pre>this is a pre</pre>
+		</div>
+		<div class="id id3" id="id3">
+			<label for="">this is a label</label><br>
+			<input type="text" placeholder="text" alt="input text" autocomplete="" autosave="">
+			<span>this is a span</span>
+			<pre>this is a pre</pre>
+		</div>
+	</div>
+</body>
+</html>
