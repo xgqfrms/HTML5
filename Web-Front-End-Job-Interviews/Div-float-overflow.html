@@ -34,6 +34,46 @@
 		.div3{
 			clear: both;
 		}
+		.line{
+			clear: both;
+			float: none;
+			margin: 2em;
+		}
+	</style>
+	<style>
+		.clearfix:after {
+			content: ".";
+			/*占像素 ？？？*/
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+			/* 
+				???
+				visibility: hidden;不占空间 
+				overflow: hidden; 占空间
+				???
+			*/
+		}
+		.box{
+			background-color: red;
+		}
+		.item1{
+			background-color: #00f;
+			/*position: relative;*/
+			width: 500px;
+			height: 300px;
+			/*clear: left;*/
+			float: left;
+		}
+		.item2{
+			background-color: #0f0;
+			/*position: relative;*/
+			width: 500px;
+			height: 300px;
+			/*clear: both;*/
+			float: right;
+		}
 	</style>
 </head>
 <body>
@@ -61,6 +101,20 @@
 				拖动 chrome 分栏条，导致 float：right的div2 的width 改变1350px->1333px！				
 				???
 			 -->
+		</div>
+	</div>
+	<div class="line">
+		<!-- <h1>分割线</h1> -->
+	</div>
+	<!-- new -->
+	<div class="box clearfix">
+		<div class="item1">
+			<!-- div -->
+			<span>new div1</span>
+		</div>
+		<div class="item2">
+			<!-- div -->
+			<span>new div2</span>
 		</div>
 	</div>
 </body>
