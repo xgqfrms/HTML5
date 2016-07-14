@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#drag{
+			position : relative;
+			cursor : move;
+		}
+		.drag{
+			background:red;
+			height:100px;
+			width:100px;
+			top:0;
+			letf:0;"
+		}
+	</style>
+</head>
+<body>
+	<div id="drag" class="drag">
+		<!--  -->
+	</div>
+	<script>
+		var obj,downX,downY,objX,objY;
+		function move(e){
+		e=(e)?e:window.event;
+		document.getElementById('drag').style.left=objX + e.clientX - downX + "px";
+		document.getElementById('drag').style.top =objY+ e.clientY - downY + "px";
+		}
+		function down(e){
+		e=(e)?e:window.event;
+		downX=window.event.clientX;
+		downY=e.clientY;
+		objX=document.getElementById('drag').offsetLeft;
+		objY=document.getElementById('drag').offsetTop;
+		objX=parseInt(objX);
+		objY=parseInt(objY);
+		var temp = (typeof e.target != "undefined")?e.target:e.srcElement;
+		if(temp.id=="drag"){
+		document.onmousemove=move;
+		}
+
+		}
+
+		function up(){
+			dragok = false;
+			document.onmousemove = null;
+		}
+		document.onmousedown=down;
+		document.onmouseup=up;
+	</script>
+</body>
+</html>
