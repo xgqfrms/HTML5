@@ -5,14 +5,26 @@
 	<title>safety-canvas</title>
 	<!-- 需要运行在 server 中，并且要开启 https:// 服务 -->
 	<!--  https://xgqfrms.github.io/HTML5/Canvas/safety-canvas.html-->
-	<!-- 仅在 chrome等(webkit) 中可以使用!(低层调用camera的API 针对，不同浏览器的实现不同！) -->
+	<!-- 仅在 chrome/chrome canary/opera等(webkit) 浏览器中可以使用!(低层调用camera的API 针对，不同浏览器的实现不同！) -->
 </head>
 <body>
 	<!-- 
 		纯 JS 的“防盗”,防盗监控系统 
 		http://www.cnblogs.com/vajoy/p/5656439.html
 	-->
-	<h1><mark>Error:</mark><span></span></h1>
+	<h1><span id="video_error"></span></h1>
+	<!--  -->
+	<script>
+		var videoError = document.getElmentById("video_error");
+		if (true) {
+			// UA : webkit check
+			videoError.innerHTML = "It's really super cool, you are using the webkit kernel browser!"
+		} else {
+			videoError.innerHTML = "<mark>Error:</mark> It's really sorry, please using the webkit kernel browser for better exprience!";
+			alert("video error:[object NavigatorUserMediaError]");
+		}
+	</script>
+	<!--  -->
 	<video width="640" height="480" autoplay></video>
 	<canvas width="640" height="480"></canvas>
 	<canvas width="640" height="480"></canvas>
