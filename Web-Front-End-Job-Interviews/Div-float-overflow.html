@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DIV float && overflow</title>
+	<style>
+		*{
+			/*reset*/
+		}
+		html{
+			background-color: rgba(0,0,0,0.3);
+		}
+		.container{
+			background-color: red;
+			/*position: absolute;*/
+			/*clear: both;*/
+		}
+		.div1{
+			background-color: #00f;
+			/*position: relative;*/
+			width: 500px;
+			height: 300px;
+			/*clear: left;*/
+			float: left;
+		}
+		.div2{
+			background-color: #0f0;
+			/*position: relative;*/
+			width: 500px;
+			height: 300px;
+			/*clear: both;*/
+			float: right;
+		}
+		.div3{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="Div div1">
+			<h3>div 1</h3>
+		</div>
+		<div class="Div div2">
+			<h3>div 2</h3>
+		</div>
+		<div class="Div div3">
+			<!-- 
+				clear: both;
+				http://blog.csdn.net/piazini/article/details/8625935
+
+				???
+				float :只有left/right, 没有 top/bottom
+				div3； clear: both;前，宽度=1333px(浏览器viewbox); 高度=0px;
+				div3； clear: both;后，宽度=1350px(浏览器viewbox); 高度=0px;
+
+				??? 
+				chrome浏览器,默认的margin/padding 
+				1333px(浏览器viewbox);
+				1350px(浏览器viewbox);
+				???
+			 -->
+		</div>
+	</div>
+</body>
+</html>

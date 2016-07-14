@@ -33,10 +33,12 @@ var User = {
 };
 
 console.log(User.getCount());
+// 1
 
 var func = User.getCount;
 
 console.log(func());
+// 
 
 
 
