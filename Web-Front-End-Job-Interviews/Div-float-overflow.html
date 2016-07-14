@@ -3,6 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DIV float && overflow</title>
+	<!-- 
+	    http://www.cnblogs.com/xgqfrms/p/5662310.html
+	    https://www.w3.org/TR/css3-selectors/#selectors
+	 -->
 	<style>
 		*{
 			/*reset*/
@@ -41,7 +45,8 @@
 		}
 	</style>
 	<style>
-		.clearfix:after {
+		.clearfix::after {
+			/*:after 好使(不规范)*/
 			content: ".";
 			/*占像素 ？？？*/
 			display: block;
@@ -54,6 +59,20 @@
 				overflow: hidden; 占空间
 				???
 			*/
+			/* 
+				CSS3伪元素/伪类 ：https://www.w3.org/TR/css3-selectors/#selectors
+				::selection
+				    伪元素(F12看不到，::selection 只是给E添加了css样式)
+                ::aftet/:after ???
+                ::aftet (规范，强烈推荐)  :after(不规范,bug,强烈不推荐)
+                    伪元素(F12看到，添加了新结点 ::after 结点)
+                :first-child
+                    伪类(.class)(F12看不到,只是给E添加了css样式 或 Jquery的js)
+			*/
+		}
+		.box span::selection{
+			color: #f0f;
+			/*:selection 不好使*/
 		}
 		.box{
 			background-color: red;
