@@ -4,7 +4,7 @@ function justTest(num){
 	}
 };
 var result = justTest(2);
-console.log(result);
+// console.log(result);
 
 
 // 
@@ -13,6 +13,7 @@ function myonclick(){
 }
 
 
+/*
 console.log("document.body:\n");
 console.log(document.body);
 
@@ -21,6 +22,30 @@ console.log(document.anchors);
 
 console.log(":\n");
 console.log();
+*/
+
+
+var User = {
+	count:1,
+	getCount: function(){
+		return this.count;
+	}
+};
+
+console.log(User.getCount());
+// 1
+
+var func = User.getCount;
+
+console.log(func());
+// 
+
+
+
+
+
+
+
 
 
 /*

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		window.onload=function(){
+			function clone(obj){
+				var obj2={};
+				if (typeof obj !== 'object'||obj=='') {
+					return obj;
+				}else if (Object.prototype.toString.call(obj)=='[object Array]') {
+					obj2=[];
+					for(var i in obj){
+						obj2[i]=arguments.callee(obj[i]);
+					}
+				}else{
+					for(var i in obj){
+						obj2[i]=arguments.callee(obj[i]);
+					}
+				}
+				return obj2;
+			}
+			var n=123;
+			console.log(typeof n);
+			console.log(clone(n));
+			console.log(typeof clone(n))
+			console.log('-------------------');
+
+			var b='jxj';
+			console.log(typeof b);
+			console.log(clone(b));
+			console.log(typeof clone(b));
+			console.log('-------------------');
+
+			var O={
+				a:'jxj',
+				b:{
+					son1:'heh',
+					son2:'fu'
+				}
+			}
+			console.log(typeof O);
+			console.log(clone(O));
+			console.log(typeof clone(O));
+			console.log('-------------------');
+			
+			var arr=[1,[2,3],2,5];
+			console.log(Object.prototype.toString.call(arr));
+			console.log(clone(arr));
+			console.log(Object.prototype.toString.call(clone(arr)));
+		}
+	</script>
+
+</body>
+</html>
