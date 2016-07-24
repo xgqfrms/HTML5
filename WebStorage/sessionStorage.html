@@ -11,7 +11,7 @@
 			<div class="session">
 				<h1>Session Storage</h1>
 				<input type="text" placeholder="session Storage" autosave="" autofocus="" autocomplete="">
-				<p></p>
+				<p id="result"></p>
 			</div>
 			<div>
 				<a href="javascript:;" onClick="if(sessionStorage && sessionStorage.getItem('name')) { alert('赶快回来哦, ' + sessionStorage.getItem('name')); }">注销</a>
@@ -29,9 +29,9 @@
 		    	sessionStorage.setItem(key, value);
 		    	// 从sessionStorage获取数据
 		    	var keyValue = sessionStorage.getItem(key);
-		    	localStorage.setItem("lastname", "Smith");
-		    	document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-		    	console.log("Value="+dataValue);
+		    	// for x in y { do ...}
+		    	document.getElementById("result").innerHTML = "<mark>keyValue</mark> = "+keyValue+"<br/>";
+		    	console.log("Value="+keyValue);
 		    }
 		    function sessionClear(){
 		    	// length ?
@@ -46,6 +46,7 @@
 		    var x = "key-test";
 		    var y = "value-test";
 		    sessionAdd(x,y);
+		    sessionAdd("name","xgqfrms");
 		    alert("Congratulations!");
 		} else {
 		    // Sorry! No Web Storage support..

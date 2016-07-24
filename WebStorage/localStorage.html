@@ -44,10 +44,34 @@
 		    	s.value();
 		    	// ?
 		    }
+		    if (!key==null) {
+		    	localClear();
+		    	console.log("localClear() had been executed!");
+		    } else {
+		    	var key = "super-admin-name";
+		    	var value = "xgqfrms";
+		    	localSet(key,value);
+		    }
 		} else {
 		    // Sorry! No Web Storage support..
 		    console.log("Sorry! Your browser doesn't support Web Storage.");
 		}
+		/*
+			x
+			y
+		*/ 
+		var x;		
+		console.log(typeof x);
+		// undefined : x 没有初始化
+		y = 1;
+		console.log(typeof y);
+		// number : y 没有声明,有初始化
+		var x1="x1";
+		console.log(typeof x1);
+		// string : x1 有声明,有初始化
+		y1;
+		console.log(typeof y1);
+		// Uncaught ReferenceError: y1 is not defined : y1 没有声明,没有初始化
 	</script>
 </body>
 </html>
