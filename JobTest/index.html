@@ -10,6 +10,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
 	<link href="./images/logo/logo_x.png" rel="shortcut icon" type="image/x-icon">
 	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<title>home page</title>
 	<style>
 		#myCarousel{
@@ -27,6 +28,10 @@
 			text-decoration: none;
 			color: rgba(255,255,255,0.9);
 		}
+		a:hover{
+			text-decoration: none;
+			color: rgba(0,255,0,0.9);
+		}
 		body{
 			background-color: rgba(255,255,255,0.7);
 			height: 100%;
@@ -35,11 +40,32 @@
 		.header{
 			background-color: rgba(51, 204, 255,0.8);
 			width: 100%;
-			height: 5%;
+			height: 10%;
 			text-align: center;
 			/*position: relative;*/
 			/*overflow: hidden;*/
 			/*top: 0;*/
+		}
+		.header .h-box a:hover{
+			color: #0f0;
+			cursor: pointer;
+		}
+		.header .h-box {
+			float: left;
+			/*position: absolute;*/
+		}
+		.header .index{
+			float: left;
+			margin-left: 40%;
+			background-color: #0f0;
+		}
+		.header .index span{
+			text-align: center;
+			font-size: 2rem;
+			/**/
+		}
+		.header .tools{
+			margin-left: 70%;
 		}
 		/**/
 		.side{
@@ -74,7 +100,7 @@
 			width: 25%;
 		}
 		.main .div1 .btn .btn1,.btn2,.btn3,.btn4{
-			/*background-color: rgba(0,255,0,0.7);*/
+			background-color: rgba(0,255,0,0.7);
 			width: 100px;
 			margin-left: 100px;
 		}
@@ -159,11 +185,11 @@
 		.main .back-to-top{
 			position: fixed;
 			bottom: 15%;
-			width: 100px;
-			height: 100px;
-			line-height: 100px;
+			width: 10%;
+			height: 20%;
+			line-height: 20%;
 			background-color: rgba(0,0,255,0.8);
-			border-radius: 50px;
+			border-radius: 50%;
 			text-align: center;
 			overflow: hidden;
 			/*float: right;*/
@@ -172,55 +198,45 @@
 		}
 		.main .back-to-top .circle{
 			cursor: pointer;
+			text-align: center;
+			margin: 0 auto;
+		}
+		.main .back-to-top .circle img{
+			text-align: center;
+			margin: 30% auto;
+			width: 50%;
+			height: 50%;
+			line-height: 50%;
 		}
 		.footer{
 			position: fixed;
 			bottom: 0;
 			width: 100%;
-			height: 10%;
+			/*height: 10%;*/
+			/*height: 100px;*/
 			background-color: rgba(242, 0, 242,0.8);
 		}
 		.footer .btn-box{
 			width: 100%;
-			height: 10%;
-			line-height: 10%;
+			height: 100%;
+			line-height: 100%;
 			text-align: center;
+			/*overflow: hidden;*/
 		}
 		.footer .btn-box .btn-container{
 			float: left;
 			width: 20%;
 			background-color: rgb(255, 255, 255);
 		}
-		.footer .btn-box .btn-container img{
-			width: 50%;
-			height: 50%;
-			line-height: 50%;
+		.footer .btn-box .btn-container button{
+			width: 100%;
+			height: 100%;
+			line-height: 100%;
+			margin: 0 auto;
 		}
 		.footer .btn-box .btn-container button:hover{
 			border: 1px solid #0f0;
 			cursor: pointer;
-		}
-		.header .h-box a:hover{
-			color: #0f0;
-			cursor: pointer;
-		}
-		.header .h-box {
-			float: left;
-			/*position: absolute;*/
-		}
-		.header .index{
-			float: left;
-			margin-left: 40%;
-			background-color: #0f0;
-			margin-top: 2%;
-		}
-		.header .index span{
-			text-align: center;
-			font-size: 2rem;
-			/**/
-		}
-		.header .tools{
-			margin-left: 70%;
 		}
 	</style>
 </head>
@@ -228,14 +244,21 @@
 	<div class="header">
 		<!-- header -->
 		<div class="h-box">
-			<a href="#"><img src="./images/icon.png" alt=""></a>
+			<a href="#">
+				<img src="./images/fonts/190-menu.png" alt="menu">
+			</a>
 		</div>
 		<div class="index">
 			<span>首页</span>
 		</div>
 		<div class="tools">
-			<a href="#">search<img src="./images/icon.png" alt=""></a>
-			<a href="#">cart<img src="./images/icon.png" alt=""></a>
+			<a href="#" title="search">
+				<img src="./images/fonts/135-search.png" alt="search">
+			</a>
+			<span>&nbsp;</span>
+			<a href="#" title="cart">
+				<img src="./images/fonts/059-cart.png" alt="cart">
+			</a>
 		</div>
 	</div>
 	<div class="main">
@@ -270,25 +293,25 @@
 		<div class="div1">
 			<div class="btn">
 				<div class="btn1">
-					<span><img src="./images/icon.png" alt=""></span>
+					<span><img src="./images/fonts/084-calendar.png" alt="calendar"></span>
 					<h3>每日签到</h3>
 				</div>
 			</div>
 			<div class="btn">
 				<div class="btn2">
-					<span><img src="./images/icon.png" alt=""></span>
+					<span><img src="./images/fonts/016-camera.png" alt="camera"></span>
 				    <h3>型男SHOW</h3>
 				</div>
 			</div>
 			<div class="btn">
 				<div class="btn3">
-					<span><img src="./images/icon.png" alt=""></span>
+					<span><img src="./images/fonts/020-film.png" alt="film"></span>
 					<h3>穿衣测试</h3>
 				</div>
 			</div>
 			<div class="btn">
 				<div class="btn4">
-					<span><img src="./images/icon.png" alt=""></span>
+					<span><img src="./images/fonts/215-brightness-contrast.png" alt="brightness"></span>
 					<h3>今天穿什么</h3>
 				</div>
 			</div>
@@ -387,6 +410,11 @@
 				<img src="./images/logo/logo_x.png" alt="" class="w-img">
 			</div>
 		</div>
+		<div class="back-to-top">
+			<div class="circle" onclick="$('body').animatescroll({scrollSpeed:3000,easing:'easeOutCirc'});" title="back to top">
+				<img src="./images/fonts/315-arrow-up2.png" alt="">
+			</div>
+		</div>
 		<div class="space">
 			<div class="space-title">
 				<h1>继续查看精选服饰</h1>
@@ -398,29 +426,44 @@
 				<a href="#">偏成熟</a>
 			</div>
 		</div>
-		<div class="back-to-top">
-			<div class="circle" onclick="$('body').animatescroll({scrollSpeed:3000,easing:'easeOutCirc'});" title="back to top">
-				<i class="arrow">Arrow</i>
-			</div>
-		</div>
 	</div>
 	<div class="footer">
 		<!-- footer -->
 		<div class="btn-box">
 			<div class="btn-container">
-				<a href="#"><button class="item1"><img src="./images/icon.png" alt=""><br>首页</button></a>
+				<a href="#">
+					<button class="item1">
+						<img src="./images/fonts/001-home.png" alt="home"><br>首页
+					</button>
+				</a>
 			</div>
 			<div class="btn-container">
-				<a href="#"><button class="item2"><img src="./images/icon.png" alt=""><br>单品</button></a>
+				<a href="#">
+					<button class="item2">
+						<img src="./images/fonts/179-accessibility.png" alt=""><br>单品
+					</button>
+				</a>
 			</div>
 			<div class="btn-container">
-				<a href="#"><button class="item3"><img src="./images/icon.png" alt=""><br>搭配</button></a>
+				<a href="#">
+					<button class="item3">
+						<img src="./images/fonts/370-table2.png" alt="table"><br>搭配
+					</button>
+				</a>
 			</div>
 			<div class="btn-container">
-				<a href="#"><button class="item4"><img src="./images/icon.png" alt=""><br>帅吧</button></a>
+				<a href="#">
+					<button class="item4">
+						<img src="./images/fonts/433-github.png" alt=""><br>帅吧
+					</button>
+				</a>
 			</div>
 			<div class="btn-container">
-				<a href="#"><button class="item5"><img src="./images/icon.png" alt=""><br>我的</button></a>
+				<a href="#">
+					<button class="item5">
+						<img src="./images/fonts/114-user.png" alt="user"><br>我的
+					</button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -434,7 +477,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script>
     	$('#myCarousel').carousel({
-    	  interval: 2000,
+    	  interval: 3000,
     	  wrap: true,
     	  keyboard:	true	
     	});
