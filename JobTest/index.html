@@ -9,7 +9,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
 	<link href="./images/logo/logo_x.png" rel="shortcut icon" type="image/x-icon">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
 	<title>home page</title>
+	<style>
+		#myCarousel{
+	      margin: 0 auto;
+	      background-color: #0f0;
+	    }
+	</style>
 	<style>
 		/*reset css*/
 		*{
@@ -18,6 +25,7 @@
 		}
 		a{
 			text-decoration: none;
+			color: rgba(255,255,255,0.9);
 		}
 		body{
 			background-color: rgba(255,255,255,0.7);
@@ -25,16 +33,22 @@
 			width: 100%;
 		}
 		.header{
-			background-color: rgba(0,0,255,0.8);
+			background-color: rgba(51, 204, 255,0.8);
 			width: 100%;
-			height: 10%;
-			overflow: hidden;
+			height: 5%;
+			text-align: center;
+			/*position: relative;*/
+			/*overflow: hidden;*/
 			/*top: 0;*/
 		}
-		.header .side{
+		/**/
+		.side{
 			background-color: #fff;
 			/*display: none;*/
 			visibility: hidden;
+			width: 50%;
+			height: 100%;
+			z-index: 99999;
 		}
 		.main{
 			background-color: rgba(242, 242, 242,0.7);
@@ -43,11 +57,12 @@
 		.main .slide{
 			width: 100%;
 			height:400px;
+			/*height: 20%;*/
 			overflow: hidden;
 		}
-		.main .slide .s-img{
+		.main .slide img{
 			width: 100%;
-			margin: 0;
+			float: left;
 		}
 		.main .div1{
 			background-color: rgba(242, 242, 242,0.7);
@@ -91,6 +106,7 @@
 			height: 3rem;
 			width: 70%;
 			background-color: #000;
+			color: #0f0;
 			margin-left: 5%;
 		}
 		.main .div3 .div3-title .title2{
@@ -104,21 +120,50 @@
 		.main .div3 .waterfall{
 			float: left;
 			width: 90%;
-			background-color: #0f0;
+			background-color: rgb(255, 255, 255);
 			margin: 0 5%;
 		}
 		.main .div3 .waterfall .w-img{
 			width: 20%;
 			margin: 0 5%;
 		}
+		.main .space{
+			margin: 5%;
+			width: 100%
+			height: 60px;
+			line-height: 60px;
+			/*background-color: #0f0;*/
+			text-align: center;
+			/*color: #fff;*/
+		}
+		.main .space .space-title{
+			/*text-align: center;*/
+		}
+		.main .space .space-l-btn{
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			background-color: rgba(0,0,255,0.7);
+			margin-left: 30%;
+			float: left;
+			color: #fff;
+		}
+		.main .space .space-r-btn{
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			background-color: rgba(0,0,255,0.7);
+			margin-left: 60%;
+			color: #fff;
+		}
 		.main .back-to-top{
 			position: fixed;
-			bottom: 10%;
-			width: 50px;
-			height: 50px;
-			line-height: 50px;
+			bottom: 15%;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
 			background-color: rgba(0,0,255,0.8);
-			border-radius: 25px;
+			border-radius: 50px;
 			text-align: center;
 			overflow: hidden;
 			/*float: right;*/
@@ -132,50 +177,118 @@
 			position: fixed;
 			bottom: 0;
 			width: 100%;
-			height: 5%;
+			height: 10%;
 			background-color: rgba(242, 0, 242,0.8);
+		}
+		.footer .btn-box{
+			width: 100%;
+			height: 10%;
+			line-height: 10%;
+			text-align: center;
+		}
+		.footer .btn-box .btn-container{
+			float: left;
+			width: 20%;
+			background-color: rgb(255, 255, 255);
+		}
+		.footer .btn-box .btn-container img{
+			width: 50%;
+			height: 50%;
+			line-height: 50%;
+		}
+		.footer .btn-box .btn-container button:hover{
+			border: 1px solid #0f0;
+			cursor: pointer;
+		}
+		.header .h-box a:hover{
+			color: #0f0;
+			cursor: pointer;
+		}
+		.header .h-box {
+			float: left;
+			/*position: absolute;*/
+		}
+		.header .index{
+			float: left;
+			margin-left: 40%;
+			background-color: #0f0;
+			margin-top: 2%;
+		}
+		.header .index span{
+			text-align: center;
+			font-size: 2rem;
+			/**/
+		}
+		.header .tools{
+			margin-left: 70%;
 		}
 	</style>
 </head>
 <body>
 	<div class="header">
 		<!-- header -->
-		<div class="side">
-			<!-- side -->
-			<img src="./images/logo/logo_x.png" alt="">
+		<div class="h-box">
+			<a href="#"><img src="./images/icon.png" alt=""></a>
+		</div>
+		<div class="index">
+			<span>首页</span>
+		</div>
+		<div class="tools">
+			<a href="#">search<img src="./images/icon.png" alt=""></a>
+			<a href="#">cart<img src="./images/icon.png" alt=""></a>
 		</div>
 	</div>
 	<div class="main">
 		<!-- main -->
 		<div class="slide">
-			<img class="s-img" src="./images/img1.png" alt="img1.png">
-			<img class="s-img" src="./images/img2.png" alt="img2.png">
-			<img class="s-img" src="./images/img3.png" alt="img3.png">
-			<img class="s-img" src="./images/img4.png" alt="img4.png">
-		</div>
+			<div id="myCarousel" class="carousel slide">
+			   <!-- 轮播（Carousel）指标 -->
+			   <ol class="carousel-indicators">
+			      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			      <li data-target="#myCarousel" data-slide-to="1"></li>
+			      <li data-target="#myCarousel" data-slide-to="2"></li>
+			      <li data-target="#myCarousel" data-slide-to="3"></li>
+			   </ol>   
+			   <!-- 轮播（Carousel）项目 -->
+			   <div class="carousel-inner">
+			      <div class="item active">
+			         <a href="#"><img class="s-img" src="./images/imgx.png" alt="img1.png"></a>
+			      </div>
+			      <div class="item">
+			         <a href="#"><img class="s-img" src="./images/imgx.png" alt="img1.png"></a>
+			      </div>
+			      <div class="item">
+			         <a href="#"><img class="s-img" src="./images/imgx.png" alt="img1.png"></a>
+			      </div>
+			      <div class="item">
+			         <a href="#"><img class="s-img" src="./images/imgx.png" alt="img1.png"></a>
+			      </div>
+			   </div>
+			</div>
+		</div> 
 		<!--  -->
 		<div class="div1">
 			<div class="btn">
 				<div class="btn1">
-					<span>icon</span>
+					<span><img src="./images/icon.png" alt=""></span>
 					<h3>每日签到</h3>
 				</div>
 			</div>
 			<div class="btn">
 				<div class="btn2">
-					<span>icon</span>
+					<span><img src="./images/icon.png" alt=""></span>
 				    <h3>型男SHOW</h3>
 				</div>
 			</div>
 			<div class="btn">
 				<div class="btn3">
-					<span>icon</span>
+					<span><img src="./images/icon.png" alt=""></span>
 					<h3>穿衣测试</h3>
 				</div>
 			</div>
 			<div class="btn">
 				<div class="btn4">
-					<span>icon</span>
+					<span><img src="./images/icon.png" alt=""></span>
 					<h3>今天穿什么</h3>
 				</div>
 			</div>
@@ -274,25 +387,57 @@
 				<img src="./images/logo/logo_x.png" alt="" class="w-img">
 			</div>
 		</div>
+		<div class="space">
+			<div class="space-title">
+				<h1>继续查看精选服饰</h1>
+			</div>
+			<div class="space-l-btn">
+				<a href="#">偏年轻</a>
+			</div>
+			<div class="space-r-btn">
+				<a href="#">偏成熟</a>
+			</div>
+		</div>
 		<div class="back-to-top">
-			<div class="circle" onclick="$('body').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});" title="back to top">
+			<div class="circle" onclick="$('body').animatescroll({scrollSpeed:3000,easing:'easeOutCirc'});" title="back to top">
 				<i class="arrow">Arrow</i>
 			</div>
 		</div>
 	</div>
 	<div class="footer">
 		<!-- footer -->
-		<div>
-			<!--  -->
+		<div class="btn-box">
+			<div class="btn-container">
+				<a href="#"><button class="item1"><img src="./images/icon.png" alt=""><br>首页</button></a>
+			</div>
+			<div class="btn-container">
+				<a href="#"><button class="item2"><img src="./images/icon.png" alt=""><br>单品</button></a>
+			</div>
+			<div class="btn-container">
+				<a href="#"><button class="item3"><img src="./images/icon.png" alt=""><br>搭配</button></a>
+			</div>
+			<div class="btn-container">
+				<a href="#"><button class="item4"><img src="./images/icon.png" alt=""><br>帅吧</button></a>
+			</div>
+			<div class="btn-container">
+				<a href="#"><button class="item5"><img src="./images/icon.png" alt=""><br>我的</button></a>
+			</div>
 		</div>
-		<button class="item1">icon1</button>
-		<button class="item2">icon2</button>
-		<button class="item3">icon3</button>
-		<button class="item4">icon4</button>
-		<button class="item5">icon5</button>
+	</div>
+	<!-- side -->
+	<div class="side">
+		<img src="./images/logo/logo_x.png" alt="">
 	</div>
 	<!-- CDN : scripts -->
 	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <script src="./js/animatescroll.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+    	$('#myCarousel').carousel({
+    	  interval: 2000,
+    	  wrap: true,
+    	  keyboard:	true	
+    	});
+    </script>
 </body>
 </html>

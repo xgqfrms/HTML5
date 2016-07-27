@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slide</title>
+	<!-- http://unslider.com/ -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- css -->
+	<link rel="stylesheet" href="./css/unslider.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.min.css">
+	<style>
+		#fullpage{
+			background-color: #0f0;
+		}
+		.section{
+			background-color: #f0f;
+		}
+	</style>
+</head>
+<body>
+    <div class="banner" >
+        <ul>
+            <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
+            <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
+            <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
+        </ul>
+    </div>
+    <div id="fullpage">
+    	<div class="section">
+    	    <div class="slide"><img class="s-img" src="./images/img.png" alt="img1.png"></div>
+    	    <div class="slide"><img class="s-img" src="./images/img.png" alt="img1.png"></div>
+    	    <div class="slide"><img class="s-img" src="./images/img.png" alt="img1.png"></div>
+    	    <div class="slide"><img class="s-img" src="./images/img.png" alt="img1.png"></div>
+    	</div>
+    </div>
+    <!-- CDN && SRI-->
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/unslider-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.js"></script>
+    <script>
+    	jQuery(document).ready(function($) {
+			$('.banner').unslider({
+    	    	speed: 500,               //  The speed to animate each slide (in milliseconds)
+    	    	delay: 3000,              //  The delay between slide animations (in milliseconds)
+    	    	complete: function() {},  //  A function that gets called after every slide animation
+    	    	//keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+    	    	dots: true,               //  Display dot navigation
+    	    	fluid: false,             //  Support responsive design. May break non-responsive designs
+    	    	autoplay: true,
+    	    	infinite: true,
+    	    	arrows: false,
+    	    	animation: 'fade'
+    	    });
+		});
+    </script>
+    <script>
+    	$(document).ready(function() {
+    	    $('#fullpage').fullpage({
+    	        //Navigation
+    	        menu: false,
+    	        lockAnchors: false,
+    	        anchors:['firstPage', 'secondPage'],
+    	        navigation: false,
+    	        navigationPosition: 'right',
+    	        navigationTooltips: ['firstSlide', 'secondSlide'],
+    	        showActiveTooltip: false,
+    	        slidesNavigation: true,
+    	        slidesNavPosition: 'bottom',
+
+    	        //Scrolling
+    	        css3: true,
+    	        scrollingSpeed: 700,
+    	        autoScrolling: true,
+    	        fitToSection: true,
+    	        fitToSectionDelay: 1000,
+    	        scrollBar: false,
+    	        easing: 'easeInOutCubic',
+    	        easingcss3: 'ease',
+    	        loopBottom: false,
+    	        loopTop: false,
+    	        loopHorizontal: true,
+    	        continuousVertical: false,
+    	        normalScrollElements: '#element1, .element2',
+    	        scrollOverflow: false,
+    	        touchSensitivity: 15,
+    	        normalScrollElementTouchThreshold: 5,
+
+    	        //Accessibility
+    	        keyboardScrolling: true,
+    	        animateAnchor: true,
+    	        recordHistory: true,
+
+    	        //Design
+    	        controlArrows: true,
+    	        verticalCentered: true,
+    	        resize : false,
+    	        sectionsColor : ['#ccc', '#fff'],
+    	        paddingTop: '3em',
+    	        paddingBottom: '10px',
+    	        fixedElements: '#header, .footer',
+    	        responsiveWidth: 0,
+    	        responsiveHeight: 0,
+
+    	        //Custom selectors
+    	        sectionSelector: '.section',
+    	        slideSelector: '.slide',
+
+    	        //events
+    	        onLeave: function(index, nextIndex, direction){},
+    	        afterLoad: function(anchorLink, index){},
+    	        afterRender: function(){},
+    	        afterResize: function(){},
+    	        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    	        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    	    });
+    	});
+    </script>
+    </body>
+</body>
+</html>

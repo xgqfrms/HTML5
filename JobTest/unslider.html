@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>animatescroll : back-to-top</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>unslider </title>
 	<!-- http://plugins.compzets.com/animatescroll/ -->
 	<!-- css -->
 	<link rel="stylesheet" href="./css/unslider.css">
@@ -14,17 +14,6 @@
 	  	margin: 0 auto;
 	  	text-align: center;
 	  }
-	  .a1{
-	  	background-color: rgba(0,255,255,0.7);
-	  	margin: 10px;
-	  }
-	  .a2{
-	  	background-color: rgba(255,0,255,0.7);
-	  	margin: 10px;
-	  }
-	  .a2 a:hover{
-	  	cursor: pointer;
-	  }
 	</style>
 	<!-- 以下两个插件用于在IE8以及以下版本浏览器支持 HTML5元素 和 媒体查询 ，如果不需要用可以移除 -->
 	<!--[if lt IE 9]>
@@ -33,17 +22,14 @@
 	<![endif]-->
 </head>
 <body>
+	<div class="banner">
+	    <ul>
+	        <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
+	        <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
+	        <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
+	    </ul>
+	</div>
 	<div class="container">
-	    <div class="banner">
-	        <ul>
-	            <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
-	            <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
-	            <li><img class="s-img" src="./images/img.png" alt="img1.png"></li>
-	        </ul>
-	    </div>
-		<div id="back-to-top">
-		  <mark class="mark">backtop</mark>
-		</div>
 		<p>test</p>
 		<p>test</p>
 		<p>test</p>
@@ -144,30 +130,10 @@
 		<p>test</p>
 		<p>test</p>
 		<p>test</p>
-		<div class="a1">
-			<a href="#back-to-top">back-to-top</a>
-		</div>
-		<div class="a2">
-			<button>
-				<a onclick="$('#back-to-top').animatescroll({onScrollStart:function(){alert('scroll started')},onScrollEnd:function(){alert('scroll ended')}});" title="back to top">back-to-top</a>
-			</button>
-		</div>
-		<div class="a2">
-			<button>
-				<a onclick="$('#back-to-top').animatescroll({scrollSpeed:3000,easing:'easeOutElastic'});" title="back to top">back-to-top</a>
-			</button>
-		</div>
-		<div class="a2">
-			<button>
-				<a onclick="$('#back-to-top').animatescroll({padding:-100});" title="back to top">back-to-top</a>
-			</button>
-		</div>
 	</div>
     <!-- CDN && SRI-->
     <!-- Placed at the end of the document so the pages load faster -->
-   <!--  <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script> -->
     <script src="./js/jquery-2.1.4.min.js"></script>
-    <script src="./js/animatescroll.min.js"></script>
     <script src="./js/unslider-min.js"></script>
     <script>
     	jQuery(document).ready(function($) {
