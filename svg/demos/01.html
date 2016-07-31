@@ -5,16 +5,30 @@
 	<title>demo 01.svg</title>
 	<style>
 		.svg{
-			background-color: rgba(255,0,255,0.7);
+			background-color: rgba(0,0,0,0.3);
+		}
+		.linear{
+			background-color: rgba(0,0,0,0.3);;
+		}
+		.radial{
+			background-color: rgba(0,0,0,0.3);
+		}
+		.brush{
+			background-color: rgba(0,0,0,0.3);
 		}
 	</style>
 </head>
 <body>
-	<img class="svg" src="01.svg" alt="01.svg">
-	<div>
-		<input type="range">
-		<br>
-		<input type="color">
-	</div>
+	<img src="01.svg" alt="01.svg" class="svg" >
+	<img src="linearGradient.svg" alt="linearGradient" class="linear" >
+	<img src="radialGradient.svg" alt="radialGradient" class="radial" >
+	<img src="brush-pattern.svg" alt="brush-pattern.svg" class="brush" >
+	<!-- 
+		<div>
+			<input type="range">
+			<br>
+			<input type="color">
+		</div>
+	 -->
 </body>
 </html>
