@@ -1,9 +1,9 @@
 <!-- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> -->
 <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="svg-logo" width="800" height="600" fill="rgba(255,0,255,0.5)"> -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="svg-logo" width="800" height="600" fill="rgba(255,0,255,0.5)">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="svg-logo" width="800" height="600" fill="rgba(255,0,255,0.5)" stroke="#f0f" stroke-width="3">
 	<!-- 
-		如果 svg 设置fill颜色, 子元素 默认使用 svg的fill颜色; 
-		如果 svg 没有设置fill颜色，子元素 默认使用 fill="000"颜色;
+		如果 svg 设置fill/stroke颜色, 子元素 默认使用 svg的fill/stroke颜色; 
+		如果 svg 没有设置fill/stroke颜色，子元素 默认使用 fill="000"/stroke="000" 颜色;
 		如果 子元素 设置fill颜色, 子元素 使用 设置的fill颜色; 
 	 -->
 	 <!-- 

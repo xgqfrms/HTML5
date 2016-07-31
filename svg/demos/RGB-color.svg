@@ -1,3 +1,39 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="500" height="500" fill="rgba(0,0,0,0.5)">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="500" height="500">
 	<!-- 使用 RGB 绘制，7色盘 -->
+	<circle
+		cx="100"
+		cy="100"
+		r="100"
+		fill="rgba(255,0,0,0.7)">
+	</circle>
+	<circle
+		cx="100"
+		cy="100"
+		r="1"
+		fill="rgba(0,0,0,1)">
+	</circle>
+	<circle
+		cx="200"
+		cy="100"
+		r="100"
+		fill="rgba(0,255,0,0.7)">
+	</circle>
+	<circle
+		cx="200"
+		cy="100"
+		r="1"
+		fill="rgba(0,0,0,1)">
+	</circle>
+	<circle
+		cx="150"
+		cy="186"
+		r="100"
+		fill="rgba(0,0,255,0.7)">
+	</circle>
+	<circle
+		cx="150"
+		cy="186"
+		r="1"
+		fill="rgba(0,0,0,1)">
+	</circle>
 </svg>
