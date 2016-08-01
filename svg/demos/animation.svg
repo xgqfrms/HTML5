@@ -2,7 +2,7 @@
 	<defs>
 		<path></path>
 	</defs>
-	<!--  -->
+	<!-- viewBox -->
 	<rect x="100" y="100" width="300" height="600" fill="none" stroke="red" stroke-width="3"></rect>
 	<circle cx="100" cy="100" r="30" fill="red"></circle>
 	<circle cx="400" cy="700" r="30" fill="green"></circle>
