@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>removeClass demo</title>
+  <!-- css -->
+  <link rel="stylesheet" href="https://xgqfrms.github.io/HTML5/lib/jquery-ui/jquery-ui-1.12.0.css">
+  <style>
+    .div-bg{
+      background-color: rgba(0,0,0,0.3);
+      border: 1px solid red;
+      margin-bottom: 3rem;
+      color: rgba(0,255,0,0.7);
+      font-size: 16px;
+    }
+    span{
+      /*font-size: 2rem;*/
+      background-color: rgba(255,255,255,0.7);
+      color: rgba(255,0,0,0.7);
+    }
+    .div-demo {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+    }
+    .big-blue {
+      width: 200px;
+      height: 200px;
+      background-color: #00f;
+    }
+  </style>
+</head>
+<body>
+  <div class="div-bg">
+    <pre>
+      <span>
+        .removeClass( className [, duration ] [, easing ] [, complete ] )   Returns: jQuery
+
+        .removeClass( className [, duration ] [, easing ] [, complete ] )
+
+        .removeClass( className [, options ] )
+      </span>
+      http://api.jquery.com/category/effects/
+      <a href="http://api.jquery.com/category/effects/">Category: Effects</a>
+    </pre>
+  </div>
+  <div class="div-demo big-blue"></div>
+  <!-- js -->
+  <script src="https://xgqfrms.github.io/HTML5/lib/jquery/jquery-1.12.4.js"></script>
+  <script src="https://xgqfrms.github.io/HTML5/lib/jquery-ui/jquery-ui-1.12.0.js"></script>
+  <script>
+    $( ".div-demo" ).click(function() {
+      $( this ).removeClass( "big-blue", 1000, "easeInBack" );
+    });
+  </script>
+</body>
+</html>

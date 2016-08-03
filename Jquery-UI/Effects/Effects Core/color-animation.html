@@ -17,8 +17,12 @@
       background-color: rgba(0,0,0,0.3);
       border: 1px solid red;
       margin-bottom: 3rem;
-      color: rgba(0,255,0,0.7);
+      color: rgba(255,255,255,0.7);
       font-size: 16px;
+    }
+    pre::selection{
+      color: rgba(255,0,255,0.7);
+      background-color: rgba(255,255,255,0.7);
     }
     span{
       font-size: 2rem;
@@ -49,6 +53,11 @@
       Support for color animation comes from the jQuery Color plugin.
       The Color plugin provides several functions for working with colors.
       For full documentation, please see the jQuery Color documentation.
+
+      Class Animations:
+      While there are use cases for directly animating individual color properties, it is often a better approach to contain the styles in a class. 
+      jQuery UI provides a few methods which will animate the addition or removal of a CSS class, specifically .addClass(), .removeClass(), .toggleClass(), and .switchClass().
+      These methods will automatically determine which properties need to change and apply the appropriate animations.
     </pre>
   </div>
   <div id="text">color animations</div>
