@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery moblie</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+	<style>
+		.mycss{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="pageone"> 
+	  <div data-role="main" class="ui-content mycss">
+	    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">打开面板</a>
+	  </div>
+	  <div data-role="panel" id="myPanel"> 
+	    <h2>面板头部</h2>
+	    <p>你可以通过点击面板外部区域或按下 Esc 键或滑动来关闭面板。</p>
+	 </div> 	   
+	</div> 
+	<script src="./js/jquery-2.1.4.min.js"></script>
+	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>

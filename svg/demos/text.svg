@@ -1,0 +1,32 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" encoding="UTF-8" width="500" height="500">
+	<!-- http://www.runoob.com/svg/svg-reference.html -->
+	<defs>
+		<pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+			<path d="M0,0H20V20" stroke="rgba(255,255,255,0.7)" fill="none"></path>
+		</pattern>
+	</defs>
+	<rect width="1000" height="600" fill="url(#grid)"></rect>
+	<text x="100" y="100" fill="rgba(0,255,0,0.7)" stroke-width="3">
+		Hello, SVG text!
+	</text>
+	<text x="300" y="100" stroke="rgba(255,0,255,0.7)" stroke-width="3">
+		Hello, SVG text!
+	</text>
+	
+	<text x="0" y="15" fill="red" transform="rotate(30 20,40)">I love SVG</text>
+
+	<defs>
+	    <path id="path1" d="M75,20 a1,1 0 0,0 100,0" fill="none"/>
+	</defs>
+	<text x="10" y="100">
+	    <textPath fill="url(#path1)">I love SVG I love SVG</textPath>
+	</text>
+
+	<text x="10" y="100" fill="#0f0" font-family="Verdana" font-size="16">
+	    <textPath xlink:href="#path1" method="stretch" style="visibility: visible;">I love SVG I love SVG</textPath>
+    </text>
+
+    <a xlink:href="http://www.xgqfrms.xyz" target="_blank">
+	    <text x="0" y="150" fill="red">I love SVG</text>
+    </a>
+</svg>

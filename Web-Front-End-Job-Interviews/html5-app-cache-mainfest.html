@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" manifest="demo_html.appcache">
+<!-- 
+	File extension(s): "appcache", "manifest"
+	https://www.w3.org/TR/html5/iana.html#text/cache-manifest
+ -->
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<p id="timePara">
+			<button onclick="getDateTime()">Get Date and Time</button>
+		</p>
+		<p>
+			<img src="./img_logo.gif" width="336" height="69">
+		</p>
+		<p>
+			Try opening 
+			<a href="./html5-app-cache-mainfest.html" target="_blank">this page</a>
+			, then go offline, and reload the page. The script and the image should still work.
+		</p>
+	</div>
+	<script>
+		// src="demo_time.js"
+		function getDateTime(){
+			var d=new Date();
+			document.getElementById('timePara').innerHTML=d;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript : Array.unshift && Array.push && Array.pop && Array.shift</title>
+</head>
+<body>
+	<div>
+		<div>
+			<pre>
+				<code>var fruits = ["Banana", "Orange", "Apple", "Mango"];</code>
+				<code>fruits.unshift("Kiwi","Lemon","Pineapple")</code>
+				<code>fruits.push("Kiwi","Lemon","Pineapple")</code>
+				<code>fruits.shift("Kiwi","Lemon","Pineapple")</code>
+				<code>fruits.pop("Kiwi","Lemon","Pineapple")</code>
+				<kbd>Ctrl</kbd>+<kbd>Shift</kbd>
+			</pre>
+			<!--  -->
+			<p id="demo1">unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度。</p>
+			<button onclick="myUnshift()">Try it</button>
+			<!--  -->
+			<p id="demo2">push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
+			<button onclick="myPush()">Try it</button>
+			<!--  -->
+			<p id="demo3">shift() 方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。</p>
+			<button onclick="myShift()">Try it</button>
+			<!--  -->
+			<p id="demo4">pop() 方法用于删除数组的最后一个元素并返回删除的元素。</p>
+			<button onclick="myPop()">Try it</button>
+		</div>
+		<script>
+			var fruits = ["Banana", "Orange", "Apple", "Mango"];
+			// 
+			function myUnshift(){
+				fruits.unshift("Kiwi","Lemon","Pineapple")
+				var x=document.getElementById("demo1");
+				x.innerHTML=fruits;
+			}
+			// 
+			function myPush(){
+				fruits.push("Kiwi","Lemon","Pineapple")
+				var x=document.getElementById("demo2");
+				x.innerHTML=fruits;
+			}
+			// 
+			function myShift(){
+				fruits.shift("Kiwi","Lemon","Pineapple")
+				var x=document.getElementById("demo3");
+				x.innerHTML=fruits;
+			}
+			// 
+			function myPop(){
+				fruits.pop("Kiwi","Lemon","Pineapple")
+				var x=document.getElementById("demo4");
+				x.innerHTML=fruits;
+			}
+		</script>
+	</div>
+</body>
+</html>

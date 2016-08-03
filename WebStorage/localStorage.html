@@ -3,8 +3,75 @@
 <head>
 	<meta charset="UTF-8">
 	<title>localStorage</title>
+	<!-- https://www.w3.org/TR/webstorage/ -->
+	<!-- http://www.cnblogs.com/xgqfrms/p/5674978.html#3472986 -->
 </head>
 <body>
-	<!--  -->
+	<div class="container">
+		<div class="div1">
+			<div class="local">
+				<h1>Local Storage</h1>
+				<input type="text" id="input" placeholder="local Storage" autosave="" autofocus="" autocomplete="">
+				<input type="submit" value="设置localStorage" onclick="">
+				<p id="result"></p>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Before using local storage, check browser support for localStorage and sessionStorage:
+		if (typeof(Storage) !== "undefined") {
+		    // Code for localStorage/sessionStorage.
+		    console.log("Congratulations! \nYour are using the browser that support Web Storage.");
+		    // sessionStorage
+		    function localSet(key,value){
+		    	// 保存数据到localStorage
+		    	localStorage.setItem(key, value);
+		    	// 从localStorage获取数据
+		    	var keyValue = localStorage.getItem(key);
+		    	console.log("Value="+keyValue);
+		    	document.getElementById("result").innerHTML = "keyValue : <mark>"+keyValue+"</mark>!";
+		    }
+		    function localRemove(key){
+		    	// sessionStorage.removeItem('someKey'); 
+		    	localStorage.removeItem(key); 
+		    }
+		    function localClear(){
+		    	// localStorage.clear();
+		    	localStorage.clear();  
+		    }
+		    function localAdd(key,value){
+		    	var s = document.getElementById("input");
+		    	s.value();
+		    	// ?
+		    }
+		    if (!key==null) {
+		    	localClear();
+		    	console.log("localClear() had been executed!");
+		    } else {
+		    	var key = "super-admin-name";
+		    	var value = "xgqfrms";
+		    	localSet(key,value);
+		    }
+		} else {
+		    // Sorry! No Web Storage support..
+		    console.log("Sorry! Your browser doesn't support Web Storage.");
+		}
+		/*
+			x
+			y
+		*/ 
+		var x;		
+		console.log(typeof x);
+		// undefined : x 没有初始化
+		y = 1;
+		console.log(typeof y);
+		// number : y 没有声明,有初始化
+		var x1="x1";
+		console.log(typeof x1);
+		// string : x1 有声明,有初始化
+		y1;
+		console.log(typeof y1);
+		// Uncaught ReferenceError: y1 is not defined : y1 没有声明,没有初始化
+	</script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap Carousel</title>
+	<!-- http://unslider.com/ -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- css -->
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		#myCarousel{
+      margin: 0 5%;
+      background-color: #0f0;
+    }
+	</style>
+</head>
+<body>
+    <div id="myCarousel" class="carousel slide">
+       <!-- 轮播（Carousel）指标 -->
+       <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+       </ol>   
+       <!-- 轮播（Carousel）项目 -->
+       <div class="carousel-inner">
+          <div class="item active">
+             <img class="s-img" src="./images/imgx.png" alt="img1.png">
+          </div>
+          <div class="item">
+             <img class="s-img" src="./images/imgx.png" alt="img1.png">
+          </div>
+          <div class="item">
+             <img class="s-img" src="./images/imgx.png" alt="img1.png">
+          </div>
+       </div>
+    </div> 
+    <!-- CDN && SRI-->
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

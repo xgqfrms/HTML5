@@ -1,0 +1,17 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" encoding="UTF-8" width="540" height="200" viewBox="0 0 270 100" style="margin:-2em 0em -3em 0em">
+  <defs>
+    <radialGradient id="radial" cx="50%" cy="50%" fx="25%" fy="25%">
+      <stop offset="0%" stop-color="#60bafc"></stop>
+      <stop offset="50%" stop-color="#409adc"></stop>
+      <stop offset="100%" stop-color="#005a9c"></stop>
+    </radialGradient>
+    <path id="curve" d="M18,60 C100,10 180,110 264,60" fill="none"></path>
+  </defs>
+
+  <circle cx="138" cy="50" r="38" fill="url(#radial)" stroke="#005a9c"></circle>
+  <text font-family="Verdana" font-size="20" fill="#ff9900">
+    <textPath xlink:href="#curve" method="stretch" style="visibility: visible;">Scalable 
+      <tspan fill="white">Vector</tspan>Graphics
+    </textPath>
+  </text>
+</svg>

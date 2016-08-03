@@ -3,8 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>sessionStorage</title>
+	<!-- https://www.w3.org/TR/webstorage/ -->
 </head>
 <body>
-	<!--  -->
+	<div class="container">
+		<div class="div1">
+			<div class="session">
+				<h1>Session Storage</h1>
+				<input type="text" placeholder="session Storage" autosave="" autofocus="" autocomplete="">
+				<p id="result"></p>
+			</div>
+			<div>
+				<a href="javascript:;" onClick="if(sessionStorage && sessionStorage.getItem('name')) { alert('赶快回来哦, ' + sessionStorage.getItem('name')); }">注销</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Before using local storage, check browser support for localStorage and sessionStorage:
+		if (typeof(Storage) !== "undefined") {
+		    // Code for localStorage/sessionStorage.
+		    console.log("Congratulations! \nYour are using the browser that support Web Storage.");
+		    // sessionStorage
+		    function sessionAdd(key,value){
+		    	// 保存数据到sessionStorage
+		    	sessionStorage.setItem(key, value);
+		    	// 从sessionStorage获取数据
+		    	var keyValue = sessionStorage.getItem(key);
+		    	// for x in y { do ...}
+		    	document.getElementById("result").innerHTML = "<mark>keyValue</mark> = "+keyValue+"<br/>";
+		    	console.log("Value="+keyValue);
+		    }
+		    function sessionClear(){
+		    	// length ?
+		    }
+		    function sessionSet(){
+		    	// sessionStorage.getItem('someKey'); //returns 'someValue'
+		    	// sessionStorage.someKey; //returns 'someValue'
+
+		    	// sessionStorage.setItem('someKey','someValue')
+		    	// sessionStorage.someKey = 'someValue';
+		    }
+		    var x = "key-test";
+		    var y = "value-test";
+		    sessionAdd(x,y);
+		    sessionAdd("name","xgqfrms");
+		    alert("Congratulations!");
+		} else {
+		    // Sorry! No Web Storage support..
+		    console.log("Sorry! Your browser doesn't support Web Storage.");
+		    alert("Sorry");
+		}
+	</script>
 </body>
 </html>

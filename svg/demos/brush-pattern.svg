@@ -1,0 +1,33 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" encoding="UTF-8" width="700" height="500">
+	<defs>
+		<pattern id="pattern" x="0" y="0" width="0.2" height="0.1">
+			<circle cx="10" cy="10" r="5" fill="rgba(255,0,0,0.7)"></circle>
+			<polygon points="30 10 60 50 0 50" fill="rgba(0,0,255,0.7)"></polygon>
+		</pattern>
+	</defs>
+	<rect x="100" y="100" width="300" height="300" fill="url(#pattern)" stroke="rgba(0,255,0,0.7)"></rect>
+
+	<defs>
+		<pattern id="pattern1" x="0" y="0" width="0.2" height="0.2" pattern="userSpaceOnUse">
+			<circle cx="10" cy="10" r="5" fill="rgba(255,0,0,0.7)"></circle>
+			<polygon points="30 10 60 50 0 50" fill="rgba(0,0,255,0.7)"></polygon>
+		</pattern>
+	</defs>
+	<rect x="400" y="100" width="200" height="200" fill="url(#pattern1)" stroke="rgba(0,255,0,0.7)"></rect>
+
+	<defs>
+		<pattern id="pattern2" x="0" y="0" width="0.3" height="0.3" pattern="userSpaceOnUse" patternUnits="objectBoundingBox">
+			<circle cx="10" cy="10" r="5" fill="rgba(255,0,0,0.7)"></circle>
+			<polygon points="30 10 60 50 0 50" fill="rgba(0,0,255,0.7)"></polygon>
+		</pattern>
+	</defs>
+	<rect x="400" y="300" width="100" height="100" fill="url(#pattern2)" stroke="rgba(0,255,0,0.7)"></rect>
+
+	<defs>
+		<pattern id="pattern3" x="0" y="0" width="0.3" height="0.3" pattern="objectBoundingBox" patternUnits="objectBoundingBox">
+			<circle cx="10" cy="10" r="5" fill="rgba(255,0,0,0.7)"></circle>
+			<polygon points="30 10 60 50 0 50" fill="rgba(0,0,255,0.7)"></polygon>
+		</pattern>
+	</defs>
+	<rect x="500" y="300" width="100" height="100" fill="url(#pattern3)" stroke="rgba(0,255,0,0.7)"></rect>
+</svg>
