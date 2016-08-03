@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>.addClass()</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<style>
+		.div-bg{
+			background-color: rgba(0,0,0,0.3);
+			border: 1px solid red;
+			margin-bottom: 3rem;
+		}
+		.demo-div{
+		width: 100px;
+		height: 100px;
+		background-color: #ccc;
+		}
+		.big-blue {
+		width: 200px;
+		height: 200px;
+		background-color: #00f;
+		}
+	</style>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body>
+	<div class="div-bg">
+		<pre>
+			.addClass( className [, duration ] [, easing ] [, complete ] )   Returns: jQuery
+
+			.addClass( className [, duration ] [, easing ] [, complete ] )
+
+			.addClass( className [, options ] )
+		</pre>
+	</div>
+	<div class="demo-div"></div>	 
+	<script>
+		$( "demo-div" ).click(function() {
+		  $( this ).addClass( "big-blue", 1000, "easeOutBounce" );
+		});
+	</script>
+</body>
+</html>
