@@ -3,12 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>.addClass()</title>
+	<!-- css -->
 	<link rel="stylesheet" href="https://xgqfrms.github.io/HTML5/lib/jquery-ui/jquery-ui-1.12.0.css">
 	<style>
 		.div-bg{
-			background-color: rgba(0,0,0,0.3);
-			border: 1px solid red;
-			margin-bottom: 3rem;
+		  background-color: rgba(0,0,0,0.3);
+		  border: 1px solid red;
+		  margin-bottom: 3rem;
+		  color: rgba(0,255,0,0.7);
+		  font-size: 16px;
+		}
+		span{
+		  /*font-size: 2rem;*/
+		  background-color: rgba(255,255,255,0.7);
+		  color: rgba(255,0,0,0.7);
 		}
 		.demo-div{
 		width: 100px;
@@ -21,23 +29,28 @@
 		background-color: #00f;
 		}
 	</style>
-	<script src="https://xgqfrms.github.io/HTML5/lib/jquery/jquery-1.12.4.js"></script>
-	<script src="https://xgqfrms.github.io/HTML5/lib/jquery-ui/jquery-ui-1.12.0.js"></script>
 </head>
 <body>
 	<div class="div-bg">
 		<pre>
-			.addClass( className [, duration ] [, easing ] [, complete ] )   Returns: jQuery
+			<span>
+				.addClass( className [, duration ] [, easing ] [, complete ] )   Returns: jQuery
 
-			.addClass( className [, duration ] [, easing ] [, complete ] )
+				.addClass( className [, duration ] [, easing ] )
 
-			.addClass( className [, options ] )
+				.addClass( className [, options ] )
+			</span>
 		</pre>
 	</div>
-	<div class="demo-div"></div>	 
+	<div class="demo-div"></div>
+	<!-- js -->
+	<script src="https://xgqfrms.github.io/HTML5/lib/jquery/jquery-1.12.4.js"></script>
+	<script src="https://xgqfrms.github.io/HTML5/lib/jquery-ui/jquery-ui-1.12.0.js"></script> 
 	<script>
 		$(".demo-div").click(function() {
 		  $(this).addClass("big-blue",1000,"easeOutBounce");
+		  // this === ".demo-div"
+		  // $(".demo-div").addClass("big-blue",1000,"easeOutBounce");
 		});
 	</script>
 </body>
