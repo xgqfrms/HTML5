@@ -1,0 +1,12 @@
+https://modernizr.com/docs
+Modernizr的是一小片的JavaScript代码，可以自动检测下一代Web技术在用户的浏览器的可用性。
+而不是基于“UA嗅探”浏览器的整个范围的黑名单”，
+Modernizr的使用特征检测，让您可以轻松地根据自己的浏览器的实际能力量身定制您的用户体验。
+
+
+
+Modernizr
+ is a small piece of JavaScript code that automatically detects the availability of next-generation web technologies in your user's browsers.
+ 
+ Rather than blacklisting entire ranges of browsers based on “UA sniffing”,
+ Modernizr uses feature detection to allow you to easily tailor your user's experiences based on the actual capabilities of their browser.
