@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<title>safety-canvas</title>
 	<!-- 需要运行在 server 中，并且要开启 https:// 服务 -->
 	<!--  https://xgqfrms.github.io/HTML5/Canvas/safety-canvas.html-->
@@ -157,7 +158,37 @@
 	            }
 	        });
 	    }
-
+	</script>
+	<!-- stats.min -->
+	<script src="../lib/stats.min"></script>
+	<script>
+		var stats = new Stats();
+		stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
+		document.body.appendChild( stats.dom );
+		// 
+		var canvas = document.createElement( 'canvas' );
+		canvas.width = 512;
+		canvas.height = 512;
+		document.body.appendChild( canvas );
+		var context = canvas.getContext( '2d' );
+		context.fillStyle = 'rgba(127,0,255,0.05)';
+		function animate() {
+			// 
+			var time = performance.now() / 1000;
+			context.clearRect( 0, 0, 512, 512 );
+		    stats.begin();
+		    // monitored code goes here
+		    for ( var i = 0; i < 2000; i ++ ) {
+				var x = Math.cos( time + i * 0.01 ) * 196 + 256;
+				var y = Math.sin( time + i * 0.01234 ) * 196 + 256;
+				context.beginPath();
+				context.arc( x, y, 10, 0, Math.PI * 2, true );
+				context.fill();
+			}
+		    stats.end();
+		    requestAnimationFrame( animate );
+		}
+		requestAnimationFrame( animate );
 	</script>
 </body>
 </html>
