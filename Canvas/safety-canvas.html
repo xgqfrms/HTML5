@@ -160,19 +160,19 @@
 	        });
 	    }
 	</script>
-	<!-- stats.min -->
+	<!-- stats.min.js -->
 	<script src="../lib/stats.js"></script>
 	<script>
 		var stats = new Stats();
-		stats.showPanel( 1 ); // 0: fps, 1: ms, 2: mb, 3+: custom
-		document.body.appendChild( stats.dom );
+		stats.showPanel(1); // 0: fps, 1: ms, 2: mb, 3+: custom
+		document.body.appendChild(stats.dom);
 		// 被监测的Canvas 对象
-		var canvas = document.createElement( 'canvas' );
+		var canvas = document.createElement('canvas');
 		canvas.width = 100;
 		canvas.height = 100;
-		document.body.appendChild( canvas );
-		document.getElementsByTagName(canvas).style.border="1px solid #f00";
-		var context = canvas.getContext( '2d' );
+		document.body.appendChild(canvas);
+		// document.getElementsByTagName(canvas).style.border="1px solid #f00";
+		var context = canvas.getContext('2d');
 		context.fillStyle = 'rgba(255,0,255,0.3)';
 		// 
 		function animate() {			
