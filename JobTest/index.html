@@ -243,6 +243,30 @@
 			border: 1px solid #0f0;
 			cursor: pointer;
 		}
+		/* back to top*/
+		.bottom_tools {
+		    position: fixed;
+		    right: 40px;
+		    bottom: 120px;
+		    display: block;
+		    /*width: 55px;
+		    height: 55px;
+		    z-index: 99999;*/
+		    /*background-color: rgba(0,255,0,0.5);*/
+		    /*border-radius: 50%;*/
+		}
+		#scrollUp{
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			color: rgba(0,0,0,0.7);
+			cursor: pointer;
+			background-color: rgba(0,255,0,0.5);
+			border-radius: 50%;
+			width: 55px;
+		    height: 55px;
+		    z-index: 99999;
+		}
 	</style>
 </head>
 <body>
@@ -420,6 +444,12 @@
 				<img src="./images/fonts/315-arrow-up2.png" alt="">
 			</div>
 		</div>
+		<!-- back to top -->
+		<div class="bottom_tools" >
+			<a id="scrollUp"  title="飞回顶部" >飞回顶部</a>
+		</div>
+		<!-- <script src="js/backtop.js"></script> -->
+		<!--  -->
 		<div class="space">
 			<div class="space-title">
 				<h1>继续查看精选服饰</h1>
@@ -487,5 +517,7 @@
     	  keyboard:	true	
     	});
     </script>
+    <!-- back to top -->
+    <script src="js/backtop.js"></script>
 </body>
 </html>
