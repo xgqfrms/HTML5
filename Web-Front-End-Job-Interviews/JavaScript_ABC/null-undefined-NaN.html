@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>你所不知道的 JS: null , undefined, NaN</title>
+	<!-- http://www.cnblogs.com/xgqfrms/p/5769202.html -->
+</head>
+<body>
+	<div>
+		<!-- js -->
+		<!-- 前端JS试题： https://github.com/N-ZOO/everycode/issues/13 -->
+		<script>
+		    var a= 1, b=0;
+		    b=2;
+		    if(a<b) alert('a is smaller');
+		    else alert('b is smaller')
+		</script>
+		<script>
+			var a;
+			    if(a==undefined) alert('undefined');//true
+			    if(a==null) alert('null');//true
+			    if(null==undefined) alert('null==undefined');//true
+			    if(undefined==null) alert('undefined==null');//true
+			var b =5 ;
+			alert('b+undefined=||b+null='+(a+b));//NaN
+		</script>
+		<script>
+			var a = null;//(0/false)
+			var b = undefined;//(false)
+			var c = 7;
+			var x;
+			alert('undefined+null='+(a+b));//NaN
+			alert('c+null='+(a+c));//7
+			alert('c+undefined='+(b+c));//NaN
+			if(x==undefined) alert('undefined');//true
+			if(x==null) alert('null');//true
+			if(null==NaN) alert('NaN=null');//undefined
+			if(undefined==NaN) alert('NaN=undefined');//undefined
+			if(NaN) alert('NaN');//undefined
+		</script>
+		<!-- http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html -->
+		<!-- http://yanhaijing.com/javascript/2014/01/05/exploring-the-abyss-of-null-and-undefined-in-javascript/ -->
+	</div>
+</body>
+</html>
