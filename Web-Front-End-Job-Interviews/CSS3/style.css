@@ -1,0 +1,218 @@
+.clearfix:after{content:' ';display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block;}
+*html .clearfix{height:1%}
+.clearfix{display:block;}
+body, div, dl, dt, dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+a{color:#4183c4; text-decoration:none; transition:color 0.3s;} a:hover{ text-decoration:underline;}
+ul,li{list-style:none; list-style-image:none; list-style-type:none;}
+#header,#ad_under_post_holder,#blog_news_kb,#footer,#green_channel,.newsItem,.mySearch,#author_profile,#site_nav_under,#comment_nav,#div_digg,#under_post_news,#google_ad_c2,#under_post_kb
+{display:none;}
+fieldset,img {border:0;}
+body{font-family:Helvetica, arial, 'microsoft yahei','simhei'; color:#333;}
+#main{margin-top:20px;}
+#sideBar{float:left; width:230px; padding:0 10px;}
+#mainContent{float:right; width:750px;padding:0 10px; }
+.vtopWrap{height:42px; width:100%; background-color:#F3F3F3; border-bottom:solid 1px #E5E5E5;background-image: linear-gradient(#f9f9f9, #f3f3f3);background-image:-webkit-linear-gradient(#f9f9f9, #f3f3f3);
+background-repeat: repeat-x;}
+.vtop,#home{width:1020px; margin:0 auto;}
+.Vlogo{display:block; float:left; margin-top:10px; width:59px;height:24px;background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_logo.png);}
+.Vlogo:hover{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_logo.png) -59px 0;}
+.VcountWrap{float:left; margin:0 15px 0 8px; width:42px; height:42px;border-left: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5;}
+.VcountIcon{display:block; margin:17px 0 0 17px;width:8px;height:8px;border-radius: 100px;background-color: #aaa;background-image: linear-gradient(#aaa, #ccc);background-repeat: repeat-x;box-shadow: inset 0 1px 0 rgba(0,0,0,0.1),0 1px 0 #fff;}
+.VcountIcon:hover{background-color:#D6E685;background-image:none;}
+.Vnav,.Vnav li{float:left; margin-right:20px;}
+.Vnav{margin-top:11px;}
+.VblackLink{ color:#333;}.VblackLink:hover{color:#4183c4; text-decoration:none;}
+.Vnav li a{font-weight:bold; color:#333;}.Vnav li a:hover,.Vusername:hover{color:#4183c4; text-decoration:none;}
+.VLinks{float:right;}.VLinks li{float:left; margin-left:15px;}.VLinks li a{display:block; background-image:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_nav.png);}
+.Vqq{ width:22px; height:19px; margin-top:10px; background-position:-8px 0;}.Vqq:hover{background-position:-30px 0;}
+.Vweibo{ width:24px; height:19px;margin-top:10px; background-position:-52px 0;}.Vweibo:hover{background-position:-76px 0;}
+.Vzcool{ width:21px; height:21px;margin-top:9px; background-position:-8px -19px;}.Vzcool:hover{background-position:-29px -19px;}
+.Vgithub{ width:20px; height:19px;margin-top:10px; background-position:-50px -19px;}.Vgithub:hover{background-position:-70px -19px;}
+.Vcount{display:block;visibility:hidden; position:absolute;z-index:3; width:149px; height:5px; padding:15px 0; top:50px;margin-left:-71px; background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_nav.png) 0 -40px; color:white; text-align:center; font-size:11px;}
+.Vavatar{ display:block; width:230px; height:230px; background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_avatar.jpg); opacity:0.1; position:relative; z-index:1;}
+.Vusername{display:block; margin:10px 0; font-size:26px; font-weight:bold; padding-bottom:20px;border-bottom:solid 1px #E5E5E5;}
+.VcontentNav{margin-bottom:15px;}
+.VcontentNav li{float:left; display:block;padding: 8px 20px 7px 20px; border-bottom:solid 1px #DDD;}
+.Vcon_a_slt{ border:solid 1px #DDD;border-bottom:solid 1px white; }
+.VcontentNav li a{padding:3px 0 0 19px; font-size:16px; color:#666;}
+.VcontentNav li a:hover{color:#333; text-decoration:none;}
+.Vlatest{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_latest1.jpg) left center no-repeat;}
+.Vbrief{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_brief1.jpg) left center no-repeat;}
+.Vlatest2{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_latest.jpg) left center no-repeat;}
+.Vbrief2{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_brief.jpg) left center no-repeat;}
+
+.Vrss{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_rss.jpg) left center no-repeat;}
+.Vnew_li{width:402px; float:left; position:relative; top:-8px;}
+.VcontentNav li a.Vnew_a{display:block; float:right;width:113px; height:26px; padding:0px;background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_newone.jpg) no-repeat;}
+.VcontentNav li a.Vnew_a:hover{display:block; float:right;width:113px; height:26px; padding:0px;background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_newone.jpg) -113px 0 no-repeat;}
+.Vinfo_ul{border-bottom:solid 1px #DDD;}
+.Vinfo_ul li{margin-bottom:10px;}.Vinfo_ul li a{color:#333; font-size:14px; padding-left:20px;}.Vinfo_ul li a:hover{text-decoration:none; color:#4183c4;}
+.Vinfo_location{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_location.jpg) left center no-repeat;}
+.Vinfo_follower{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_follow.jpg) left center no-repeat;}
+.Vinfo_mail{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_mail.jpg) left center no-repeat;}
+.Vinfo_age{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_time.jpg) left center no-repeat;}
+.catListEssay li,.catListFeedback li,.catListView li,.catListPostCategory li{ display:block;width:225px; padding:5px 0; text-overflow:ellipsis; overflow:hidden;-o-text-overflow:ellipsis;white-space:nowrap; }
+.catListEssay h3,.catListFeedback h3,.catListView h3,.catListPostCategory h3,.catListComment h3{margin:10px 0;}
+.Vleft_li_hover{background-color:#F5F5F5;}
+#blog-sidecolumn li a:hover,.postTitl2 a:hover,.postTitle a:hover,.leftLinks>li>a:hover{text-decoration:none; color:#DB4C50;}
+.recent_comment_body{margin:3px 0 12px 0; font-size:15px; font-style:italic; color:#888;}
+.postCon,.postDesc{font-size:14px;}
+.postCon{margin-top:8px;}
+.postDesc{text-align:right; margin:5px 0 15px 0;}
+#leftcontentcontainer li a{font-size:14px;}
+.topicListFooter{margin-right:0;}.topicListFooter a{margin-left:8px; font-size:14px;}
+.postBody{font-size:15px; line-height:25px;}
+.cnblogs_code{background-color:white; border-radius:8px; transition:all 1.5s;}
+.cnblogs_code:hover{ border-color:#9EE0F8; box-shadow:#C0EBFB 0px 0px 20px 0px;}
+.cnblogs_code_collapse{border-radius:5px; border:1px solid #ccc; font-family:"Arial"!important; color:#4183c4;}
+.cnblogs_code_collapse:hover{cursor:pointer; color:#DB4C50;}
+.postBody{padding-bottom:20px; margin-bottom:10px;}
+#cnblogs_post_body{padding-bottom:20px; border-bottom:dashed 1px #DDD; margin-bottom:10px;}
+#BlogPostCategory{padding-left:19px;background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_category.jpg) left center no-repeat;}
+.feedback_area_title{padding-left:19px; margin-bottom:15px;background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_commentlist.jpg) left center no-repeat;}
+div.commentform textarea{border-radius:10px; width:750px!important; height:200px!important; border:solid 1px #DDD;}
+.commentbox_main{margin-top:10px;}
+input.author{border-radius:3px; width:120px;}
+.VfooterWrap{width:100%;margin:10px auto 5px auto; padding-top:10px; border-top:solid 1px #DDD;}
+.Vfooter{ margin:0 auto 0 auto; width:1020px;font-size:13px; text-align:center; color:#666; }
+.Vflesh{display:block; float:right; width:21px; height:22px;}
+.Vflesh0{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_flesh.gif) left center no-repeat;}
+.Vflesh0:hover{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_flesh.gif) -21px 0 no-repeat; cursor:pointer;}
+.Vflesh1{background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_flesh.gif) -42px 0 no-repeat;}
+#commentform_title { margin-top:10px; padding: 10px 0 10px 19px;background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_feedback.jpg) left center no-repeat;border-top:dashed 1px #ccc;}
+.Vvisitor{margin:15px 0 8px 0;}
+.Vvisitblock{ position:relative; height:24px; background-color:white; margin-top:-24px;}
+.pager a{border-radius:3px;border:solid 1px #DDD; font-size:12px;}.pager a:hover,.feedbackItem a:hover,.entrylistPosttitle:hover{text-decoration:none; color:#DB4C50;}
+.Vtotop{display:block; position:fixed; bottom:40px; margin-left:1020px; width:46px; height:48px; background:url(http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_totop.jpg);opacity:0.8;}
+.Vtotop:hover{opacity:1; cursor:pointer;}
+.feedbackItem{padding:10px; margin-bottom:10px; border-radius:10px; border:solid 1px #DDD; font-size:14px;}
+.feedbackManage{margin-bottom:10px;}
+.blog_comment_body{margin:10px 0 5px 0; line-height:21px;}
+div.diggit{border-radius:5px;padding-top:0;opacity:0.8;position:fixed;margin-left:1020px;bottom:93px; display:none;}
+#comment_form_container p{font-size:14px; color:#999;}
+.entrylistTitle,.entrylistItemPostDesc{margin-bottom:15px;}
+.entrylistPosttitle,.entrylistPostSummary{margin-bottom:8px;}
+.entrylistItemPostDesc,.entrylistPostSummary{font-size:14px;}
+.entrylistPosttitle:hover{text-decoration:none!important; color:#DB4C50!important;}
+legend a{color:#BBB;}
+.leftLinks{margin-top:10px;}
+.leftLinks>li{padding:3px 0;}
+.VJ_linkTit{margin-top:10px;}
+a.links-apply{font-size:12px;font-style:italic;color:#888;font-weight:normal;}
+a.links-apply:hover{text-decoration:none;color:#DB4C50;}
+.VJ_note{display:block;padding:10px;border:solid 1px #CCC; border-radius:10px;color:#444;font-size:13px;}
+.comment_actions{margin-left:-8px;}
+a.clta{position:absolute;display:block;width:17px;height:17px;margin-left: 732px;margin-top: -2px;background:url("http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_collect.gif");}
+a.clta:hover{background-position:-17px 0;}
+.VJ_promo{margin:15px 0 10px 0;}
+
+
+
+
+  
+  .VJpromo-wrapper {
+    display: inline-block;
+    width: 225px;
+    height: 60px;
+    vertical-align: top;
+    margin-bottom:15px;
+    cursor: pointer;
+    position: relative;
+    font-family: Tahoma, Arial;
+  }
+  
+  .VJpromo-item {
+    height: 60px;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform .6s;
+         -moz-transition: -moz-transform .6s;
+          -ms-transition: -ms-transform .6s;
+           -o-transition: -o-transform .6s;
+              transition: transform .6s;
+  }
+  
+    .VJpromo-item:hover {
+      -webkit-transform: translateZ(-30px) rotateX(95deg);
+         -moz-transform: translateZ(-30px) rotateX(95deg);
+           -o-transform: translateZ(-30px) rotateX(95deg);
+              transform: translateZ(-30px) rotateX(95deg);
+		  -ms-transform: translateZ(0) rotateX(0);
+    }
+
+    
+      .VJpromo-item:hover img {
+        box-shadow: none;
+        border-radius: 15px; top:-5px;
+      }
+
+      .VJpromo-item:hover .VJpromo-information {
+        box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+        border-radius: 3px;
+		color:#333;
+      }
+
+    .VJpromo-item img {
+      display: block;
+      position: absolute;
+      top: 0;
+      border-radius: 3px;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+      -webkit-transform: translateZ(30px);
+         -moz-transform: translateZ(30px);
+          -ms-transform: translateZ(30px);
+           -o-transform: translateZ(30px);
+              transform: translateZ(30px);
+      -webkit-transition: all .6s;
+         -moz-transition: all .6s;
+          -ms-transition: all .6s;
+           -o-transition: all .6s;
+              transition: all .6s;
+      
+    }
+    
+    .VJpromo-item .VJpromo-information {
+		text-decoration:none;
+		color:#AAA;
+      display: block;
+      position: absolute;
+      top: 0;
+      height:40px;
+      width: 205px;
+      text-align: left;
+      border-radius: 15px;
+      padding: 10px;
+      font-size: 12px;
+      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+      box-shadow: none;
+      background: rgb(236,241,244);
+      background: -moz-linear-gradient(top,  rgba(236,241,244,1) 0%, rgba(190,202,217,1) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,241,244,1)), color-stop(100%,rgba(190,202,217,1)));
+      background: -webkit-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      background: -o-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      background: -ms-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      background: linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf1f4', endColorstr='#becad9',GradientType=0 );
+      -webkit-transform: rotateX(-90deg) translateZ(30px);
+         -moz-transform: rotateX(-90deg) translateZ(30px);
+          -ms-transform: rotateX(-90deg) translateZ(30px);
+           -o-transform: rotateX(-90deg) translateZ(30px);
+              transform: rotateX(-90deg) translateZ(30px);
+      -webkit-transition: all .6s;
+         -moz-transition: all .6s;
+          -ms-transition: all .6s;
+           -o-transition: all .6s;
+              transition: all .6s;
+      
+    }
+    
+      .VJpromo-information strong {
+        display: block;
+        margin-bottom:3px;
+        font-size: 20px;
+      }
