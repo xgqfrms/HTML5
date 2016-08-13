@@ -6,134 +6,126 @@
 	<!-- <link rel="stylesheet" href="./style.css"> -->
 	<style>
 		a {
-		    color: #4183c4;
-		    text-decoration: none;
-		    transition: color 0.3s;
+			color: #4183c4;
+			text-decoration: none;
+			transition: color 0.3s;
 		}
-		a:hover{ text-decoration:underline;}
+		a:hover{ 
+			text-decoration:underline;
+		}
 		body {
-		    font-family: Helvetica, arial, 'microsoft yahei','simhei';
-		    color: #333;
+			font-family: Helvetica, arial, 'microsoft yahei','simhei';
+			color: #333;
 		}
 		/**/
 		.VJpromo-wrapper {
-    display: inline-block;
-    width: 225px;
-    height: 60px;
-    vertical-align: top;
-    margin-bottom:15px;
-    cursor: pointer;
-    position: relative;
-    font-family: Tahoma, Arial;
-  }
-  
-  .VJpromo-item {
-    height: 60px;
-      -webkit-transform-style: preserve-3d;
-         -moz-transform-style: preserve-3d;
-          -ms-transform-style: preserve-3d;
-           -o-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-      -webkit-transition: -webkit-transform .6s;
-         -moz-transition: -moz-transform .6s;
-          -ms-transition: -ms-transform .6s;
-           -o-transition: -o-transform .6s;
-              transition: transform .6s;
-  }
-  
-    .VJpromo-item:hover {
-      -webkit-transform: translateZ(-30px) rotateX(95deg);
-         -moz-transform: translateZ(-30px) rotateX(95deg);
-           -o-transform: translateZ(-30px) rotateX(95deg);
-              transform: translateZ(-30px) rotateX(95deg);
-		  -ms-transform: translateZ(0) rotateX(0);
-    }
-
-    
-      .VJpromo-item:hover img {
-        box-shadow: none;
-        border-radius: 15px; top:-5px;
-      }
-
-      .VJpromo-item:hover .VJpromo-information {
-        box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
-        border-radius: 3px;
-		color:#333;
-      }
-
-    .VJpromo-item img {
-      display: block;
-      position: absolute;
-      top: 0;
-      border-radius: 3px;
-      box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
-      -webkit-transform: translateZ(30px);
-         -moz-transform: translateZ(30px);
-          -ms-transform: translateZ(30px);
-           -o-transform: translateZ(30px);
-              transform: translateZ(30px);
-      -webkit-transition: all .6s;
-         -moz-transition: all .6s;
-          -ms-transition: all .6s;
-           -o-transition: all .6s;
-              transition: all .6s;
-      
-    }
-    
-    .VJpromo-item .VJpromo-information {
-		text-decoration:none;
-		color:#AAA;
-      display: block;
-      position: absolute;
-      top: 0;
-      height:40px;
-      width: 205px;
-      text-align: left;
-      border-radius: 15px;
-      padding: 10px;
-      font-size: 12px;
-      text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
-      box-shadow: none;
-      background: rgb(236,241,244);
-      background: -moz-linear-gradient(top,  rgba(236,241,244,1) 0%, rgba(190,202,217,1) 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,241,244,1)), color-stop(100%,rgba(190,202,217,1)));
-      background: -webkit-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
-      background: -o-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
-      background: -ms-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
-      background: linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf1f4', endColorstr='#becad9',GradientType=0 );
-      -webkit-transform: rotateX(-90deg) translateZ(30px);
-         -moz-transform: rotateX(-90deg) translateZ(30px);
-          -ms-transform: rotateX(-90deg) translateZ(30px);
-           -o-transform: rotateX(-90deg) translateZ(30px);
-              transform: rotateX(-90deg) translateZ(30px);
-      -webkit-transition: all .6s;
-         -moz-transition: all .6s;
-          -ms-transition: all .6s;
-           -o-transition: all .6s;
-              transition: all .6s;
-      
-    }
-    
-      .VJpromo-information strong {
-        display: block;
-        margin-bottom:3px;
-        font-size: 20px;
-      }
+			display: inline-block;
+			width: 225px;
+			height: 60px;
+			vertical-align: top;
+			margin-bottom:15px;
+			cursor: pointer;
+			position: relative;
+			font-family: Tahoma, Arial;
+		}
+		.VJpromo-item {
+			height: 60px;
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			-o-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transition: -webkit-transform .6s;
+			-moz-transition: -moz-transform .6s;
+			-ms-transition: -ms-transform .6s;
+			-o-transition: -o-transform .6s;
+			transition: transform .6s;
+		}
+		.VJpromo-item:hover {
+			-webkit-transform: translateZ(-30px) rotateX(95deg);
+			-moz-transform: translateZ(-30px) rotateX(95deg);
+			-o-transform: translateZ(-30px) rotateX(95deg);
+			transform: translateZ(-30px) rotateX(95deg);
+			-ms-transform: translateZ(0) rotateX(0);
+		}
+		.VJpromo-item:hover img {
+			box-shadow: none;
+			border-radius: 15px; top:-5px;
+		}
+		.VJpromo-item:hover .VJpromo-information {
+			box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+			border-radius: 3px;
+			color:#333;
+		}
+		.VJpromo-item img {
+			display: block;
+			position: absolute;
+			top: 0;
+			border-radius: 3px;
+			box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+			-webkit-transform: translateZ(30px);
+			-moz-transform: translateZ(30px);
+			-ms-transform: translateZ(30px);
+			-o-transform: translateZ(30px);
+			transform: translateZ(30px);
+			-webkit-transition: all .6s;
+			-moz-transition: all .6s;
+			-ms-transition: all .6s;
+			-o-transition: all .6s;
+			transition: all .6s;
+		}
+		.VJpromo-item .VJpromo-information {
+			text-decoration:none;
+			color:#AAA;
+			display: block;
+			position: absolute;
+			top: 0;
+			height:40px;
+			width: 205px;
+			text-align: left;
+			border-radius: 15px;
+			padding: 10px;
+			font-size: 12px;
+			text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+			box-shadow: none;
+			background: rgb(236,241,244);
+			background: -moz-linear-gradient(top,  rgba(236,241,244,1) 0%, rgba(190,202,217,1) 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,241,244,1)), color-stop(100%,rgba(190,202,217,1)));
+			background: -webkit-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+			background: -o-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+			background: -ms-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+			background: linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf1f4', endColorstr='#becad9',GradientType=0 );
+			-webkit-transform: rotateX(-90deg) translateZ(30px);
+			-moz-transform: rotateX(-90deg) translateZ(30px);
+			-ms-transform: rotateX(-90deg) translateZ(30px);
+			-o-transform: rotateX(-90deg) translateZ(30px);
+			transform: rotateX(-90deg) translateZ(30px);
+			-webkit-transition: all .6s;
+			-moz-transition: all .6s;
+			-ms-transition: all .6s;
+			-o-transition: all .6s;
+			transition: all .6s;
+		}
+		.VJpromo-information strong {
+			display: block;
+			margin-bottom:3px;
+			font-size: 20px;
+		}
 	</style>
 </head>
 <body>
 	<div>
 		<div>
 			<div>
-				<h3><a href="http://www.cnblogs.com/vajoy/p/4650467.html">Promo</a></h3>
+				<h3><a href="http://www.cnblogs.com/xgqfrms/p/5769202.html">Promo</a></h3>
 				<!--  -->
-				<a href="https://github.com/VaJoy" target="_blank">
-				<div class="VJpromo-wrapper" title="我的GitHub">
+				<a href="https://github.com/xgqfrms" target="_blank">
+				<div class="VJpromo-wrapper" title="xgqfrms's GitHub">
 				<div class="VJpromo-item">
 				<img src="http://images.cnblogs.com/cnblogs_com/vajoy/558869/o_github.gif">
 				<span class="VJpromo-information">
-				<strong>VaJoy`s GitHub</strong> 欢迎各种 star 和 fork
+				<strong>xgqfrms's GitHub</strong>Welcome to star && fork!
 				</span>
 				</div>
 				</div>
