@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/local_storage.js" type="text/javascript" ></script>
+    <title>local storage</title>
+    <style type="text/css">
+        body{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <h1 id="msg"></h1>
+    <form id="form1">
+        <label>name:</label>
+        <input id="name" type="text" name="name" required="required" /><br/>
+        <label>email:</label>
+        <input id="email" type="email" name="email" required="required" /><br/>
+        <label>tel:</label>
+        <input id="tel" type="tel" name="tel" required="required" /><br/>
+        <label>male:</label>
+        <input id="gender1" type="radio" name="gender" value="male"/><br/>
+        <label>female:</label>
+        <input id="gender2" type="radio" name="gender" value="female"/><br/>
+    </form>
+    <!--************为了防止 引号匹配错误； 单引号与双引号交叉使用*******************-->
+    <!--<input type="button" value="save" onclick="saveLocalStorage("form1")"/>-->
+    <input type="button" value="save" onclick="saveLocalStorage('form1')"/>
+
+
+    <input type="button" value="save" onclick="saveLocalStorage('email')"/>
+    <input type="button" value="show" onclick="showLocalStorage('msg')" />
+</div>
+</body>
+</html>
