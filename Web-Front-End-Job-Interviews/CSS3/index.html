@@ -3,9 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- meta -->
+	<!-- icon -->
+	<link rel=icon href=favicon.png sizes="16x16" type="image/png">
+	<link rel=icon href=gnome.svg sizes="any" type="image/svg+xml">
+	<!--  -->
 	<link rel="stylesheet" href="./css/jquery.fullpage.min.css">
 	<!-- css -->
 	<style>
+		/*special font*/
+		/*@import 必须放在style 的最前面，才能生效!*/
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Tangerine);
+		.tangerine {
+		    font-family: 'Tangerine', serif;
+		    font-size: 36px;
+		    text-shadow: 4px 4px 4px #aaa;
+		    margin-top: 30px;
+		    margin-bottom: 20px;
+		    line-height: 40px;
+		}
 		/*commom.css*/
 		.x_header{
 			background-color: rgba(0,0,0,0.7);
@@ -19,16 +34,7 @@
 			background-color: rgba(0,0,0,0.7);
 			width: 100%;
 		}
-		/*special font*/
-		@import url(https://fonts.googleapis.com/css?family=Open+Sans:300|Tangerine);
-		.tangerine {
-		    font-family: 'Tangerine', serif;
-		    font-size: 36px;
-		    text-shadow: 4px 4px 4px #aaa;
-		    margin-top: 30px;
-		    margin-bottom: 20px;
-		    line-height: 40px;
-		}
+		/**/
 	</style>
 	<!-- media query -->
 	<title>Home Page</title>
@@ -38,10 +44,11 @@
 	<div class="x_header">
 		<div class="x_logo">
 			<i>img</i>
+			<!--  -->
 		</div>
 	</div>
 	<div class="x_body">
-		<!--  -->
+		<span class="tangerine">xgqfrms 2016</span>
 	</div>
 	<div class="x_footer">
 		<!--  -->
