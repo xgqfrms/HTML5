@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<pre>
+			^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$
+			/*regular expression(regexp/regex) for Email*/
+		</pre>
+		<pre>
+			^     regex开始
+			[]    取值范围组
+			+     组重复次数 1+
+			\.    转译 .
+			{m,n} 循环重复次数的范围(min,max)
+			$     regex结束
+		</pre>
+	</div>
+	<script>
+		var reg = ^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$;
+		var regex = ^([a-zA-Z0-9_-]){3,7}@([a-zA-Z0-9_-]){3,7}((\.[a-zA-Z0-9_-]{2,3}){1,2})$;
+		var regex = ^([a-zA-Z0-9_-]){3,7}@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$;
+		/*regular expression(regexp/regex) for Email*/
+	</script>
+</body>
+</html>

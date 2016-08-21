@@ -1,0 +1,4 @@
+"Bug ID","Product","Component","Assignee","Status","Resolution","Summary","Changed"
+1,"Validator","Website","link","RESOLVED","FIXED","XHTML 1.1/Basic 1.0 missing from detailed.html","2008-12-02 22:40:56"
+2,"Validator","Website","link","RESOLVED","FIXED","ISO-8859-3 mislabelled on detailed.html.","2008-12-02 22:42:40"
+3,"Validator","check","link","RESOLVED","FIXED","Results from Advanced form are not GETable.","2005-02-03 17:35:48"
