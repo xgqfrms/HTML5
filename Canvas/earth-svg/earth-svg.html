@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<!-- <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>earth-svg</title>
+		http://www.gsmlondon.ac.uk/global-oil-map/#2014-importers-156
+	</head> 
+-->
+<html xmlns:fb="http://ogp.me/ns/fb#" class="js hidden webgl no-touchevents">
+<head>
+	<style type="text/css">
+		.ftscroller_container { overflow: hidden; position: relative; max-height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -ms-touch-action: none }
+		.ftscroller_hwaccelerated { transform: translateZ(0); }
+		.ftscroller_x, .ftscroller_y { position: relative; min-width: 100%; min-height: 100%; overflow: hidden }
+		.ftscroller_x { display: inline-block }
+		.ftscroller_scrollbar { pointer-events: none; position: absolute; width: 5px; height: 5px; border: 1px solid rgba(255, 255, 255, 0.3); -webkit-border-radius: 3px; border-radius: 6px; opacity: 0; transition: opacity 350ms; z-index: 10; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box }
+		.ftscroller_scrollbarx { bottom: 2px; left: 2px }
+		.ftscroller_scrollbary { right: 2px; top: 2px }
+		.ftscroller_scrollbarinner { height: 100%; background: #000; -webkit-border-radius: 2px; border-radius: 4px / 6px }
+		.ftscroller_scrollbar.active { opacity: 0.5; transition: none; -o-transition: all 0 none }
+	</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Global Oil Imports &amp; Exports Map | GSM London</title>
+    <meta name="description" content="GSM London have created an interactive map to show Oil imports and exports that spans the last 15 years. Visit the tool now to view.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta property="og:title" content="Global Oil Imports &amp; Exports Map | GSM London">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.gsmlondon.ac.uk/global-oil-map/">
+    <meta property="og:image" content="http://www.gsmlondon.ac.uk/global-oil-map/assets/img/social/og-image.jpg">
+    <meta property="og:site_name" content="GSM London">
+
+    <meta property="og:description" content="GSM London have created an interactive map to show Oil imports and exports that spans the last 15 years. Visit the tool now to view.">
+
+    <link data-viewport-units-buggyfill="ignore" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./assets/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="./assets/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="mask-icon" href="./assets/img/favicons/safari-pinned-tab.svg" color="#161319">
+    <link rel="stylesheet" href="./assets/css/screen.min.css">
+    <script src="./assets/js/modernizr.js"></script>
+	<style type="text/css">
+		.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.
+		dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}
+		.dg:not(.ac) .main{overflow:hidden}
+		.dg.main{-webkit-transition:opacity 0.1s linear;-o-transition:opacity 0.1s linear;-moz-transition:opacity 0.1s linear;transition:opacity 0.1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity 0.1s linear;-o-transition:opacity 0.1s linear;-moz-transition:opacity 0.1s linear;transition:opacity 0.1s linear;border:0;position:absolute;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-x:hidden}.dg.a.has-save ul{margin-top:27px}.dg.a.has-save ul.closed{margin-top:0}.dg.a .save-row{position:fixed;top:0;z-index:1002}.dg li{-webkit-transition:height 0.1s ease-out;-o-transition:height 0.1s ease-out;-moz-transition:height 0.1s ease-out;transition:height 0.1s ease-out}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;overflow:hidden;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li > *{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:9px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2fa1d6}.dg .cr.number input[type=text]{color:#2fa1d6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2fa1d6}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+	</style>
+	<style>
+		@-webkit-keyframes popzypbxrfvcrfafkoreisutxjmzifrdmychmi {50% {-webkit-transform:scale(1.2);}100% {-webkit-transform:scale(1);}}
+		@keyframes popzypbxrfvcrfafkoreisutxjmzifrdmychmi {50% {-webkit-transform:scale(1.2);transform:scale(1.2);}100% {-webkit-transform:scale(1);transform:scale(1);}}#zypbxrfvcrfafkoreisutxjmzifrdmychmi{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.zypbxrfvcrfafkoreisutxjmzifrdmychmi-blocked{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;color:#AAA !important;display:inline !important;text-decoration:line-through !important;}#zypbxrfvcrfafkoreisutxjmzifrdmychmi br{display:block !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#zypbxrfvcrfafkoreisutxjmzifrdmychmi span{background:transparent !important;padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;}#zypbxrfvcrfafkoreisutxjmzifrdmychmi div{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#zypbxrfvcrfafkoreisutxjmzifrdmychmi a{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}a#zypbxrfvcrfafkoreisutxjmzifrdmychmi-gear{padding:0;margin:0;font:13px Arial,Helvetica;text-transform:none;font-size: 100%;vertical-align:baseline;line-height:normal;color:#fff;position:static;text-decoration:none !important;position:absolute !important;display:none !important;font-size:20px !important;width:20px !important;height:20px !important;line-height:20px !important;text-align:center !important;background-color:rgba(255,255,255,.8) !important;background-image:url(chrome-extension://mlomiejdfkolichcflejclcbmpeaniij/data/images/gear.svg) !important;background-size:16px 16px !important;background-position:center center !important;background-repeat:no-repeat !important;text-decoration:none !important;}a#zypbxrfvcrfafkoreisutxjmzifrdmychmi-gear:hover{-webkit-animation-name:popzypbxrfvcrfafkoreisutxjmzifrdmychmi !important;animation-name:popzypbxrfvcrfafkoreisutxjmzifrdmychmi !important;-webkit-animation-duration:0.3s !important;animation-duration:0.3s !important;}#zypbxrfvcrfafkoreisutxjmzifrdmychmi:hover #zypbxrfvcrfafkoreisutxjmzifrdmychmi-gear{text-decoration:none !important;display:inline-block !important;}@media print{#zypbxrfvcrfafkoreisutxjmzifrdmychmi{display:none !important;}}</style>
+		<meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;jQuery&quot;:&quot;2.2.0&quot;,&quot;jQuery UI&quot;:&quot;1.10.4&quot;,&quot;Modernizr&quot;:&quot;3.3.1&quot;}">
+		<script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script>
+</head>
+<body class="visualisation visualisation-transition-complete">
+<div id="container">
+<div class="navigation">
+	<svg version="1.1" id="logo-stacked" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="104.6px" height="51.8px" viewBox="0 0 104.6 51.8" style="enable-background:new 0 0 104.6 51.8;" xml:space="preserve">
+<path d="M12.8,13.1l-2.7-7.9H10l-2.8,7.9H12.8z M12.5,0l8,21.4h-4.9L14,16.6H6l-1.7,4.8h-4.7L7.7,0
+	C7.7,0,12.5,0,12.5,0z M40.6,21.4L37.9,11h-0.1l-2.6,10.4h-4.4L25.8,5.9h4.5l2.9,10.5h0.1l2.6-10.5H40l2.6,10.5h0.1l2.8-10.5h4.4
+	L45,21.4H40.6L40.6,21.4z M54.8,15.5c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.2,1.1c0.6,0.3,1.2,0.4,1.8,0.4
+	c0.6,0,1.3-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.2-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.8-1.2-1.1c-0.6-0.3-1.2-0.5-1.8-0.4c-1.2-0.1-2.3,0.5-3,1.6c-0.3,0.5-0.5,1-0.6,1.6
+	c-0.1,0.6-0.2,1.2-0.2,1.8C54.6,14.3,54.6,14.9,54.8,15.5z M50.9,10.3c0.7-1.9,2.2-3.5,4.1-4.2c1.1-0.4,2.2-0.6,3.3-0.6
+	c1.1,0,2.3,0.2,3.3,0.6c1.9,0.7,3.5,2.3,4.2,4.2c0.4,1.1,0.6,2.2,0.6,3.4c0,1.1-0.2,2.3-0.6,3.4c-0.4,1-0.9,1.8-1.6,2.6
+	c-0.7,0.7-1.6,1.3-2.5,1.6c-1.1,0.4-2.2,0.6-3.3,0.6c-1.1,0-2.2-0.2-3.3-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.3-1.6-1.6-2.6
+	c-0.4-1.1-0.6-2.2-0.6-3.4C50.3,12.5,50.5,11.4,50.9,10.3z M72.9,5.9v2.9h0.1c0.2-0.5,0.5-0.9,0.8-1.3c0.3-0.4,0.7-0.8,1.2-1.1
+	c0.4-0.3,0.9-0.5,1.4-0.7c0.5-0.2,1-0.2,1.6-0.2c0.3,0,0.6,0.1,0.9,0.2v4c-0.2,0-0.4-0.1-0.7-0.1c-0.3,0-0.5,0-0.8,0
+	c-0.7,0-1.4,0.1-2,0.4c-0.5,0.2-1,0.6-1.3,1.1c-0.3,0.5-0.6,1-0.7,1.6c-0.1,0.6-0.2,1.3-0.2,1.9v7h-4.3V5.9H72.9L72.9,5.9z M86.4,0
+	v21.4h-4.3V0C82.1,0,86.4,0,86.4,0z M100.3,11.8c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.4-0.7-0.8-1.1-1.1c-0.5-0.3-1.1-0.4-1.7-0.4
+	c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.9,0.7-1.2,1.1c-0.3,0.5-0.5,1-0.6,1.6C93.1,12.4,93,13,93,13.6c0,0.6,0.1,1.2,0.2,1.8
+	c0.1,0.6,0.4,1.1,0.7,1.6c0.3,0.5,0.7,0.9,1.2,1.1c0.5,0.3,1.1,0.5,1.7,0.4c0.6,0,1.2-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.1-1.1
+	c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.9C100.5,13,100.4,12.4,100.3,11.8L100.3,11.8z M100.4,19.4c-0.5,0.8-1.1,1.4-2,1.8
+	c-0.9,0.4-1.8,0.6-2.7,0.6c-1.1,0-2.1-0.2-3.1-0.7c-0.9-0.4-1.6-1.1-2.2-1.8c-0.6-0.8-1-1.7-1.3-2.7c-0.3-1-0.4-2.1-0.4-3.1
+	c0-1,0.1-2,0.4-3c0.3-0.9,0.7-1.8,1.3-2.6c1.2-1.6,3.1-2.5,5.1-2.5c0.9,0,1.8,0.2,2.6,0.6c0.8,0.4,1.5,1,2,1.7h0.1V0h4.3v21.4h-4.1
+	L100.4,19.4L100.4,19.4L100.4,19.4z M4.4,45.5c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.2,1.1c0.6,0.3,1.2,0.4,1.8,0.4
+	c0.6,0,1.3-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.2-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.8-1.2-1.1c-0.6-0.3-1.2-0.5-1.8-0.4c-0.6,0-1.3,0.1-1.8,0.4c-0.5,0.3-0.9,0.7-1.2,1.1
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.8C4.3,44.3,4.3,44.9,4.4,45.5z M0.6,40.3c0.7-1.9,2.2-3.5,4.1-4.2
+	c1.1-0.4,2.2-0.6,3.3-0.6c1.1,0,2.3,0.2,3.3,0.6c1.9,0.7,3.5,2.3,4.2,4.2c0.4,1.1,0.6,2.2,0.6,3.4c0,1.1-0.2,2.3-0.6,3.4
+	c-0.4,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.6,1.3-2.5,1.6c-1.1,0.4-2.2,0.6-3.3,0.6c-1.1,0-2.2-0.2-3.3-0.6c-0.9-0.4-1.8-0.9-2.5-1.6
+	C1.5,48.9,0.9,48,0.6,47C0.2,46,0,44.8,0,43.7C0,42.5,0.2,41.4,0.6,40.3z M16.9,38.7v-2.8h2.5v-1.2c0-1.3,0.4-2.5,1.3-3.4
+	c1.1-1,2.5-1.4,3.9-1.3c0.4,0,0.8,0,1.1,0c0.4,0,0.8,0.1,1.1,0.1v3.2c-0.5-0.1-1-0.1-1.6-0.1c-0.5,0-0.9,0.1-1.2,0.4
+	c-0.3,0.4-0.4,0.9-0.4,1.4v0.9h2.9v2.8h-2.9v12.7h-4.3V38.7H16.9z M52.3,33.5V30h4.3v3.5H52.3z M56.6,35.9v15.5h-4.3V35.9H56.6z
+	 M64.1,30v21.4h-4.3V30H64.1z"></path>
+<path d="M42,36.3c2.3,3.2,4,6.2,4,7.3v0l0,0c0,2.3-1.8,4.1-4,4.2c-2.2-0.1-4-1.9-4-4.2l0-0.1l0,0
+	C38,42.4,39.7,39.4,42,36.3 M42,29.9c0,0-8,9.2-8,13.7c0,0,0,0,0,0c-0.1,4.5,3.5,8.2,8,8.2c4.5-0.1,8.1-3.8,8-8.2
+	C50,39,42,29.9,42,29.9L42,29.9z"></path>
+</svg>
+	<nav></nav>
+	<a href="#">
+		<span></span>
+	</a>
+</div>
+
+
+<div class="section section-intro" style="transform: translateY(-100%);">
+
+	<div class="loader">
+		<div class="drop-wrap">
+			<div class="drop"></div>
+		</div>
+		<p>Loading</p>
+		<svg version="1.1" id="unstacked-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="174px" height="27.2px" viewBox="0 0 174 27.2" style="enable-background:new 0 0 174 27.2;" xml:space="preserve">
+<path fill="#f295fd" d="M12.8,18.3l-2.6-7.9h-0.1l-2.7,7.9H12.8L12.8,18.3z M12.6,5.1l7.8,21.6h-4.8L14,21.9H6.2
+	l-1.6,4.8H0L7.9,5.1H12.6L12.6,5.1z M39.3,26.7l-2.7-10.5h-0.1L34,26.7h-4.3l-4.8-15.6h4.4l2.8,10.6h0.1l2.5-10.6h4l2.6,10.6h0.1
+	l2.8-10.6h4.3l-4.8,15.6H39.3L39.3,26.7z M53.6,20.7c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.1,1.1c0.5,0.3,1.1,0.4,1.8,0.4
+	c0.6,0,1.2-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.1-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.9-1.1-1.1c-0.5-0.3-1.1-0.5-1.8-0.4c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.8,0.7-1.1,1.1
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.8C53.5,19.5,53.5,20.1,53.6,20.7L53.6,20.7z M49.9,15.5c0.3-1,0.9-1.9,1.6-2.6
+	c0.7-0.7,1.5-1.3,2.5-1.7c1-0.4,2.1-0.6,3.2-0.6c1.1,0,2.2,0.2,3.2,0.6c0.9,0.4,1.8,0.9,2.5,1.7c0.7,0.7,1.2,1.6,1.6,2.6
+	c0.4,1.1,0.6,2.2,0.6,3.4c0,1.2-0.2,2.3-0.6,3.4c-0.3,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.5,1.3-2.5,1.6c-1,0.4-2.1,0.6-3.2,0.6
+	c-1.1,0-2.2-0.2-3.2-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.2-1.6-1.6-2.6c-0.4-1.1-0.6-2.2-0.6-3.4
+	C49.3,17.7,49.5,16.6,49.9,15.5z M71.3,11.1V14h0.1c0.2-0.5,0.5-0.9,0.8-1.3c0.3-0.4,0.7-0.8,1.1-1.1c0.4-0.3,0.9-0.5,1.4-0.7
+	c0.5-0.2,1-0.2,1.5-0.2c0.3,0,0.6,0.1,0.9,0.2v4c-0.2,0-0.4-0.1-0.7-0.1c-0.3,0-0.5,0-0.8,0c-0.7,0-1.3,0.1-1.9,0.4
+	c-0.5,0.2-0.9,0.6-1.3,1.1c-0.3,0.5-0.6,1-0.7,1.6c-0.1,0.6-0.2,1.3-0.2,2v7h-4.1V11.1H71.3L71.3,11.1z M83.2,5.1v21.6h-4.1V5.1
+	H83.2z M96.7,17c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.4-0.7-0.8-1.1-1.1c-0.5-0.3-1.1-0.4-1.7-0.4c-1.2-0.1-2.3,0.5-2.8,1.5
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.9c0,0.6,0.1,1.2,0.2,1.8c0.1,0.6,0.3,1.1,0.7,1.6c0.3,0.5,0.7,0.9,1.1,1.2
+	c0.5,0.3,1.1,0.5,1.6,0.4c1.2,0.1,2.2-0.5,2.8-1.6c0.3-0.5,0.5-1.1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.9C96.9,18.2,96.8,17.6,96.7,17
+	L96.7,17z M96.9,24.7c-0.4,0.8-1.1,1.4-1.9,1.8c-0.8,0.4-1.7,0.6-2.7,0.6c-1,0-2.1-0.2-3-0.7c-0.8-0.4-1.6-1.1-2.1-1.8
+	c-0.6-0.8-1-1.7-1.3-2.7c-0.3-1-0.4-2.1-0.4-3.1c0-1,0.1-2.1,0.4-3c0.3-0.9,0.7-1.8,1.3-2.6c0.6-0.7,1.3-1.4,2.1-1.8
+	c0.9-0.5,1.9-0.7,2.9-0.7c0.9,0,1.8,0.2,2.6,0.6c0.8,0.4,1.5,1,1.9,1.7h0.1V5.1h4.1v21.6h-3.9L96.9,24.7L96.9,24.7L96.9,24.7z
+	 M113.6,20.7c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.1,1.1c0.5,0.3,1.1,0.4,1.8,0.4c0.6,0,1.2-0.1,1.8-0.4
+	c0.5-0.3,0.9-0.7,1.1-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8c-0.1-0.6-0.3-1.1-0.6-1.6
+	c-0.3-0.5-0.7-0.9-1.1-1.1c-0.5-0.3-1.1-0.5-1.8-0.4c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.8,0.7-1.1,1.1c-0.3,0.5-0.5,1-0.6,1.6
+	c-0.1,0.6-0.2,1.2-0.2,1.8C113.5,19.5,113.5,20.1,113.6,20.7L113.6,20.7z M109.9,15.5c0.3-1,0.9-1.9,1.6-2.6
+	c0.7-0.7,1.5-1.3,2.5-1.7c1-0.4,2.1-0.6,3.2-0.6c1.1,0,2.2,0.2,3.2,0.6c0.9,0.4,1.8,0.9,2.5,1.7c0.7,0.7,1.2,1.6,1.6,2.6
+	c0.4,1.1,0.6,2.2,0.6,3.4c0,1.2-0.2,2.3-0.6,3.4c-0.3,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.5,1.3-2.5,1.6c-1,0.4-2.1,0.6-3.2,0.6
+	c-1.1,0-2.2-0.2-3.2-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.2-1.6-1.6-2.6c-0.4-1.1-0.6-2.2-0.6-3.4
+	C109.3,17.7,109.5,16.6,109.9,15.5L109.9,15.5z M125.7,13.9v-2.9h2.5V9.8c0-1.3,0.4-2.5,1.3-3.4c1-1,2.4-1.4,3.8-1.3
+	c0.4,0,0.7,0,1.1,0s0.7,0.1,1.1,0.1v3.2c-0.5-0.1-1-0.1-1.5-0.1c-0.4,0-0.9,0.1-1.2,0.4c-0.3,0.4-0.4,0.9-0.4,1.4v0.9h2.9v2.9h-2.9
+	v12.8h-4.1V13.9L125.7,13.9L125.7,13.9z M162.6,8.6V5.1h4.1v3.5L162.6,8.6L162.6,8.6z M166.8,11.1v15.6h-4.1V11.1L166.8,11.1
+	L166.8,11.1z M174,5.1v21.6h-4.1V5.1H174z"></path>
+<path fill="#ff959d" d="M150.1,6.3c3.7,4.8,6,9.1,6,10.7c0,3.3-2.7,6.1-6,6.2c-3.3-0.1-6-2.8-6-6.2
+	C144.1,15.4,146.4,11.1,150.1,6.3 M150.1,0c0,0-10,11.4-10,17c-0.1,5.6,4.4,10.1,10,10.2c5.6-0.1,10-4.6,10-10.2
+	C160.1,11.4,150.1,0,150.1,0L150.1,0z"></path>
+</svg>
+		<div class="tablet-prompt btn dark">Start</div>
+	</div>
+
+	<div class="content">
+		<p>20 years of <br>global oil imports &amp; exports.</p>
+
+		<div class="bottom-cta">
+			<svg version="1.1" id="unstacked-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="174px" height="27.2px" viewBox="0 0 174 27.2" style="enable-background:new 0 0 174 27.2;" xml:space="preserve">
+<path fill="#ff119d" d="M12.8,18.3l-2.6-7.9h-0.1l-2.7,7.9H12.8L12.8,18.3z M12.6,5.1l7.8,21.6h-4.8L14,21.9H6.2
+	l-1.6,4.8H0L7.9,5.1H12.6L12.6,5.1z M39.3,26.7l-2.7-10.5h-0.1L34,26.7h-4.3l-4.8-15.6h4.4l2.8,10.6h0.1l2.5-10.6h4l2.6,10.6h0.1
+	l2.8-10.6h4.3l-4.8,15.6H39.3L39.3,26.7z M53.6,20.7c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.1,1.1c0.5,0.3,1.1,0.4,1.8,0.4
+	c0.6,0,1.2-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.1-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.9-1.1-1.1c-0.5-0.3-1.1-0.5-1.8-0.4c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.8,0.7-1.1,1.1
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.8C53.5,19.5,53.5,20.1,53.6,20.7L53.6,20.7z M49.9,15.5c0.3-1,0.9-1.9,1.6-2.6
+	c0.7-0.7,1.5-1.3,2.5-1.7c1-0.4,2.1-0.6,3.2-0.6c1.1,0,2.2,0.2,3.2,0.6c0.9,0.4,1.8,0.9,2.5,1.7c0.7,0.7,1.2,1.6,1.6,2.6
+	c0.4,1.1,0.6,2.2,0.6,3.4c0,1.2-0.2,2.3-0.6,3.4c-0.3,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.5,1.3-2.5,1.6c-1,0.4-2.1,0.6-3.2,0.6
+	c-1.1,0-2.2-0.2-3.2-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.2-1.6-1.6-2.6c-0.4-1.1-0.6-2.2-0.6-3.4
+	C49.3,17.7,49.5,16.6,49.9,15.5z M71.3,11.1V14h0.1c0.2-0.5,0.5-0.9,0.8-1.3c0.3-0.4,0.7-0.8,1.1-1.1c0.4-0.3,0.9-0.5,1.4-0.7
+	c0.5-0.2,1-0.2,1.5-0.2c0.3,0,0.6,0.1,0.9,0.2v4c-0.2,0-0.4-0.1-0.7-0.1c-0.3,0-0.5,0-0.8,0c-0.7,0-1.3,0.1-1.9,0.4
+	c-0.5,0.2-0.9,0.6-1.3,1.1c-0.3,0.5-0.6,1-0.7,1.6c-0.1,0.6-0.2,1.3-0.2,2v7h-4.1V11.1H71.3L71.3,11.1z M83.2,5.1v21.6h-4.1V5.1
+	H83.2z M96.7,17c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.4-0.7-0.8-1.1-1.1c-0.5-0.3-1.1-0.4-1.7-0.4c-1.2-0.1-2.3,0.5-2.8,1.5
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.9c0,0.6,0.1,1.2,0.2,1.8c0.1,0.6,0.3,1.1,0.7,1.6c0.3,0.5,0.7,0.9,1.1,1.2
+	c0.5,0.3,1.1,0.5,1.6,0.4c1.2,0.1,2.2-0.5,2.8-1.6c0.3-0.5,0.5-1.1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.9C96.9,18.2,96.8,17.6,96.7,17
+	L96.7,17z M96.9,24.7c-0.4,0.8-1.1,1.4-1.9,1.8c-0.8,0.4-1.7,0.6-2.7,0.6c-1,0-2.1-0.2-3-0.7c-0.8-0.4-1.6-1.1-2.1-1.8
+	c-0.6-0.8-1-1.7-1.3-2.7c-0.3-1-0.4-2.1-0.4-3.1c0-1,0.1-2.1,0.4-3c0.3-0.9,0.7-1.8,1.3-2.6c0.6-0.7,1.3-1.4,2.1-1.8
+	c0.9-0.5,1.9-0.7,2.9-0.7c0.9,0,1.8,0.2,2.6,0.6c0.8,0.4,1.5,1,1.9,1.7h0.1V5.1h4.1v21.6h-3.9L96.9,24.7L96.9,24.7L96.9,24.7z
+	 M113.6,20.7c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.1,1.1c0.5,0.3,1.1,0.4,1.8,0.4c0.6,0,1.2-0.1,1.8-0.4
+	c0.5-0.3,0.9-0.7,1.1-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8c-0.1-0.6-0.3-1.1-0.6-1.6
+	c-0.3-0.5-0.7-0.9-1.1-1.1c-0.5-0.3-1.1-0.5-1.8-0.4c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.8,0.7-1.1,1.1c-0.3,0.5-0.5,1-0.6,1.6
+	c-0.1,0.6-0.2,1.2-0.2,1.8C113.5,19.5,113.5,20.1,113.6,20.7L113.6,20.7z M109.9,15.5c0.3-1,0.9-1.9,1.6-2.6
+	c0.7-0.7,1.5-1.3,2.5-1.7c1-0.4,2.1-0.6,3.2-0.6c1.1,0,2.2,0.2,3.2,0.6c0.9,0.4,1.8,0.9,2.5,1.7c0.7,0.7,1.2,1.6,1.6,2.6
+	c0.4,1.1,0.6,2.2,0.6,3.4c0,1.2-0.2,2.3-0.6,3.4c-0.3,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.5,1.3-2.5,1.6c-1,0.4-2.1,0.6-3.2,0.6
+	c-1.1,0-2.2-0.2-3.2-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.2-1.6-1.6-2.6c-0.4-1.1-0.6-2.2-0.6-3.4
+	C109.3,17.7,109.5,16.6,109.9,15.5L109.9,15.5z M125.7,13.9v-2.9h2.5V9.8c0-1.3,0.4-2.5,1.3-3.4c1-1,2.4-1.4,3.8-1.3
+	c0.4,0,0.7,0,1.1,0s0.7,0.1,1.1,0.1v3.2c-0.5-0.1-1-0.1-1.5-0.1c-0.4,0-0.9,0.1-1.2,0.4c-0.3,0.4-0.4,0.9-0.4,1.4v0.9h2.9v2.9h-2.9
+	v12.8h-4.1V13.9L125.7,13.9L125.7,13.9z M162.6,8.6V5.1h4.1v3.5L162.6,8.6L162.6,8.6z M166.8,11.1v15.6h-4.1V11.1L166.8,11.1
+	L166.8,11.1z M174,5.1v21.6h-4.1V5.1H174z"></path>
+<path fill="#ff959d" d="M150.1,6.3c3.7,4.8,6,9.1,6,10.7c0,3.3-2.7,6.1-6,6.2c-3.3-0.1-6-2.8-6-6.2
+	C144.1,15.4,146.4,11.1,150.1,6.3 M150.1,0c0,0-10,11.4-10,17c-0.1,5.6,4.4,10.1,10,10.2c5.6-0.1,10-4.6,10-10.2
+	C160.1,11.4,150.1,0,150.1,0L150.1,0z"></path>
+</svg>
+			<div class="btn explore active">Explore</div>
+		</div>
+	</div>
+
+	<svg version="1.1" id="unstacked-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="174px" height="27.2px" viewBox="0 0 174 27.2" style="enable-background:new 0 0 174 27.2;" xml:space="preserve">
+<path fill="#ff959d" d="M12.8,18.3l-2.6-7.9h-0.1l-2.7,7.9H12.8L12.8,18.3z M12.6,5.1l7.8,21.6h-4.8L14,21.9H6.2
+	l-1.6,4.8H0L7.9,5.1H12.6L12.6,5.1z M39.3,26.7l-2.7-10.5h-0.1L34,26.7h-4.3l-4.8-15.6h4.4l2.8,10.6h0.1l2.5-10.6h4l2.6,10.6h0.1
+	l2.8-10.6h4.3l-4.8,15.6H39.3L39.3,26.7z M53.6,20.7c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.1,1.1c0.5,0.3,1.1,0.4,1.8,0.4
+	c0.6,0,1.2-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.1-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.9-1.1-1.1c-0.5-0.3-1.1-0.5-1.8-0.4c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.8,0.7-1.1,1.1
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.8C53.5,19.5,53.5,20.1,53.6,20.7L53.6,20.7z M49.9,15.5c0.3-1,0.9-1.9,1.6-2.6
+	c0.7-0.7,1.5-1.3,2.5-1.7c1-0.4,2.1-0.6,3.2-0.6c1.1,0,2.2,0.2,3.2,0.6c0.9,0.4,1.8,0.9,2.5,1.7c0.7,0.7,1.2,1.6,1.6,2.6
+	c0.4,1.1,0.6,2.2,0.6,3.4c0,1.2-0.2,2.3-0.6,3.4c-0.3,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.5,1.3-2.5,1.6c-1,0.4-2.1,0.6-3.2,0.6
+	c-1.1,0-2.2-0.2-3.2-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.2-1.6-1.6-2.6c-0.4-1.1-0.6-2.2-0.6-3.4
+	C49.3,17.7,49.5,16.6,49.9,15.5z M71.3,11.1V14h0.1c0.2-0.5,0.5-0.9,0.8-1.3c0.3-0.4,0.7-0.8,1.1-1.1c0.4-0.3,0.9-0.5,1.4-0.7
+	c0.5-0.2,1-0.2,1.5-0.2c0.3,0,0.6,0.1,0.9,0.2v4c-0.2,0-0.4-0.1-0.7-0.1c-0.3,0-0.5,0-0.8,0c-0.7,0-1.3,0.1-1.9,0.4
+	c-0.5,0.2-0.9,0.6-1.3,1.1c-0.3,0.5-0.6,1-0.7,1.6c-0.1,0.6-0.2,1.3-0.2,2v7h-4.1V11.1H71.3L71.3,11.1z M83.2,5.1v21.6h-4.1V5.1
+	H83.2z M96.7,17c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.4-0.7-0.8-1.1-1.1c-0.5-0.3-1.1-0.4-1.7-0.4c-1.2-0.1-2.3,0.5-2.8,1.5
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.9c0,0.6,0.1,1.2,0.2,1.8c0.1,0.6,0.3,1.1,0.7,1.6c0.3,0.5,0.7,0.9,1.1,1.2
+	c0.5,0.3,1.1,0.5,1.6,0.4c1.2,0.1,2.2-0.5,2.8-1.6c0.3-0.5,0.5-1.1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.9C96.9,18.2,96.8,17.6,96.7,17
+	L96.7,17z M96.9,24.7c-0.4,0.8-1.1,1.4-1.9,1.8c-0.8,0.4-1.7,0.6-2.7,0.6c-1,0-2.1-0.2-3-0.7c-0.8-0.4-1.6-1.1-2.1-1.8
+	c-0.6-0.8-1-1.7-1.3-2.7c-0.3-1-0.4-2.1-0.4-3.1c0-1,0.1-2.1,0.4-3c0.3-0.9,0.7-1.8,1.3-2.6c0.6-0.7,1.3-1.4,2.1-1.8
+	c0.9-0.5,1.9-0.7,2.9-0.7c0.9,0,1.8,0.2,2.6,0.6c0.8,0.4,1.5,1,1.9,1.7h0.1V5.1h4.1v21.6h-3.9L96.9,24.7L96.9,24.7L96.9,24.7z
+	 M113.6,20.7c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.1,1.1c0.5,0.3,1.1,0.4,1.8,0.4c0.6,0,1.2-0.1,1.8-0.4
+	c0.5-0.3,0.9-0.7,1.1-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8c-0.1-0.6-0.3-1.1-0.6-1.6
+	c-0.3-0.5-0.7-0.9-1.1-1.1c-0.5-0.3-1.1-0.5-1.8-0.4c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.8,0.7-1.1,1.1c-0.3,0.5-0.5,1-0.6,1.6
+	c-0.1,0.6-0.2,1.2-0.2,1.8C113.5,19.5,113.5,20.1,113.6,20.7L113.6,20.7z M109.9,15.5c0.3-1,0.9-1.9,1.6-2.6
+	c0.7-0.7,1.5-1.3,2.5-1.7c1-0.4,2.1-0.6,3.2-0.6c1.1,0,2.2,0.2,3.2,0.6c0.9,0.4,1.8,0.9,2.5,1.7c0.7,0.7,1.2,1.6,1.6,2.6
+	c0.4,1.1,0.6,2.2,0.6,3.4c0,1.2-0.2,2.3-0.6,3.4c-0.3,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.5,1.3-2.5,1.6c-1,0.4-2.1,0.6-3.2,0.6
+	c-1.1,0-2.2-0.2-3.2-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.2-1.6-1.6-2.6c-0.4-1.1-0.6-2.2-0.6-3.4
+	C109.3,17.7,109.5,16.6,109.9,15.5L109.9,15.5z M125.7,13.9v-2.9h2.5V9.8c0-1.3,0.4-2.5,1.3-3.4c1-1,2.4-1.4,3.8-1.3
+	c0.4,0,0.7,0,1.1,0s0.7,0.1,1.1,0.1v3.2c-0.5-0.1-1-0.1-1.5-0.1c-0.4,0-0.9,0.1-1.2,0.4c-0.3,0.4-0.4,0.9-0.4,1.4v0.9h2.9v2.9h-2.9
+	v12.8h-4.1V13.9L125.7,13.9L125.7,13.9z M162.6,8.6V5.1h4.1v3.5L162.6,8.6L162.6,8.6z M166.8,11.1v15.6h-4.1V11.1L166.8,11.1
+	L166.8,11.1z M174,5.1v21.6h-4.1V5.1H174z"></path>
+<path fill="#ff959d" d="M150.1,6.3c3.7,4.8,6,9.1,6,10.7c0,3.3-2.7,6.1-6,6.2c-3.3-0.1-6-2.8-6-6.2
+	C144.1,15.4,146.4,11.1,150.1,6.3 M150.1,0c0,0-10,11.4-10,17c-0.1,5.6,4.4,10.1,10,10.2c5.6-0.1,10-4.6,10-10.2
+	C160.1,11.4,150.1,0,150.1,0L150.1,0z"></path>
+</svg>
+
+	<div class="mobile-poster no-bg"></div>
+
+	<video class="intro-video" loop="" preload="" autoplay="" data-src="assets/video/intro-1080.mp4" poster="assets/img/poster-1080.png" src="assets/video/intro-1080.mp4" style="width: 1143.11px; height: 643px;"></video>
+
+</div>
+<div class="section section-visualisation">
+	
+	<div class="mobile-toggle">
+		<div>Select Data</div>
+	</div>
+
+	<div class="mobile-interface mobile-sub-section"></div>
+
+	<div class="basic mobile-sub-section visible hide">
+		<div class="inner">
+			<div class="tagline medium">Top ten <span>importers</span></div> 
+			<div class="selected-year large-text"> 
+				<span>2014</span>
+			</div>
+			<ol class="top-ten importers top-border"></ol>
+			<ol class="top-ten exporters top-border"></ol>
+			<div class="sub-logo">
+				<svg xmlns="http://www.w3.org/2000/svg" width="120.03" height="42.97" viewBox="0 0 120.03 42.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #95919d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="GSM_logo" data-name="GSM logo" fill="#ff959d" class="cls-1" d="M3740.25,1095.18c0-2.87-2.25-3.01-3.65-3.15v-0.82l7.35-1.15v5.75h0.1c0.58-1.68,3.03-5.75,6.92-5.75,4.52,0,5.72,2.35,5.72,5.75h0.09c0.72-1.63,2.69-5.75,7.02-5.75,5.72,0,5.72,3.83,5.72,7.61v15.17h-3.7v-14.4c0-3.54,0-6.03-3.27-6.03-2.5,0-5.82,4.4-5.82,8.85v11.58h-3.69v-15.45c0-2.59,0-4.98-3.18-4.98-3.07,0-5.91,5.07-5.91,9.04v11.39h-3.7v-17.66Zm-15.38,21.7c0-.83-0.38-0.8-1.21-0.89v-0.21l2.26-.28v6.57c0,0.99,0,1.06.99,1.06h1.07c0.91,0,.94-0.5,1.04-1.31h0.37l-0.06,1.78h-4.46v-6.72Zm5.83,2.68c0-2.57.76-4.19,3.16-4.19s3.13,1.8,3.13,4.19c0,2.55-.74,4.18-3.13,4.18-2.48,0-3.16-1.79-3.16-4.18m5.11,0c0-1.52-.08-3.72-1.95-3.72-1.85,0-1.98,2.06-1.98,3.72,0,1.5.09,3.71,1.98,3.71,1.82,0,1.95-2.06,1.95-3.71m3.53-2.64c0-.96-0.16-1.04-1.19-1.21v-0.2h2.39l3.75,6.56h0.02v-6.56h0.62v8.09h-0.91l-4.03-7.06h-0.03v7.06h-0.62v-6.68Zm8.4-.04c0-.92-0.15-0.97-1.2-1.17v-0.2h2.55c2.54,0,4.4.49,4.4,4.05s-1.95,4.04-4.45,4.04h-1.3v-6.72Zm1.05,5.36c0,0.59,0,.89.63,0.89,1.93,0,2.89-1.06,2.89-3.57,0-2.07-.56-3.59-2.71-3.59-0.72,0-.81.12-0.81,0.91v5.36Zm6.53-2.68c0-2.57.75-4.19,3.15-4.19s3.13,1.8,3.13,4.19c0,2.55-.75,4.18-3.13,4.18-2.48,0-3.15-1.79-3.15-4.18m5.1,0c0-1.52-.08-3.72-1.95-3.72-1.84,0-1.97,2.06-1.97,3.72,0,1.5.08,3.71,1.97,3.71,1.82,0,1.95-2.06,1.95-3.71m3.5-2.64c0-.96-0.16-1.04-1.19-1.21v-0.2h2.38l3.74,6.56h0.02v-6.56h0.62v8.09h-0.9l-4.03-7.06h-0.02v7.06h-0.62v-6.68Zm-30.14-20.75c-0.6-1.78-1.65-4.21-4.74-4.21-2.81,0-4.08,1.32-4.08,3.05,0,3.26,5.85,4.6,8.45,6.53a5.807,5.807,0,0,1,2.75,5.27c0,4.68-3.79,6.41-9.06,6.41a21.912,21.912,0,0,1-5.89-.86l-0.3-5.29h1.18a5.578,5.578,0,0,0,5.39,4.55c3.02,0,4.91-1.94,4.91-3.58,0-3.26-4.43-4.69-7.44-6.41-2.08-1.3-3.74-2.63-3.74-5.29,0-3.59,2.85-5.99,7.92-5.99a30.549,30.549,0,0,1,5.5.73l0.35,5.1Zm-18.45-6.06a11.831,11.831,0,0,0-1.33-.72c3.18-2.97,8.17-3.24,8.81-.37,0.53,2.38-2.44,3.36-4.15,1.01-0.98-1.34-2.73-.26-3.33.08m-11.3,16.47s-6.5-1.83-6.22-8.41c0.28-6.79,6.67-8.92,11.44-8.84,4.38,0.07,9.91,3.19,9.77,9.46-0.1,4.68-2.22,8.24-11.34,8.73-4.67.25-5.84,1.04-5.87,2.67-0.03,1.22,2,1.36,3.4,1.52,6.58,0.76,17.28-.94,16.95,8.72-0.36,10.47-12.79,9.52-14.26,9.55-2.42.03-11.87-1.58-10.82-8.16,0.82-5.2,5.65-4.78,6.63-3.16-3.46.06-6.22,9.85,5.34,9.97,9.34,0.09,9.23-5.63,9.24-6.43,0.11-6.51-10.09-5.26-14.29-5.61-5.95-.48-7.83-8,0.03-10.01m4.35-15.96c-3.72,0-5.74,3.49-5.74,7.81s1.91,7.81,5.74,7.81c3.72,0,5.74-3.5,5.74-7.81s-2.09-7.81-5.74-7.81m65.56-.19h2.07a1.988,1.988,0,0,1,1.8.99,3.077,3.077,0,0,1,.32,1.95,3.045,3.045,0,0,1-.33,1.97,2.133,2.133,0,0,1-1.85.97h-2.01v-5.88Zm0.9,5.04h1.07a1.236,1.236,0,0,0,1.1-.51,5.428,5.428,0,0,0-.04-3.19,1.148,1.148,0,0,0-1.06-.5h-1.07v4.2Zm5.11-5.04h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.19h-0.85v-4.19Zm2.93,2.91a1.741,1.741,0,0,0,1.33.54,0.676,0.676,0,0,0,.83-0.54,0.44,0.44,0,0,0-.52-0.41l-0.75-.07a1.185,1.185,0,0,1-1.21-1.19,1.353,1.353,0,0,1,1.57-1.29,2.431,2.431,0,0,1,1.65.57l-0.52.61a1.873,1.873,0,0,0-1.13-.38c-0.54,0-.72.21-0.72,0.5,0,0.18.13,0.36,0.55,0.4l0.7,0.05a1.158,1.158,0,0,1,1.22,1.25,1.483,1.483,0,0,1-1.74,1.29,2.626,2.626,0,0,1-1.85-.75Zm4.74-4.18h0.84v1.27h0.62v0.65h-0.62v2.44a0.261,0.261,0,0,0,.3.31h0.32v0.79h-0.44a0.958,0.958,0,0,1-1.02-1.03v-2.51h-0.43v-0.65h0.43v-1.27Zm3.11-.42h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.19h-0.85v-4.19Zm2.8,0h0.84v0.45h0.02a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.838,0.838,0,1,0-1.67,0v2.49h-0.84v-4.19Zm8.38,3.52a1.959,1.959,0,0,1-1.51.72,2.159,2.159,0,0,1,0-4.29,1.967,1.967,0,0,1,1.51.73l-0.62.55a1.126,1.126,0,0,0-.85-0.43,1.318,1.318,0,0,0,0,2.6,1.105,1.105,0,0,0,.85-0.44Zm1.47-4.79h0.85v1.27h0.61v0.65h-0.61v2.44a0.258,0.258,0,0,0,.3.31h0.31v0.79h-0.44a0.958,0.958,0,0,1-1.02-1.03v-2.51h-0.42v-0.65h0.42v-1.27Zm3.12-.42h0.84v0.84h-0.84v-0.84Zm0,1.69h0.84v4.19h-0.84v-4.19Zm2.2,0h0.89l0.99,2.94h0.02l0.99-2.94h0.89l-1.54,4.19h-0.7Zm5.68,2.42a0.938,0.938,0,0,0,1,1.03,1.3,1.3,0,0,0,.92-0.41l0.62,0.53a1.98,1.98,0,0,1-1.52.67c-0.87,0-1.87-.41-1.87-2.13,0-1.63.92-2.16,1.74-2.16a1.709,1.709,0,0,1,1.73,1.77v0.7h-2.62Zm1.77-.7a0.889,0.889,0,1,0-1.77,0h1.77Zm-42.28,4.86h0.84v2.14h0.02a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.838,0.838,0,1,0-1.67,0v2.49h-0.84v-5.88Zm5.31-.01h0.85v0.85h-0.85v-0.85Zm0,1.7h0.85v4.19h-0.85v-4.19Zm5.17,3.75a1.5,1.5,0,0,1-1.09.49,1.4,1.4,0,0,1-1.11-.51c-0.25-.32-0.32-0.47-0.32-1.63s0.07-1.32.32-1.64a1.4,1.4,0,0,1,1.11-.51,1.45,1.45,0,0,1,1.09.5v-0.45h0.84v4.09a1.716,1.716,0,0,1-1.82,1.85,2.03,2.03,0,0,1-1.47-.71l0.66-.52a1.194,1.194,0,0,0,.82.38,0.873,0.873,0,0,0,.97-0.91v-0.43Zm-1.51-.67a0.864,0.864,0,0,0,.68.32,0.852,0.852,0,0,0,.66-0.32,1.325,1.325,0,0,0,.17-0.98,1.31,1.31,0,0,0-.17-0.98,0.828,0.828,0,0,0-.66-0.33,0.839,0.839,0,0,0-.68.33,1.327,1.327,0,0,0-.16.98,1.343,1.343,0,0,0,.16.98m4.28-4.77h0.85v2.14h0.01a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.834,0.834,0,1,0-1.66,0v2.49h-0.85v-5.88Zm5.93,4.1a0.941,0.941,0,0,0,1,1.04,1.32,1.32,0,0,0,.92-0.41l0.62,0.52a1.957,1.957,0,0,1-1.52.68c-0.87,0-1.87-.41-1.87-2.13,0-1.63.92-2.16,1.73-2.16a1.711,1.711,0,0,1,1.74,1.77v0.69h-2.62Zm1.77-.69a0.89,0.89,0,1,0-1.77,0h1.77Zm2.57-1.72h0.84v0.45h0.02a1.368,1.368,0,0,1,1.1-.5,1.4,1.4,0,0,1,.88.32l-0.62.73a0.829,0.829,0,0,0-.55-0.21,0.805,0.805,0,0,0-.83.88v2.52h-0.84v-4.19Zm-22.88,10.68a0.933,0.933,0,0,0,1,1.03,1.333,1.333,0,0,0,.92-0.4l0.62,0.52a1.957,1.957,0,0,1-1.52.68c-0.86,0-1.87-.42-1.87-2.14,0-1.63.92-2.15,1.74-2.15a1.694,1.694,0,0,1,1.73,1.76v0.7h-2.62Zm1.77-.7a0.889,0.889,0,1,0-1.77,0h1.77Zm5.09,2.04a1.5,1.5,0,0,1-1.09.49,1.355,1.355,0,0,1-1.13-.55,4.417,4.417,0,0,1,0-3.2,1.375,1.375,0,0,1,1.13-.54,1.553,1.553,0,0,1,1.09.49v-2.14h0.84v5.89h-0.84v-0.44Zm-1.67-1.66c0,0.65.04,1.3,0.84,1.3,0.78,0,.83-0.69.83-1.3s-0.05-1.3-.83-1.3c-0.8,0-.84.65-0.84,1.3m4.29-2.09h0.85v2.49a0.837,0.837,0,1,0,1.67,0v-2.49h0.84v4.19h-0.84v-0.45h-0.02a1.362,1.362,0,0,1-1.09.5,1.417,1.417,0,0,1-1.41-1.46v-2.78Zm8.38,3.51a1.967,1.967,0,0,1-1.51.73,2.159,2.159,0,0,1,0-4.29,1.959,1.959,0,0,1,1.51.72l-0.62.56a1.09,1.09,0,0,0-.85-0.44,1.318,1.318,0,0,0,0,2.6,1.09,1.09,0,0,0,.85-0.44Zm3.63,0.3h-0.01a1.067,1.067,0,0,1-1.04.43,1.322,1.322,0,0,1-1.49-1.29,1.24,1.24,0,0,1,1.37-1.24H3796v-0.43c0-.4-0.26-0.54-0.86-0.54a0.8,0.8,0,0,0-.8.32l-0.66-.5a1.583,1.583,0,0,1,1.42-.61c1.04,0,1.75.34,1.75,1.38v2.86H3796v-0.38Zm0-1.4h-1.01c-0.5,0-.73.2-0.73,0.5,0,0.28.22,0.53,0.8,0.53,0.7,0,.94-0.07.94-0.73v-0.3Zm2.83-3.69h0.84v1.27h0.62v0.65h-0.62v2.44a0.258,0.258,0,0,0,.3.31h0.32v0.8h-0.44a0.966,0.966,0,0,1-1.02-1.04v-2.51h-0.43v-0.65h0.43v-1.27Zm3.11-.42h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.2h-0.85v-4.2Zm3.05,0.49a1.8,1.8,0,0,1,2.55,0,3.047,3.047,0,0,1,0,3.22,1.775,1.775,0,0,1-2.55,0,3.047,3.047,0,0,1,0-3.22m1.95,0.61a0.858,0.858,0,0,0-.68-0.3,0.873,0.873,0,0,0-.68.3,2.6,2.6,0,0,0,0,2,0.873,0.873,0,0,0,.68.3,0.858,0.858,0,0,0,.68-0.3,1.426,1.426,0,0,0,.21-0.99,1.456,1.456,0,0,0-.21-1.01m2.78-1.09h0.84v0.44h0.02a1.36,1.36,0,0,1,1.1-.49,1.406,1.406,0,0,1,1.4,1.45v2.79h-0.85v-2.5a0.837,0.837,0,1,0-1.67,0v2.5h-0.84v-4.19Z" transform="translate(-3696.97 -1087)"></path>
+</svg>
+			</div> 
+		</div>
+	</div> 
+
+	<div class="globe show"> 
+		<div class="back-glow"></div>
+		<div class="inner"><canvas width="1000" height="1000" style="width: 500px; height: 500px;"></canvas></div>
+		<div class="top-glow" style="top: calc(50% - 30px);"></div>
+		<ul class="markers simple">
+	<li data-code="842" class="has-weight hide hidden" style="transform: translate(134.019px, 143.739px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">USA</span></div>
+	</li>
+
+	<li data-code="156" class="has-weight selected hidden" style="transform: translate(410.323px, 77.8222px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">China</span></div>
+	</li>
+
+	<li data-code="699" class="has-weight hide hidden" style="transform: translate(432.789px, 94.0246px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">India</span></div>
+	</li>
+
+	<li data-code="392" class="has-weight hide hidden" style="transform: translate(373.836px, 149.722px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">Japan</span></div>
+	</li>
+
+	<li data-code="410" class="has-weight hide hidden" style="transform: translate(384.472px, 136.491px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">Rep. of Korea</span></div>
+	</li>
+
+	<li data-code="276" class="has-weight hide hidden" style="transform: translate(218.75px, -1.96617px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">Germany</span></div>
+	</li>
+
+	<li data-code="528" class="has-weight hide hidden" style="transform: translate(218.488px, -1.54035px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path fill="#ff959d" class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">Netherlands</span></div>
+	</li>
+
+	<li data-code="724" class="has-weight hide" style="transform: translate(168.412px, 10.565px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">Spain</span></div>
+	</li>
+
+	<li data-code="251" class="has-weight hide hidden" style="transform: translate(203.716px, -0.243538px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">France</span></div>
+	</li>
+
+	<li data-code="381" class="has-weight hide" style="transform: translate(232.051px, -4.0062px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="No data">Italy</span></div>
+	</li>
+</ul>
+		<ul class="markers detailed importers">
+	<li data-code="24" class="has-weight" style="transform: translate(221.858px, 148.526px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="40,647,655,424kg">Angola</span></div>
+	</li>
+
+	<li data-code="170" class="has-weight hidden" style="transform: translate(54.0635px, 209.456px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" fill="#ff959d" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="10,091,235,328kg">Colombia</span></div>
+	</li>
+
+	<li data-code="364" class="has-weight" style="transform: translate(371.088px, 32.9359px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path fill="#ff959d" class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path fill="#ff959d" class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path fill="#ff959d" class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path fill="#ff959d" class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle fill="#ff959d" class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="27,462,539,264kg">Iran</span></div>
+	</li>
+
+	<li data-code="368" class="has-weight" style="transform: translate(338.447px, 16.2799px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path fill="#ff959d" class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle fill="#ff959d" class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path fill="#ff959d" class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="28,577,810,432kg">Iraq</span></div>
+	</li>
+
+	<li data-code="414" class="has-weight" style="transform: translate(355.122px, 26.4183px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path fill="#ff959d" class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="10,618,718,208kg">Kuwait</span></div>
+	</li>
+
+	<li data-code="512" class="has-weight" style="transform: translate(395.377px, 59.2127px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="29,743,869,952kg">Oman</span></div>
+	</li>
+
+	<li data-code="643" class="has-weight hidden" style="transform: translate(334.534px, 43.1229px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="33,107,531,776kg">Russian Federation</span></div>
+	</li>
+
+	<li data-code="682" class="has-weight" style="transform: translate(354.778px, 32.6245px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="49,666,809,856kg">Saudi Arabia</span></div>
+	</li>
+
+	<li data-code="784" class="has-weight" style="transform: translate(383.964px, 47.2365px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="11,651,960,832kg">United Arab Emirates</span></div>
+	</li>
+
+	<li data-code="862" class="has-weight hidden" style="transform: translate(44.7235px, 181.698px);">
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"></path>
+	<path class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"></path>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"></path>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"></circle>
+	</g>
+	<g class="default">
+		<path class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"></path><circle class="country-pin" cx="11" cy="19" r="2"></circle>
+	</g>
+</svg>
+		<div><span data-weight="13,785,720,832kg">Venezuela</span></div>
+	</li>
+</ul>
+		<div class="static-earth">
+			<a href="http://www.gsmlondon.ac.uk/undergraduate/oil-and-gas-management/bsc-hons-oil-and-gas-management" target="_blank" class="marker">
+				<div class="logo">
+					<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="120" height="42.98" viewBox="0 0 120 42.98"><defs><style>.cls-1{fill:#595a5c;}.cls-2{fill:#d50031;}</style></defs><title>logo-gsm-color</title><path class="cls-1" d="M76.95,3.42H79a2,2,0,0,1,1.8,1,3.09,3.09,0,0,1,.32,2c0,1.32-.07,1.55-0.33,2A2.11,2.11,0,0,1,79,9.3h-2V3.42Zm0.9,5h1.07A1.23,1.23,0,0,0,80,7.95a2.37,2.37,0,0,0,.22-1.55A2.41,2.41,0,0,0,80,4.76a1.14,1.14,0,0,0-1.05-.5H77.84v4.2Z" transform="translate(0)"></path><rect class="cls-1" x="82.96" y="3.42" width="0.85" height="0.84"></rect><rect class="cls-1" x="82.96" y="5.11" width="0.85" height="4.19"></rect><path class="cls-1" d="M85.88,8a1.77,1.77,0,0,0,1.33.54A0.68,0.68,0,0,0,88,8a0.44,0.44,0,0,0-.51-0.41l-0.75-.07a1.18,1.18,0,0,1-1.21-1.19,1.35,1.35,0,0,1,1.57-1.29,2.42,2.42,0,0,1,1.65.57l-0.52.61a1.88,1.88,0,0,0-1.13-.39c-0.54,0-.72.22-0.72,0.5s0.13,0.36.56,0.4l0.7,0a1.17,1.17,0,0,1,1.22,1.26c0,0.82-.76,1.29-1.74,1.29a2.66,2.66,0,0,1-1.85-.75Z" transform="translate(0)"></path><path class="cls-1" d="M90.62,3.84h0.85V5.11h0.61V5.76H91.47V8.2a0.26,0.26,0,0,0,.3.31h0.31V9.3H91.64a1,1,0,0,1-1-1V5.76H90.2V5.11h0.42V3.84Z" transform="translate(0)"></path><rect class="cls-1" x="93.73" y="3.42" width="0.85" height="0.84"></rect><rect class="cls-1" x="93.73" y="5.11" width="0.85" height="4.19"></rect><path class="cls-1" d="M96.53,5.11h0.85V5.56h0a1.35,1.35,0,0,1,1.1-.5,1.41,1.41,0,0,1,1.4,1.45V9.3H99V6.81a0.84,0.84,0,1,0-1.67,0V9.3H96.53V5.11Z" transform="translate(0)"></path><path class="cls-1" d="M104.92,8.63a2,2,0,0,1-1.51.73,1.88,1.88,0,0,1-1.91-2.14,1.89,1.89,0,0,1,1.91-2.15,2,2,0,0,1,1.51.73l-0.62.55a1.11,1.11,0,0,0-.85-0.44,1.07,1.07,0,0,0-1.1,1.31,1.07,1.07,0,0,0,1.1,1.3,1.1,1.1,0,0,0,.85-0.44Z" transform="translate(0)"></path><path class="cls-1" d="M106.39,3.84h0.85V5.11h0.61V5.76h-0.61V8.2a0.26,0.26,0,0,0,.3.31h0.31V9.3h-0.44a1,1,0,0,1-1-1V5.76H106V5.11h0.42V3.84Z" transform="translate(0)"></path><rect class="cls-1" x="109.5" y="3.42" width="0.85" height="0.84"></rect><rect class="cls-1" x="109.5" y="5.11" width="0.85" height="4.19"></rect><polygon class="cls-1" points="111.7 5.11 112.6 5.11 113.58 8.05 113.6 8.05 114.59 5.11 115.49 5.11 113.94 9.3 113.24 9.3 111.7 5.11"></polygon><path class="cls-1" d="M117.38,7.53a0.94,0.94,0,0,0,1,1,1.33,1.33,0,0,0,.92-0.4l0.62,0.52a1.94,1.94,0,0,1-1.52.68c-0.86,0-1.87-.41-1.87-2.13s0.92-2.16,1.74-2.16A1.7,1.7,0,0,1,120,6.83V7.53h-2.62Zm1.78-.69a0.89,0.89,0,1,0-1.78,0h1.78Z" transform="translate(0)"></path><path class="cls-1" d="M76.87,11.69h0.85v2.14h0a1.35,1.35,0,0,1,1.1-.5,1.41,1.41,0,0,1,1.4,1.45v2.79H79.39v-2.5a0.84,0.84,0,1,0-1.67,0v2.5H76.87V11.69Z" transform="translate(0)"></path><rect class="cls-1" x="82.19" y="11.69" width="0.85" height="0.84"></rect><rect class="cls-1" x="82.19" y="13.38" width="0.85" height="4.19"></rect><path class="cls-1" d="M87.35,17.13a1.49,1.49,0,0,1-1.09.49,1.41,1.41,0,0,1-1.11-.51c-0.24-.31-0.31-0.47-0.31-1.63s0.07-1.32.31-1.64a1.41,1.41,0,0,1,1.11-.51,1.43,1.43,0,0,1,1.09.5V13.38H88.2v4.09a1.72,1.72,0,0,1-1.83,1.84,2,2,0,0,1-1.46-.7l0.66-.52a1.2,1.2,0,0,0,.82.38,0.87,0.87,0,0,0,1-.91V17.13Zm-1.5-.68a0.85,0.85,0,0,0,1.34,0,1.32,1.32,0,0,0,.17-1,1.33,1.33,0,0,0-.17-1,0.85,0.85,0,0,0-1.34,0,1.33,1.33,0,0,0-.17,1,1.32,1.32,0,0,0,.17,1" transform="translate(0)"></path><path class="cls-1" d="M90.12,11.69H91v2.14h0a1.35,1.35,0,0,1,1.1-.5,1.41,1.41,0,0,1,1.4,1.45v2.79H92.64v-2.5a0.84,0.84,0,1,0-1.67,0v2.5H90.12V11.69Z" transform="translate(0)"></path><path class="cls-1" d="M96.05,15.8a0.94,0.94,0,0,0,1,1,1.32,1.32,0,0,0,.92-0.4l0.61,0.52a1.94,1.94,0,0,1-1.52.68c-0.86,0-1.87-.41-1.87-2.13s0.92-2.16,1.73-2.16a1.7,1.7,0,0,1,1.74,1.77v0.7H96.05Zm1.78-.7a0.89,0.89,0,1,0-1.78,0h1.78Z" transform="translate(0)"></path><path class="cls-1" d="M100.39,13.38h0.85v0.45h0a1.35,1.35,0,0,1,1.1-.5,1.4,1.4,0,0,1,.88.32l-0.61.73a0.83,0.83,0,0,0-.56-0.21,0.8,0.8,0,0,0-.82.88v2.52h-0.85V13.38Z" transform="translate(0)"></path><path class="cls-1" d="M77.51,24.06a0.94,0.94,0,0,0,1,1,1.32,1.32,0,0,0,.92-0.41l0.61,0.52a1.94,1.94,0,0,1-1.52.68c-0.86,0-1.87-.41-1.87-2.13s0.92-2.16,1.73-2.16a1.7,1.7,0,0,1,1.74,1.77v0.7H77.51Zm1.78-.7a0.89,0.89,0,1,0-1.78,0h1.78Z" transform="translate(0)"></path><path class="cls-1" d="M84.37,25.4a1.49,1.49,0,0,1-1.09.49,1.37,1.37,0,0,1-1.13-.55,2.28,2.28,0,0,1-.3-1.6,2.27,2.27,0,0,1,.3-1.6,1.37,1.37,0,0,1,1.13-.55,1.55,1.55,0,0,1,1.09.5V20h0.85v5.89H84.37V25.4ZM82.7,23.74c0,0.65,0,1.31.84,1.31s0.83-.69.83-1.31,0-1.3-.83-1.3-0.84.65-.84,1.3" transform="translate(0)"></path><path class="cls-1" d="M87,21.65h0.85v2.5a0.84,0.84,0,1,0,1.67,0v-2.5h0.85v4.19H89.51V25.39h0a1.34,1.34,0,0,1-1.09.5A1.41,1.41,0,0,1,87,24.43V21.65Z" transform="translate(0)"></path><path class="cls-1" d="M95.38,25.16a2,2,0,0,1-1.51.73A1.88,1.88,0,0,1,92,23.75a1.89,1.89,0,0,1,1.91-2.15,2,2,0,0,1,1.51.73l-0.62.55a1.11,1.11,0,0,0-.86-0.44,1.07,1.07,0,0,0-1.1,1.31A1.07,1.07,0,0,0,93.9,25a1.11,1.11,0,0,0,.86-0.44Z" transform="translate(0)"></path><path class="cls-1" d="M99,25.47h0a1.05,1.05,0,0,1-1,.42,1.32,1.32,0,0,1-1.49-1.28,1.23,1.23,0,0,1,1.37-1.24H99V22.93c0-.4-0.26-0.54-0.86-0.54a0.79,0.79,0,0,0-.8.32l-0.66-.5a1.59,1.59,0,0,1,1.42-.61c1,0,1.75.35,1.75,1.38v2.86H99V25.47Zm0-1.41H98c-0.5,0-.73.2-0.73,0.5s0.22,0.53.8,0.53S99,25,99,24.37V24.06Z" transform="translate(0)"></path><path class="cls-1" d="M101.83,20.37h0.85v1.27h0.61v0.64h-0.61v2.44a0.26,0.26,0,0,0,.3.31h0.31v0.79h-0.44a1,1,0,0,1-1-1V22.29h-0.42V21.65h0.42V20.37Z" transform="translate(0)"></path><rect class="cls-1" x="104.94" y="19.95" width="0.85" height="0.84"></rect><rect class="cls-1" x="104.94" y="21.65" width="0.85" height="4.19"></rect><path class="cls-1" d="M110.55,22.13a1.79,1.79,0,0,0-2.56,0,2,2,0,0,0-.46,1.6,2,2,0,0,0,.46,1.61,1.79,1.79,0,0,0,2.56,0,2,2,0,0,0,.46-1.61A2,2,0,0,0,110.55,22.13Zm-0.6,2.6a0.91,0.91,0,0,1-1.36,0,1.44,1.44,0,0,1-.21-1,1.43,1.43,0,0,1,.21-1,0.91,0.91,0,0,1,1.36,0,1.44,1.44,0,0,1,.21,1A1.43,1.43,0,0,1,109.95,24.74Z" transform="translate(0)"></path><path class="cls-1" d="M112.72,21.65h0.85v0.45h0a1.35,1.35,0,0,1,1.1-.5,1.41,1.41,0,0,1,1.4,1.45v2.79h-0.85v-2.5a0.84,0.84,0,1,0-1.67,0v2.5h-0.85V21.65Z" transform="translate(0)"></path><path d="M18.34,3.1A12.62,12.62,0,0,0,17,2.38c3.18-3,8.17-3.24,8.82-.36,0.53,2.38-2.44,3.36-4.16,1-1-1.33-2.73-.26-3.32.09" transform="translate(0)"></path><path d="M7,19.57S0.53,17.74.81,11.16C1.1,4.37,7.49,2.24,12.26,2.32c4.38,0.07,9.91,3.2,9.77,9.46-0.1,4.68-2.23,8.24-11.34,8.73-4.68.25-5.84,1-5.88,2.67,0,1.22,2,1.36,3.41,1.52,6.57,0.76,17.28-.93,16.95,8.73C24.81,43.89,12.38,42.94,10.91,43,8.48,43-1,41.39.08,34.81,0.9,29.61,5.74,30,6.71,31.66c-3.46.05-6.22,9.84,5.34,10,9.34,0.1,9.23-5.63,9.24-6.42C21.4,28.68,11.21,29.93,7,29.58c-5.95-.48-7.82-8,0-10m4.35-16c-3.72,0-5.74,3.5-5.74,7.81s1.91,7.81,5.74,7.81,5.74-3.5,5.74-7.81S15,3.61,11.38,3.61" transform="translate(0)"></path><g id="sm"><path class="cls-2" d="M43.26,8.17c0-2.87-2.26-3-3.65-3.16V4.2L47,3.05V8.8h0.1c0.58-1.67,3-5.74,6.92-5.74,4.52,0,5.72,2.34,5.72,5.74h0.1c0.72-1.63,2.69-5.74,7-5.74,5.72,0,5.72,3.83,5.72,7.61V25.83h-3.7V11.43c0-3.54,0-6-3.27-6-2.5,0-5.81,4.4-5.81,8.85V25.83H56V10.38c0-2.58,0-5-3.17-5S47,10.47,47,14.44V25.83h-3.7V8.17Z" transform="translate(0)"></path><path class="cls-2" d="M36.78,9.16C36.19,7.38,35.14,4.95,32,4.95,29.24,4.95,28,6.27,28,8c0,3.25,5.85,4.6,8.46,6.53a5.81,5.81,0,0,1,2.75,5.27c0,4.68-3.78,6.41-9.06,6.41a22,22,0,0,1-5.89-.86l-0.3-5.29h1.18a5.58,5.58,0,0,0,5.39,4.56c3,0,4.91-1.95,4.91-3.59,0-3.25-4.43-4.69-7.44-6.41-2.08-1.29-3.74-2.63-3.74-5.29,0-3.59,2.85-6,7.92-6a29.92,29.92,0,0,1,5.5.73L38,9.17h-1.2Z" transform="translate(0)"></path></g><g id="London"><path class="cls-1" d="M27.87,29.87c0-.83-0.37-0.79-1.21-0.89v-0.2l2.26-.28v6.57c0,1,0,1.06,1,1.06H31c0.9,0,.94-0.51,1-1.31H32.4l-0.06,1.78H27.87V29.87Z" transform="translate(0)"></path><path class="cls-1" d="M33.7,32.55c0-2.58.76-4.19,3.16-4.19S40,30.16,40,32.55c0,2.55-.75,4.18-3.13,4.18s-3.16-1.78-3.16-4.18m5.11,0c0-1.52-.08-3.72-2-3.72s-2,2.06-2,3.72c0,1.5.08,3.71,2,3.71s2-2.06,2-3.71" transform="translate(0)"></path><path class="cls-1" d="M42.35,29.92c0-1-.17-1-1.19-1.21V28.5h2.39l3.75,6.57h0V28.5h0.62v8.1H47l-4-7.06h0v7.06H42.35V29.92Z" transform="translate(0)"></path><path class="cls-1" d="M50.75,29.87c0-.91-0.16-1-1.2-1.17V28.5h2.54c2.54,0,4.4.49,4.4,4.06s-1.94,4-4.45,4H50.75V29.87Zm1,5.37c0,0.59,0,.89.64,0.89,1.93,0,2.89-1.06,2.89-3.57,0-2.07-.56-3.59-2.71-3.59-0.72,0-.82.12-0.82,0.9v5.37Z" transform="translate(0)"></path><path class="cls-1" d="M58.32,32.55c0-2.58.76-4.19,3.15-4.19s3.13,1.79,3.13,4.19c0,2.55-.75,4.18-3.13,4.18s-3.15-1.78-3.15-4.18m5.1,0c0-1.52-.08-3.72-2-3.72s-2,2.06-2,3.72c0,1.5.08,3.71,2,3.71s2-2.06,2-3.71" transform="translate(0)"></path><path class="cls-1" d="M66.93,29.92c0-1-.17-1-1.19-1.21V28.5h2.38l3.74,6.57h0V28.5h0.62v8.1h-0.9l-4-7.06h0v7.06H66.93V29.92Z" transform="translate(0)"></path></g></svg>
+				</div>
+				<div class="pin">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="35" viewBox="0 0 24 35"><defs><style>.gsm-pin{fill:#d60032;}.gsm-pin-dot{fill:#fff;}</style></defs><path class="gsm-pin" fill="#ffaa9d" d="M12,2c5.51,0,10,5,10,11.13,0,4.63-6.23,13.73-10,18.64-1.13-1.48-2.74-3.66-4.33-6.09C2.74,18.18,2,14.59,2,13.13,2,7,6.49,2,12,2m0-2C5.37,0,0,5.88,0,13.13S12,35,12,35,24,20.37,24,13.13,18.63,0,12,0h0Z"></path><circle class="gsm-pin-dot" cx="12" cy="12" r="4"></circle></svg>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	
+
+	<div class="gradient-overlay"></div>
+
+	<div class="detailed mobile-sub-section show">
+		<div class="inner">
+	<div class="close">Close<span></span></div>
+	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+	<div class="tagline medium">2nd biggest importer in 2014</div>
+	<div class="country large-text">China</div>
+	<ul class="child-top-border">
+		
+	<li>
+		<div class="sub-title">Net weight</div>
+		<div class="value">
+			<span>308,377,682,346</span><sup>kg</sup>
+		</div>
+	</li>
+
+		
+	<li>
+		<div class="sub-title">Import value</div>
+		<div class="value">
+			<sup>$</sup><span>228,319,857,435</span>
+		</div>
+	</li>
+
+		
+	<li class="sources">
+		<div class="sub-title">10 biggest sources</div>
+		<ol>
+			<li>Angola</li><li>Colombia</li><li>Iran</li><li>Iraq</li><li>Kuwait</li><li>Oman</li><li>Russian Federation</li><li>Saudi Arabia</li><li>United Arab Emirates</li><li>Venezuela</li>
+		</ol>
+	</li>
+
+	</ul>
+</div>
+		<div class="sub-logo">
+			<svg xmlns="http://www.w3.org/2000/svg" width="120.03" height="42.97" viewBox="0 0 120.03 42.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #95919d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="GSM_logo" data-name="GSM logo" fill="#ff959d" class="cls-1" d="M3740.25,1095.18c0-2.87-2.25-3.01-3.65-3.15v-0.82l7.35-1.15v5.75h0.1c0.58-1.68,3.03-5.75,6.92-5.75,4.52,0,5.72,2.35,5.72,5.75h0.09c0.72-1.63,2.69-5.75,7.02-5.75,5.72,0,5.72,3.83,5.72,7.61v15.17h-3.7v-14.4c0-3.54,0-6.03-3.27-6.03-2.5,0-5.82,4.4-5.82,8.85v11.58h-3.69v-15.45c0-2.59,0-4.98-3.18-4.98-3.07,0-5.91,5.07-5.91,9.04v11.39h-3.7v-17.66Zm-15.38,21.7c0-.83-0.38-0.8-1.21-0.89v-0.21l2.26-.28v6.57c0,0.99,0,1.06.99,1.06h1.07c0.91,0,.94-0.5,1.04-1.31h0.37l-0.06,1.78h-4.46v-6.72Zm5.83,2.68c0-2.57.76-4.19,3.16-4.19s3.13,1.8,3.13,4.19c0,2.55-.74,4.18-3.13,4.18-2.48,0-3.16-1.79-3.16-4.18m5.11,0c0-1.52-.08-3.72-1.95-3.72-1.85,0-1.98,2.06-1.98,3.72,0,1.5.09,3.71,1.98,3.71,1.82,0,1.95-2.06,1.95-3.71m3.53-2.64c0-.96-0.16-1.04-1.19-1.21v-0.2h2.39l3.75,6.56h0.02v-6.56h0.62v8.09h-0.91l-4.03-7.06h-0.03v7.06h-0.62v-6.68Zm8.4-.04c0-.92-0.15-0.97-1.2-1.17v-0.2h2.55c2.54,0,4.4.49,4.4,4.05s-1.95,4.04-4.45,4.04h-1.3v-6.72Zm1.05,5.36c0,0.59,0,.89.63,0.89,1.93,0,2.89-1.06,2.89-3.57,0-2.07-.56-3.59-2.71-3.59-0.72,0-.81.12-0.81,0.91v5.36Zm6.53-2.68c0-2.57.75-4.19,3.15-4.19s3.13,1.8,3.13,4.19c0,2.55-.75,4.18-3.13,4.18-2.48,0-3.15-1.79-3.15-4.18m5.1,0c0-1.52-.08-3.72-1.95-3.72-1.84,0-1.97,2.06-1.97,3.72,0,1.5.08,3.71,1.97,3.71,1.82,0,1.95-2.06,1.95-3.71m3.5-2.64c0-.96-0.16-1.04-1.19-1.21v-0.2h2.38l3.74,6.56h0.02v-6.56h0.62v8.09h-0.9l-4.03-7.06h-0.02v7.06h-0.62v-6.68Zm-30.14-20.75c-0.6-1.78-1.65-4.21-4.74-4.21-2.81,0-4.08,1.32-4.08,3.05,0,3.26,5.85,4.6,8.45,6.53a5.807,5.807,0,0,1,2.75,5.27c0,4.68-3.79,6.41-9.06,6.41a21.912,21.912,0,0,1-5.89-.86l-0.3-5.29h1.18a5.578,5.578,0,0,0,5.39,4.55c3.02,0,4.91-1.94,4.91-3.58,0-3.26-4.43-4.69-7.44-6.41-2.08-1.3-3.74-2.63-3.74-5.29,0-3.59,2.85-5.99,7.92-5.99a30.549,30.549,0,0,1,5.5.73l0.35,5.1Zm-18.45-6.06a11.831,11.831,0,0,0-1.33-.72c3.18-2.97,8.17-3.24,8.81-.37,0.53,2.38-2.44,3.36-4.15,1.01-0.98-1.34-2.73-.26-3.33.08m-11.3,16.47s-6.5-1.83-6.22-8.41c0.28-6.79,6.67-8.92,11.44-8.84,4.38,0.07,9.91,3.19,9.77,9.46-0.1,4.68-2.22,8.24-11.34,8.73-4.67.25-5.84,1.04-5.87,2.67-0.03,1.22,2,1.36,3.4,1.52,6.58,0.76,17.28-.94,16.95,8.72-0.36,10.47-12.79,9.52-14.26,9.55-2.42.03-11.87-1.58-10.82-8.16,0.82-5.2,5.65-4.78,6.63-3.16-3.46.06-6.22,9.85,5.34,9.97,9.34,0.09,9.23-5.63,9.24-6.43,0.11-6.51-10.09-5.26-14.29-5.61-5.95-.48-7.83-8,0.03-10.01m4.35-15.96c-3.72,0-5.74,3.49-5.74,7.81s1.91,7.81,5.74,7.81c3.72,0,5.74-3.5,5.74-7.81s-2.09-7.81-5.74-7.81m65.56-.19h2.07a1.988,1.988,0,0,1,1.8.99,3.077,3.077,0,0,1,.32,1.95,3.045,3.045,0,0,1-.33,1.97,2.133,2.133,0,0,1-1.85.97h-2.01v-5.88Zm0.9,5.04h1.07a1.236,1.236,0,0,0,1.1-.51,5.428,5.428,0,0,0-.04-3.19,1.148,1.148,0,0,0-1.06-.5h-1.07v4.2Zm5.11-5.04h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.19h-0.85v-4.19Zm2.93,2.91a1.741,1.741,0,0,0,1.33.54,0.676,0.676,0,0,0,.83-0.54,0.44,0.44,0,0,0-.52-0.41l-0.75-.07a1.185,1.185,0,0,1-1.21-1.19,1.353,1.353,0,0,1,1.57-1.29,2.431,2.431,0,0,1,1.65.57l-0.52.61a1.873,1.873,0,0,0-1.13-.38c-0.54,0-.72.21-0.72,0.5,0,0.18.13,0.36,0.55,0.4l0.7,0.05a1.158,1.158,0,0,1,1.22,1.25,1.483,1.483,0,0,1-1.74,1.29,2.626,2.626,0,0,1-1.85-.75Zm4.74-4.18h0.84v1.27h0.62v0.65h-0.62v2.44a0.261,0.261,0,0,0,.3.31h0.32v0.79h-0.44a0.958,0.958,0,0,1-1.02-1.03v-2.51h-0.43v-0.65h0.43v-1.27Zm3.11-.42h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.19h-0.85v-4.19Zm2.8,0h0.84v0.45h0.02a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.838,0.838,0,1,0-1.67,0v2.49h-0.84v-4.19Zm8.38,3.52a1.959,1.959,0,0,1-1.51.72,2.159,2.159,0,0,1,0-4.29,1.967,1.967,0,0,1,1.51.73l-0.62.55a1.126,1.126,0,0,0-.85-0.43,1.318,1.318,0,0,0,0,2.6,1.105,1.105,0,0,0,.85-0.44Zm1.47-4.79h0.85v1.27h0.61v0.65h-0.61v2.44a0.258,0.258,0,0,0,.3.31h0.31v0.79h-0.44a0.958,0.958,0,0,1-1.02-1.03v-2.51h-0.42v-0.65h0.42v-1.27Zm3.12-.42h0.84v0.84h-0.84v-0.84Zm0,1.69h0.84v4.19h-0.84v-4.19Zm2.2,0h0.89l0.99,2.94h0.02l0.99-2.94h0.89l-1.54,4.19h-0.7Zm5.68,2.42a0.938,0.938,0,0,0,1,1.03,1.3,1.3,0,0,0,.92-0.41l0.62,0.53a1.98,1.98,0,0,1-1.52.67c-0.87,0-1.87-.41-1.87-2.13,0-1.63.92-2.16,1.74-2.16a1.709,1.709,0,0,1,1.73,1.77v0.7h-2.62Zm1.77-.7a0.889,0.889,0,1,0-1.77,0h1.77Zm-42.28,4.86h0.84v2.14h0.02a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.838,0.838,0,1,0-1.67,0v2.49h-0.84v-5.88Zm5.31-.01h0.85v0.85h-0.85v-0.85Zm0,1.7h0.85v4.19h-0.85v-4.19Zm5.17,3.75a1.5,1.5,0,0,1-1.09.49,1.4,1.4,0,0,1-1.11-.51c-0.25-.32-0.32-0.47-0.32-1.63s0.07-1.32.32-1.64a1.4,1.4,0,0,1,1.11-.51,1.45,1.45,0,0,1,1.09.5v-0.45h0.84v4.09a1.716,1.716,0,0,1-1.82,1.85,2.03,2.03,0,0,1-1.47-.71l0.66-.52a1.194,1.194,0,0,0,.82.38,0.873,0.873,0,0,0,.97-0.91v-0.43Zm-1.51-.67a0.864,0.864,0,0,0,.68.32,0.852,0.852,0,0,0,.66-0.32,1.325,1.325,0,0,0,.17-0.98,1.31,1.31,0,0,0-.17-0.98,0.828,0.828,0,0,0-.66-0.33,0.839,0.839,0,0,0-.68.33,1.327,1.327,0,0,0-.16.98,1.343,1.343,0,0,0,.16.98m4.28-4.77h0.85v2.14h0.01a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.834,0.834,0,1,0-1.66,0v2.49h-0.85v-5.88Zm5.93,4.1a0.941,0.941,0,0,0,1,1.04,1.32,1.32,0,0,0,.92-0.41l0.62,0.52a1.957,1.957,0,0,1-1.52.68c-0.87,0-1.87-.41-1.87-2.13,0-1.63.92-2.16,1.73-2.16a1.711,1.711,0,0,1,1.74,1.77v0.69h-2.62Zm1.77-.69a0.89,0.89,0,1,0-1.77,0h1.77Zm2.57-1.72h0.84v0.45h0.02a1.368,1.368,0,0,1,1.1-.5,1.4,1.4,0,0,1,.88.32l-0.62.73a0.829,0.829,0,0,0-.55-0.21,0.805,0.805,0,0,0-.83.88v2.52h-0.84v-4.19Zm-22.88,10.68a0.933,0.933,0,0,0,1,1.03,1.333,1.333,0,0,0,.92-0.4l0.62,0.52a1.957,1.957,0,0,1-1.52.68c-0.86,0-1.87-.42-1.87-2.14,0-1.63.92-2.15,1.74-2.15a1.694,1.694,0,0,1,1.73,1.76v0.7h-2.62Zm1.77-.7a0.889,0.889,0,1,0-1.77,0h1.77Zm5.09,2.04a1.5,1.5,0,0,1-1.09.49,1.355,1.355,0,0,1-1.13-.55,4.417,4.417,0,0,1,0-3.2,1.375,1.375,0,0,1,1.13-.54,1.553,1.553,0,0,1,1.09.49v-2.14h0.84v5.89h-0.84v-0.44Zm-1.67-1.66c0,0.65.04,1.3,0.84,1.3,0.78,0,.83-0.69.83-1.3s-0.05-1.3-.83-1.3c-0.8,0-.84.65-0.84,1.3m4.29-2.09h0.85v2.49a0.837,0.837,0,1,0,1.67,0v-2.49h0.84v4.19h-0.84v-0.45h-0.02a1.362,1.362,0,0,1-1.09.5,1.417,1.417,0,0,1-1.41-1.46v-2.78Zm8.38,3.51a1.967,1.967,0,0,1-1.51.73,2.159,2.159,0,0,1,0-4.29,1.959,1.959,0,0,1,1.51.72l-0.62.56a1.09,1.09,0,0,0-.85-0.44,1.318,1.318,0,0,0,0,2.6,1.09,1.09,0,0,0,.85-0.44Zm3.63,0.3h-0.01a1.067,1.067,0,0,1-1.04.43,1.322,1.322,0,0,1-1.49-1.29,1.24,1.24,0,0,1,1.37-1.24H3796v-0.43c0-.4-0.26-0.54-0.86-0.54a0.8,0.8,0,0,0-.8.32l-0.66-.5a1.583,1.583,0,0,1,1.42-.61c1.04,0,1.75.34,1.75,1.38v2.86H3796v-0.38Zm0-1.4h-1.01c-0.5,0-.73.2-0.73,0.5,0,0.28.22,0.53,0.8,0.53,0.7,0,.94-0.07.94-0.73v-0.3Zm2.83-3.69h0.84v1.27h0.62v0.65h-0.62v2.44a0.258,0.258,0,0,0,.3.31h0.32v0.8h-0.44a0.966,0.966,0,0,1-1.02-1.04v-2.51h-0.43v-0.65h0.43v-1.27Zm3.11-.42h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.2h-0.85v-4.2Zm3.05,0.49a1.8,1.8,0,0,1,2.55,0,3.047,3.047,0,0,1,0,3.22,1.775,1.775,0,0,1-2.55,0,3.047,3.047,0,0,1,0-3.22m1.95,0.61a0.858,0.858,0,0,0-.68-0.3,0.873,0.873,0,0,0-.68.3,2.6,2.6,0,0,0,0,2,0.873,0.873,0,0,0,.68.3,0.858,0.858,0,0,0,.68-0.3,1.426,1.426,0,0,0,.21-0.99,1.456,1.456,0,0,0-.21-1.01m2.78-1.09h0.84v0.44h0.02a1.36,1.36,0,0,1,1.1-.49,1.406,1.406,0,0,1,1.4,1.45v2.79h-0.85v-2.5a0.837,0.837,0,1,0-1.67,0v2.5h-0.84v-4.19Z" transform="translate(-3696.97 -1087)"></path>
+</svg>
+		</div>
+	</div>
+	
+	<script type="text/html" id="visualisation-interface">
+	<div class="years sub-nav">
+		<div class="wrap">
+			<div class="line"></div>
+		</div>
+	</div>
+	<div class="type-wrap">
+		<div class="switch sub-nav">
+			<div class="line"></div>
+			<ul>
+				<li data-type="importers">Importers</li>
+				<li data-type="exporters">Exporters</li>
+			</ul>
+		</div>
+		<ol class="importers"></ol>
+		<ol class="exporters"></ol>
+		<div class="btn">
+			Go
+		</div>
+	</div>	
+</script>
+	<script type="text/html" id="visualisation-detail">
+	<div class="close">Close<span></span></div>
+	<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+	<div class="tagline medium">{tagline}</div>
+	<div class="country large-text">{country}</div>
+	<ul class="child-top-border">
+		{weight}
+		{value}
+		{extra}
+	</ul>
+</script>
+
+<script type="text/html" id="visualisation-detail-weight">
+	<li>
+		<div class="sub-title">Net weight</div>
+		<div class="value">
+			<span>{weight}</span><sup>kg</sup>
+		</div>
+	</li>
+</script>
+
+<script type="text/html" id="visualisation-detail-value">
+	<li>
+		<div class="sub-title">{type} value</div>
+		<div class="value">
+			<sup>$</sup><span>{value}</span>
+		</div>
+	</li>
+</script>
+
+<script type="text/html" id="visualisation-detail-story">
+	<li class="story{extraClass}">
+		<div class="sub-title">Story in oil</div>
+		<p>
+			{story}
+		</p>
+	</li>
+</script>
+
+<script type="text/html" id="visualisation-detail-sources">
+	<li class="sources">
+		<div class="sub-title">10 biggest sources</div>
+		<ol>
+			{sources}
+		</ol>
+	</li>
+</script>
+	<script type="text/html" id="visualisation-pin">
+	<li data-code="{code}" {cssClass} {weightClass}>
+		<svg xmlns="http://www.w3.org/2000/svg" class="source-country" width="15" height="20" viewBox="0 0 15 20">
+	<defs>
+		<style>.pin-sourcecountry-a{fill:#1f1c25;fill-rule:evenodd;}.pin-sourcecountry-b{fill:#fff;}</style>
+	</defs>
+	<path fill="#ff959d" class="pin-sourcecountry-a" d="M7.5,19A6.51,6.51,0,0,1,1,12.5c0-2.75,4.17-8.24,6.5-11C9.83,4.26,14,9.75,14,12.5A6.51,6.51,0,0,1,7.5,19Z"/>
+	<path fill="#ff259d" class="pin-sourcecountry-b" d="M7.5,3.08C10.14,6.31,13,10.55,13,12.5a5.5,5.5,0,1,1-11,0c0-1.95,2.86-6.19,5.5-9.42M7.5,0S0,8.36,0,12.5a7.5,7.5,0,1,0,15,0C15,8.36,7.5,0,7.5,0h0Z"/>
+</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 23 31">
+	<defs>
+		<style> .country-pin{fill:#fff;} .pin-selected-country{fill:#fff;} .country-pin-dark{fill:#161319;} </style>
+	</defs>
+	<g class="hover">
+		<path fill="#ff959d" class="pin-selected-country" d="M11.5,30.5c-6.1-0.1-11.1-5.1-11-11.3c0,0,0,0,0,0l0,0c0-6.2,11-18.7,11-18.7s11,12.5,11,18.8
+	C22.6,25.4,17.6,30.4,11.5,30.5z"/>
+		<circle class="country-pin-dark" cx="11" cy="19" r="2"/>
+	</g>
+	<g class="default">
+		<path fill="#ff959d" class="country-pin" d="M11.5,3.59c4,4.84,9,12.14,9,15.66a9.14,9.14,0,0,1-9,9.25,9.14,9.14,0,0,1-9-9.25c0-3.51,5-10.81,9-15.66m0-3.09S0.5,13,.5,19.25a11.13,11.13,0,0,0,11,11.25,11.13,11.13,0,0,0,11-11.25C22.5,13,11.5.5,11.5,0.5h0Z" transform="translate(-0.5 -0.5)"/><circle class="country-pin" cx="11" cy="19" r="2"/>
+	</g>
+</svg>
+		<div><span {weightAttr}>{name}</span></div>
+	</li>
+</script> 
+
+	<div class="years sub-nav">
+		<div class="wrap"><div class="ftscroller_container"><div class="ftscroller_x ftscroller_hwaccelerated">
+			<div class="line" style="width: 31px; left: 891.672px;"></div>
+		<ul><li data-year="1995">1995</li><li data-year="1996">1996</li><li data-year="1997">1997</li><li data-year="1998">1998</li><li data-year="1999">1999</li><li data-year="2000">2000</li><li data-year="2001">2001</li><li data-year="2002">2002</li><li data-year="2003">2003</li><li data-year="2004">2004</li><li data-year="2005">2005</li><li data-year="2006">2006</li><li data-year="2007">2007</li><li data-year="2008">2008</li><li data-year="2009">2009</li><li data-year="2010">2010</li><li data-year="2011">2011</li><li data-year="2012">2012</li><li data-year="2013">2013</li><li data-year="2014" class="active">2014</li></ul></div></div></div>
+	</div>
+	<div class="type-wrap">
+		<div class="switch sub-nav">
+			<div class="line" style="width: 65px; left: 0px;"></div>
+			<ul>
+				<li data-type="importers" class="active">Importers</li>
+				<li data-type="exporters">Exporters</li>
+			</ul>
+		</div>
+		<ol class="importers"><li data-type="importers" data-position="0" data-country="842">USA</li><li data-type="importers" data-position="1" data-country="156" class="active">China</li><li data-type="importers" data-position="2" data-country="699">India</li><li data-type="importers" data-position="3" data-country="392">Japan</li><li data-type="importers" data-position="4" data-country="410">Rep. of Korea</li><li data-type="importers" data-position="5" data-country="276">Germany</li><li data-type="importers" data-position="6" data-country="528">Netherlands</li><li data-type="importers" data-position="7" data-country="724">Spain</li><li data-type="importers" data-position="8" data-country="251">France</li><li data-type="importers" data-position="9" data-country="381">Italy</li></ol>
+		<ol class="exporters" style="display: none;"><li data-type="exporters" data-position="0" data-country="643">Russian Federation</li><li data-type="exporters" data-position="1" data-country="124">Canada</li><li data-type="exporters" data-position="2" data-country="784">United Arab Emirates</li><li data-type="exporters" data-position="3" data-country="566">Nigeria</li><li data-type="exporters" data-position="4" data-country="414">Kuwait</li><li data-type="exporters" data-position="5" data-country="398">Kazakhstan</li><li data-type="exporters" data-position="6" data-country="579">Norway</li><li data-type="exporters" data-position="7" data-country="484">Mexico</li><li data-type="exporters" data-position="8" data-country="512">Oman</li><li data-type="exporters" data-position="9" data-country="826">United Kingdom</li></ol>
+		<div class="btn">
+			Go
+		</div>
+	</div>	
+</div>
+<div class="section section-content">
+	<div class="inner-scroll">
+		<svg version="1.1" id="logo-stacked" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="104.6px" height="51.8px" viewBox="0 0 104.6 51.8" style="enable-background:new 0 0 104.6 51.8;" xml:space="preserve">
+<path fill="#ff95ff" d="M12.8,13.1l-2.7-7.9H10l-2.8,7.9H12.8z M12.5,0l8,21.4h-4.9L14,16.6H6l-1.7,4.8h-4.7L7.7,0
+	C7.7,0,12.5,0,12.5,0z M40.6,21.4L37.9,11h-0.1l-2.6,10.4h-4.4L25.8,5.9h4.5l2.9,10.5h0.1l2.6-10.5H40l2.6,10.5h0.1l2.8-10.5h4.4
+	L45,21.4H40.6L40.6,21.4z M54.8,15.5c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.2,1.1c0.6,0.3,1.2,0.4,1.8,0.4
+	c0.6,0,1.3-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.2-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.8-1.2-1.1c-0.6-0.3-1.2-0.5-1.8-0.4c-1.2-0.1-2.3,0.5-3,1.6c-0.3,0.5-0.5,1-0.6,1.6
+	c-0.1,0.6-0.2,1.2-0.2,1.8C54.6,14.3,54.6,14.9,54.8,15.5z M50.9,10.3c0.7-1.9,2.2-3.5,4.1-4.2c1.1-0.4,2.2-0.6,3.3-0.6
+	c1.1,0,2.3,0.2,3.3,0.6c1.9,0.7,3.5,2.3,4.2,4.2c0.4,1.1,0.6,2.2,0.6,3.4c0,1.1-0.2,2.3-0.6,3.4c-0.4,1-0.9,1.8-1.6,2.6
+	c-0.7,0.7-1.6,1.3-2.5,1.6c-1.1,0.4-2.2,0.6-3.3,0.6c-1.1,0-2.2-0.2-3.3-0.6c-0.9-0.4-1.8-0.9-2.5-1.6c-0.7-0.7-1.3-1.6-1.6-2.6
+	c-0.4-1.1-0.6-2.2-0.6-3.4C50.3,12.5,50.5,11.4,50.9,10.3z M72.9,5.9v2.9h0.1c0.2-0.5,0.5-0.9,0.8-1.3c0.3-0.4,0.7-0.8,1.2-1.1
+	c0.4-0.3,0.9-0.5,1.4-0.7c0.5-0.2,1-0.2,1.6-0.2c0.3,0,0.6,0.1,0.9,0.2v4c-0.2,0-0.4-0.1-0.7-0.1c-0.3,0-0.5,0-0.8,0
+	c-0.7,0-1.4,0.1-2,0.4c-0.5,0.2-1,0.6-1.3,1.1c-0.3,0.5-0.6,1-0.7,1.6c-0.1,0.6-0.2,1.3-0.2,1.9v7h-4.3V5.9H72.9L72.9,5.9z M86.4,0
+	v21.4h-4.3V0C82.1,0,86.4,0,86.4,0z M100.3,11.8c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.4-0.7-0.8-1.1-1.1c-0.5-0.3-1.1-0.4-1.7-0.4
+	c-0.6,0-1.2,0.1-1.8,0.4c-0.5,0.3-0.9,0.7-1.2,1.1c-0.3,0.5-0.5,1-0.6,1.6C93.1,12.4,93,13,93,13.6c0,0.6,0.1,1.2,0.2,1.8
+	c0.1,0.6,0.4,1.1,0.7,1.6c0.3,0.5,0.7,0.9,1.2,1.1c0.5,0.3,1.1,0.5,1.7,0.4c0.6,0,1.2-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.1-1.1
+	c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.9C100.5,13,100.4,12.4,100.3,11.8L100.3,11.8z M100.4,19.4c-0.5,0.8-1.1,1.4-2,1.8
+	c-0.9,0.4-1.8,0.6-2.7,0.6c-1.1,0-2.1-0.2-3.1-0.7c-0.9-0.4-1.6-1.1-2.2-1.8c-0.6-0.8-1-1.7-1.3-2.7c-0.3-1-0.4-2.1-0.4-3.1
+	c0-1,0.1-2,0.4-3c0.3-0.9,0.7-1.8,1.3-2.6c1.2-1.6,3.1-2.5,5.1-2.5c0.9,0,1.8,0.2,2.6,0.6c0.8,0.4,1.5,1,2,1.7h0.1V0h4.3v21.4h-4.1
+	L100.4,19.4L100.4,19.4L100.4,19.4z M4.4,45.5c0.1,0.6,0.3,1.1,0.6,1.6c0.3,0.5,0.7,0.9,1.2,1.1c0.6,0.3,1.2,0.4,1.8,0.4
+	c0.6,0,1.3-0.1,1.8-0.4c0.5-0.3,0.9-0.7,1.2-1.1c0.3-0.5,0.5-1,0.6-1.6c0.1-0.6,0.2-1.2,0.2-1.8c0-0.6-0.1-1.2-0.2-1.8
+	c-0.1-0.6-0.3-1.1-0.6-1.6c-0.3-0.5-0.7-0.8-1.2-1.1c-0.6-0.3-1.2-0.5-1.8-0.4c-0.6,0-1.3,0.1-1.8,0.4c-0.5,0.3-0.9,0.7-1.2,1.1
+	c-0.3,0.5-0.5,1-0.6,1.6c-0.1,0.6-0.2,1.2-0.2,1.8C4.3,44.3,4.3,44.9,4.4,45.5z M0.6,40.3c0.7-1.9,2.2-3.5,4.1-4.2
+	c1.1-0.4,2.2-0.6,3.3-0.6c1.1,0,2.3,0.2,3.3,0.6c1.9,0.7,3.5,2.3,4.2,4.2c0.4,1.1,0.6,2.2,0.6,3.4c0,1.1-0.2,2.3-0.6,3.4
+	c-0.4,1-0.9,1.8-1.6,2.6c-0.7,0.7-1.6,1.3-2.5,1.6c-1.1,0.4-2.2,0.6-3.3,0.6c-1.1,0-2.2-0.2-3.3-0.6c-0.9-0.4-1.8-0.9-2.5-1.6
+	C1.5,48.9,0.9,48,0.6,47C0.2,46,0,44.8,0,43.7C0,42.5,0.2,41.4,0.6,40.3z M16.9,38.7v-2.8h2.5v-1.2c0-1.3,0.4-2.5,1.3-3.4
+	c1.1-1,2.5-1.4,3.9-1.3c0.4,0,0.8,0,1.1,0c0.4,0,0.8,0.1,1.1,0.1v3.2c-0.5-0.1-1-0.1-1.6-0.1c-0.5,0-0.9,0.1-1.2,0.4
+	c-0.3,0.4-0.4,0.9-0.4,1.4v0.9h2.9v2.8h-2.9v12.7h-4.3V38.7H16.9z M52.3,33.5V30h4.3v3.5H52.3z M56.6,35.9v15.5h-4.3V35.9H56.6z
+	 M64.1,30v21.4h-4.3V30H64.1z"></path>
+<path fill="#ff959d" d="M42,36.3c2.3,3.2,4,6.2,4,7.3v0l0,0c0,2.3-1.8,4.1-4,4.2c-2.2-0.1-4-1.9-4-4.2l0-0.1l0,0
+	C38,42.4,39.7,39.4,42,36.3 M42,29.9c0,0-8,9.2-8,13.7c0,0,0,0,0,0c-0.1,4.5,3.5,8.2,8,8.2c4.5-0.1,8.1-3.8,8-8.2
+	C50,39,42,29.9,42,29.9L42,29.9z"></path>
+</svg>
+		<div class="sub-nav">
+			<div class="line" style="width: 47px; left: 0px;"></div>
+			<ul>
+				<li data-page="stories" class="active">
+					Stories
+				</li>
+				<li data-page="about">
+					About
+				</li>
+				<li data-page="courses">
+					GSM London<span class="mob-hide"> Oil &amp; Gas</span> courses
+				</li>
+			</ul>
+		</div>
+		<div class="page-wrapper">
+			<div class="inner-move">
+				<div class="page stories-page">
+	<h3>Stories in oil</h3>
+	<ul>
+		<li>
+			<a href="#2012-importers-842">
+				<p>US Spend Falling</p>
+				<span>View the data</span>
+			</a>
+		</li>
+		<li>
+			<a href="#2012-exporters-682">
+				<p>Saudi Arabia Stays At Top Spot</p>
+				<span>View the data</span>
+			</a>
+		</li>
+		<li>
+			<a href="#2009-importers-156">
+				<p>Japan Overtaken By China</p>
+				<span>View the data<span>
+			</span></span></a>
+		</li>
+		<li>
+			<a href="#2002-exporters-579">
+				<p>Norway's Exports Wane</p>
+				<span>View the data</span>
+			</a>
+		</li>
+		<li>
+			<a href="#1999-importers-699">
+				<p>India's Oil Boom</p>
+				<span>View the data</span>
+			</a>
+		</li>
+		<li>
+			<a href="#2002-exporters-643">
+				<p>Russia Rises To Second Place</p>
+				<span>View the data</span>
+			</a>
+		</li>
+		<li>
+			<a href="#2012-importers-156">
+				<p>China Closes Gap With USA</p>
+				<span>View the data</span>
+			</a>
+		</li>
+		<li>
+			<a href="#2014-exporters-826">
+				<p>UK's Oil Dependence Falls</p>
+				<span>View the data</span>
+			</a>
+		</li>
+	</ul>
+	<div class="social">
+	<h4>Share</h4>
+	<ul>
+		<li>
+			<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap&amp;text=GSM%20London%20have%20created%20an%20exciting%20interactive%20guide%20showing%20global%20oil%20imports%20%26%20exports%20over%20the%20last%2015%20years" class="twitter">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="16px" viewBox="0 0 20 16" style="enable-background:new 0 0 20 16;" xml:space="preserve">
+	<path fill="#95ffcc" d="M20,1.9c-0.8,0.3-1.5,0.5-2.4,0.6c0.9-0.5,1.5-1.3,1.8-2.2c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.6-4.2-1.7-5.8-0.1
+		C10.2,1.9,9.8,2.9,9.8,4c0,0.3,0,0.6,0.1,0.9C6.6,4.8,3.5,3.3,1.4,0.7C0.3,2.6,0.9,5,2.7,6.1C2,6.1,1.4,5.9,0.8,5.6v0
+		c0,1.9,1.4,3.6,3.3,4C3.7,9.7,3.4,9.8,3,9.8c-0.3,0-0.5,0-0.8-0.1c0.6,1.7,2.1,2.8,3.8,2.8c-1.5,1.1-3.3,1.7-5.1,1.7
+		c-0.3,0-0.6,0-1-0.1C1.9,15.4,4.1,16,6.3,16c6.4,0.1,11.6-5,11.7-11.3c0-0.1,0-0.1,0-0.2c0-0.2,0-0.3,0-0.5
+		C18.8,3.4,19.5,2.7,20,1.9z"></path>
+</svg>
+			</a> 
+		</li>
+		<li>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="facebook">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+	<path fill="#95aa9d" d="M15.1,0H0.9C0.4,0,0,0.4,0,0.9v14.2C0,15.6,0.4,16,0.9,16h7.7V9.8H6.5V7.4h2.1V5.6c-0.2-1.6,1-3,2.6-3.2c0.2,0,0.3,0,0.5,0
+		c0.6,0,1.2,0,1.9,0.1v2.2h-1.3c-0.5-0.1-1.1,0.2-1.2,0.8c0,0.1,0,0.3,0,0.4v1.5h2.4l-0.3,2.4H11V16h4.1c0.5,0,0.9-0.4,0.9-0.9V0.9
+		C16,0.4,15.6,0,15.1,0z"></path>
+</svg>
+			</a>
+		</li>
+		<li>
+			<a href="http://plus.google.com/share?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3DG%2B%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="gplus">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.9px" height="20px" viewBox="0 0 24.9 18" style="enable-background:new 0 0 24.9 18;" xml:space="preserve">
+	<path fill="#95ff9d" d="M8,6.9v2.7h4.5c-0.4,2.1-2.3,3.6-4.5,3.4C5.2,13,3,10.6,3.1,7.8C3.2,5.2,5.3,3,8,3c1.2,0,2.3,0.4,3.1,1.2l2.1-2.1
+		C11.9,0.7,10,0,8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.6,0,7.6-3.2,7.6-7.8c0-0.4,0-0.9-0.1-1.3L8,6.9L8,6.9z M24.9,6.9h-2.2V4.6
+		h-2.2v2.3h-2.3v2.3h2.3v2.3h2.2V9.1h2.2V6.9L24.9,6.9z"></path>
+</svg>
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+				<div class="page about-page">
+	<h3>Crude oil is the world's single most actively-traded commodity.</h3>
+	<div class="column-wrapper">
+		<div class="column">
+			<p>
+				This tool uses data sourced from UN Comtrade to show the world's ten biggest importers and exporters of oil for every year from 1995 to 2014 – including each country's ten biggest clients in each category.
+			</p>
+			<p class="link">
+				Data source - <a href="http://comtrade.un.org" target="_blank">United Nations data www.comtrade.un.org</a>
+			</p>
+		</div>
+		<div class="column">
+			<p>
+				Select a year and a country to find out who's trading with who, and how relationships have changed over the years.
+			</p>
+		</div>
+	</div>
+	<div class="social">
+	<h4>Share</h4>
+	<ul>
+		<li>
+			<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap&amp;text=GSM%20London%20have%20created%20an%20exciting%20interactive%20guide%20showing%20global%20oil%20imports%20%26%20exports%20over%20the%20last%2015%20years" class="twitter">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="16px" viewBox="0 0 20 16" style="enable-background:new 0 0 20 16;" xml:space="preserve">
+	<path fill="#95ff9d" d="M20,1.9c-0.8,0.3-1.5,0.5-2.4,0.6c0.9-0.5,1.5-1.3,1.8-2.2c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.6-4.2-1.7-5.8-0.1
+		C10.2,1.9,9.8,2.9,9.8,4c0,0.3,0,0.6,0.1,0.9C6.6,4.8,3.5,3.3,1.4,0.7C0.3,2.6,0.9,5,2.7,6.1C2,6.1,1.4,5.9,0.8,5.6v0
+		c0,1.9,1.4,3.6,3.3,4C3.7,9.7,3.4,9.8,3,9.8c-0.3,0-0.5,0-0.8-0.1c0.6,1.7,2.1,2.8,3.8,2.8c-1.5,1.1-3.3,1.7-5.1,1.7
+		c-0.3,0-0.6,0-1-0.1C1.9,15.4,4.1,16,6.3,16c6.4,0.1,11.6-5,11.7-11.3c0-0.1,0-0.1,0-0.2c0-0.2,0-0.3,0-0.5
+		C18.8,3.4,19.5,2.7,20,1.9z"></path>
+</svg>
+			</a> 
+		</li>
+		<li>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="facebook">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+	<path fill="#95ff9d" d="M15.1,0H0.9C0.4,0,0,0.4,0,0.9v14.2C0,15.6,0.4,16,0.9,16h7.7V9.8H6.5V7.4h2.1V5.6c-0.2-1.6,1-3,2.6-3.2c0.2,0,0.3,0,0.5,0
+		c0.6,0,1.2,0,1.9,0.1v2.2h-1.3c-0.5-0.1-1.1,0.2-1.2,0.8c0,0.1,0,0.3,0,0.4v1.5h2.4l-0.3,2.4H11V16h4.1c0.5,0,0.9-0.4,0.9-0.9V0.9
+		C16,0.4,15.6,0,15.1,0z"></path>
+</svg>
+			</a>
+		</li>
+		<li>
+			<a href="http://plus.google.com/share?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3DG%2B%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="gplus">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.9px" height="20px" viewBox="0 0 24.9 18" style="enable-background:new 0 0 24.9 18;" xml:space="preserve">
+	<path fill="#95229d" d="M8,6.9v2.7h4.5c-0.4,2.1-2.3,3.6-4.5,3.4C5.2,13,3,10.6,3.1,7.8C3.2,5.2,5.3,3,8,3c1.2,0,2.3,0.4,3.1,1.2l2.1-2.1
+		C11.9,0.7,10,0,8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.6,0,7.6-3.2,7.6-7.8c0-0.4,0-0.9-0.1-1.3L8,6.9L8,6.9z M24.9,6.9h-2.2V4.6
+		h-2.2v2.3h-2.3v2.3h2.3v2.3h2.2V9.1h2.2V6.9L24.9,6.9z"></path>
+</svg>
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+				<div class="page courses-page">
+	<h3>At GSM London<br> we offer a <br class="med">range of<br> oil &amp; gas undergrad<br><br class="med"> and postgrad courses</h3>
+	<div class="column-wrapper">
+		<div class="column">
+			<p class="link">
+				<a href="http://www.gsmlondon.ac.uk/undergraduate/oil-and-gas-management/bsc-hons-oil-and-gas-management" class="btn" target="_blank">See our range of courses</a>
+			</p>
+		</div>
+	</div>
+	<div class="social">
+	<h4>Share</h4>
+	<ul>
+		<li>
+			<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap&amp;text=GSM%20London%20have%20created%20an%20exciting%20interactive%20guide%20showing%20global%20oil%20imports%20%26%20exports%20over%20the%20last%2015%20years" class="twitter">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="16px" viewBox="0 0 20 16" style="enable-background:new 0 0 20 16;" xml:space="preserve">
+	<path fill="#95cc9d" d="M20,1.9c-0.8,0.3-1.5,0.5-2.4,0.6c0.9-0.5,1.5-1.3,1.8-2.2c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.6-4.2-1.7-5.8-0.1
+		C10.2,1.9,9.8,2.9,9.8,4c0,0.3,0,0.6,0.1,0.9C6.6,4.8,3.5,3.3,1.4,0.7C0.3,2.6,0.9,5,2.7,6.1C2,6.1,1.4,5.9,0.8,5.6v0
+		c0,1.9,1.4,3.6,3.3,4C3.7,9.7,3.4,9.8,3,9.8c-0.3,0-0.5,0-0.8-0.1c0.6,1.7,2.1,2.8,3.8,2.8c-1.5,1.1-3.3,1.7-5.1,1.7
+		c-0.3,0-0.6,0-1-0.1C1.9,15.4,4.1,16,6.3,16c6.4,0.1,11.6-5,11.7-11.3c0-0.1,0-0.1,0-0.2c0-0.2,0-0.3,0-0.5
+		C18.8,3.4,19.5,2.7,20,1.9z"></path>
+</svg>
+			</a> 
+		</li>
+		<li>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="facebook">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+	<path fill="#95ff90" d="M15.1,0H0.9C0.4,0,0,0.4,0,0.9v14.2C0,15.6,0.4,16,0.9,16h7.7V9.8H6.5V7.4h2.1V5.6c-0.2-1.6,1-3,2.6-3.2c0.2,0,0.3,0,0.5,0
+		c0.6,0,1.2,0,1.9,0.1v2.2h-1.3c-0.5-0.1-1.1,0.2-1.2,0.8c0,0.1,0,0.3,0,0.4v1.5h2.4l-0.3,2.4H11V16h4.1c0.5,0,0.9-0.4,0.9-0.9V0.9
+		C16,0.4,15.6,0,15.1,0z"></path>
+</svg>
+			</a>
+		</li>
+		<li>
+			<a href="http://plus.google.com/share?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3DG%2B%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="gplus">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.9px" height="20px" viewBox="0 0 24.9 18" style="enable-background:new 0 0 24.9 18;" xml:space="preserve">
+	<path fill="#92ff2d" d="M8,6.9v2.7h4.5c-0.4,2.1-2.3,3.6-4.5,3.4C5.2,13,3,10.6,3.1,7.8C3.2,5.2,5.3,3,8,3c1.2,0,2.3,0.4,3.1,1.2l2.1-2.1
+		C11.9,0.7,10,0,8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.6,0,7.6-3.2,7.6-7.8c0-0.4,0-0.9-0.1-1.3L8,6.9L8,6.9z M24.9,6.9h-2.2V4.6
+		h-2.2v2.3h-2.3v2.3h2.3v2.3h2.2V9.1h2.2V6.9L24.9,6.9z"></path>
+</svg>
+			</a>
+		</li>
+	</ul>
+</div>
+</div>
+			</div>
+			<div class="social">
+	<h4>Share</h4>
+	<ul>
+		<li>
+			<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap&amp;text=GSM%20London%20have%20created%20an%20exciting%20interactive%20guide%20showing%20global%20oil%20imports%20%26%20exports%20over%20the%20last%2015%20years" class="twitter">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="16px" viewBox="0 0 20 16" style="enable-background:new 0 0 20 16;" xml:space="preserve">
+	<path fill="#95ff9d" d="M20,1.9c-0.8,0.3-1.5,0.5-2.4,0.6c0.9-0.5,1.5-1.3,1.8-2.2c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.6-4.2-1.7-5.8-0.1
+		C10.2,1.9,9.8,2.9,9.8,4c0,0.3,0,0.6,0.1,0.9C6.6,4.8,3.5,3.3,1.4,0.7C0.3,2.6,0.9,5,2.7,6.1C2,6.1,1.4,5.9,0.8,5.6v0
+		c0,1.9,1.4,3.6,3.3,4C3.7,9.7,3.4,9.8,3,9.8c-0.3,0-0.5,0-0.8-0.1c0.6,1.7,2.1,2.8,3.8,2.8c-1.5,1.1-3.3,1.7-5.1,1.7
+		c-0.3,0-0.6,0-1-0.1C1.9,15.4,4.1,16,6.3,16c6.4,0.1,11.6-5,11.7-11.3c0-0.1,0-0.1,0-0.2c0-0.2,0-0.3,0-0.5
+		C18.8,3.4,19.5,2.7,20,1.9z"></path>
+</svg>
+			</a> 
+		</li>
+		<li>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="facebook">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+	<path fill="#95ffaa" d="M15.1,0H0.9C0.4,0,0,0.4,0,0.9v14.2C0,15.6,0.4,16,0.9,16h7.7V9.8H6.5V7.4h2.1V5.6c-0.2-1.6,1-3,2.6-3.2c0.2,0,0.3,0,0.5,0
+		c0.6,0,1.2,0,1.9,0.1v2.2h-1.3c-0.5-0.1-1.1,0.2-1.2,0.8c0,0.1,0,0.3,0,0.4v1.5h2.4l-0.3,2.4H11V16h4.1c0.5,0,0.9-0.4,0.9-0.9V0.9
+		C16,0.4,15.6,0,15.1,0z"></path>
+</svg>
+			</a>
+		</li>
+		<li>
+			<a href="http://plus.google.com/share?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3DG%2B%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="gplus">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.9px" height="20px" viewBox="0 0 24.9 18" style="enable-background:new 0 0 24.9 18;" xml:space="preserve">
+	<path fill="#aaff9d" d="M8,6.9v2.7h4.5c-0.4,2.1-2.3,3.6-4.5,3.4C5.2,13,3,10.6,3.1,7.8C3.2,5.2,5.3,3,8,3c1.2,0,2.3,0.4,3.1,1.2l2.1-2.1
+		C11.9,0.7,10,0,8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.6,0,7.6-3.2,7.6-7.8c0-0.4,0-0.9-0.1-1.3L8,6.9L8,6.9z M24.9,6.9h-2.2V4.6
+		h-2.2v2.3h-2.3v2.3h2.3v2.3h2.2V9.1h2.2V6.9L24.9,6.9z"></path>
+</svg>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="social">
+	<h4>Share</h4>
+	<ul>
+		<li>
+			<a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap&amp;text=GSM%20London%20have%20created%20an%20exciting%20interactive%20guide%20showing%20global%20oil%20imports%20%26%20exports%20over%20the%20last%2015%20years" class="twitter">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="16px" viewBox="0 0 20 16" style="enable-background:new 0 0 20 16;" xml:space="preserve">
+	<path fill="#95ff9d" d="M20,1.9c-0.8,0.3-1.5,0.5-2.4,0.6c0.9-0.5,1.5-1.3,1.8-2.2c-0.8,0.5-1.7,0.8-2.6,1c-1.6-1.6-4.2-1.7-5.8-0.1
+		C10.2,1.9,9.8,2.9,9.8,4c0,0.3,0,0.6,0.1,0.9C6.6,4.8,3.5,3.3,1.4,0.7C0.3,2.6,0.9,5,2.7,6.1C2,6.1,1.4,5.9,0.8,5.6v0
+		c0,1.9,1.4,3.6,3.3,4C3.7,9.7,3.4,9.8,3,9.8c-0.3,0-0.5,0-0.8-0.1c0.6,1.7,2.1,2.8,3.8,2.8c-1.5,1.1-3.3,1.7-5.1,1.7
+		c-0.3,0-0.6,0-1-0.1C1.9,15.4,4.1,16,6.3,16c6.4,0.1,11.6-5,11.7-11.3c0-0.1,0-0.1,0-0.2c0-0.2,0-0.3,0-0.5
+		C18.8,3.4,19.5,2.7,20,1.9z"></path>
+</svg>
+			</a> 
+		</li>
+		<li>
+			<a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="facebook">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+	<path d="M15.1,0H0.9C0.4,0,0,0.4,0,0.9v14.2C0,15.6,0.4,16,0.9,16h7.7V9.8H6.5V7.4h2.1V5.6c-0.2-1.6,1-3,2.6-3.2c0.2,0,0.3,0,0.5,0
+		c0.6,0,1.2,0,1.9,0.1v2.2h-1.3c-0.5-0.1-1.1,0.2-1.2,0.8c0,0.1,0,0.3,0,0.4v1.5h2.4l-0.3,2.4H11V16h4.1c0.5,0,0.9-0.4,0.9-0.9V0.9
+		C16,0.4,15.6,0,15.1,0z"></path>
+</svg>
+			</a>
+		</li>
+		<li>
+			<a href="http://plus.google.com/share?url=http%3A%2F%2Fwww.gsmlondon.ac.uk%2Fglobal-oil-map%2F%3Futm_source%3DG%2B%26utm_medium%3Dsocial%26utm_campaign%3DGlobal%2BOil%2BMap" class="gplus">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.9px" height="20px" viewBox="0 0 24.9 18" style="enable-background:new 0 0 24.9 18;" xml:space="preserve">
+	<path d="M8,6.9v2.7h4.5c-0.4,2.1-2.3,3.6-4.5,3.4C5.2,13,3,10.6,3.1,7.8C3.2,5.2,5.3,3,8,3c1.2,0,2.3,0.4,3.1,1.2l2.1-2.1
+		C11.9,0.7,10,0,8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.6,0,7.6-3.2,7.6-7.8c0-0.4,0-0.9-0.1-1.3L8,6.9L8,6.9z M24.9,6.9h-2.2V4.6
+		h-2.2v2.3h-2.3v2.3h2.3v2.3h2.2V9.1h2.2V6.9L24.9,6.9z"></path>
+</svg>
+			</a>
+		</li>
+	</ul>
+</div>
+            <a href="#" class="footer-logo">
+	<svg xmlns="http://www.w3.org/2000/svg" width="120.03" height="42.97" viewBox="0 0 120.03 42.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #95919d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="GSM_logo" data-name="GSM logo"  fill="#95ff9d" class="cls-1" d="M3740.25,1095.18c0-2.87-2.25-3.01-3.65-3.15v-0.82l7.35-1.15v5.75h0.1c0.58-1.68,3.03-5.75,6.92-5.75,4.52,0,5.72,2.35,5.72,5.75h0.09c0.72-1.63,2.69-5.75,7.02-5.75,5.72,0,5.72,3.83,5.72,7.61v15.17h-3.7v-14.4c0-3.54,0-6.03-3.27-6.03-2.5,0-5.82,4.4-5.82,8.85v11.58h-3.69v-15.45c0-2.59,0-4.98-3.18-4.98-3.07,0-5.91,5.07-5.91,9.04v11.39h-3.7v-17.66Zm-15.38,21.7c0-.83-0.38-0.8-1.21-0.89v-0.21l2.26-.28v6.57c0,0.99,0,1.06.99,1.06h1.07c0.91,0,.94-0.5,1.04-1.31h0.37l-0.06,1.78h-4.46v-6.72Zm5.83,2.68c0-2.57.76-4.19,3.16-4.19s3.13,1.8,3.13,4.19c0,2.55-.74,4.18-3.13,4.18-2.48,0-3.16-1.79-3.16-4.18m5.11,0c0-1.52-.08-3.72-1.95-3.72-1.85,0-1.98,2.06-1.98,3.72,0,1.5.09,3.71,1.98,3.71,1.82,0,1.95-2.06,1.95-3.71m3.53-2.64c0-.96-0.16-1.04-1.19-1.21v-0.2h2.39l3.75,6.56h0.02v-6.56h0.62v8.09h-0.91l-4.03-7.06h-0.03v7.06h-0.62v-6.68Zm8.4-.04c0-.92-0.15-0.97-1.2-1.17v-0.2h2.55c2.54,0,4.4.49,4.4,4.05s-1.95,4.04-4.45,4.04h-1.3v-6.72Zm1.05,5.36c0,0.59,0,.89.63,0.89,1.93,0,2.89-1.06,2.89-3.57,0-2.07-.56-3.59-2.71-3.59-0.72,0-.81.12-0.81,0.91v5.36Zm6.53-2.68c0-2.57.75-4.19,3.15-4.19s3.13,1.8,3.13,4.19c0,2.55-.75,4.18-3.13,4.18-2.48,0-3.15-1.79-3.15-4.18m5.1,0c0-1.52-.08-3.72-1.95-3.72-1.84,0-1.97,2.06-1.97,3.72,0,1.5.08,3.71,1.97,3.71,1.82,0,1.95-2.06,1.95-3.71m3.5-2.64c0-.96-0.16-1.04-1.19-1.21v-0.2h2.38l3.74,6.56h0.02v-6.56h0.62v8.09h-0.9l-4.03-7.06h-0.02v7.06h-0.62v-6.68Zm-30.14-20.75c-0.6-1.78-1.65-4.21-4.74-4.21-2.81,0-4.08,1.32-4.08,3.05,0,3.26,5.85,4.6,8.45,6.53a5.807,5.807,0,0,1,2.75,5.27c0,4.68-3.79,6.41-9.06,6.41a21.912,21.912,0,0,1-5.89-.86l-0.3-5.29h1.18a5.578,5.578,0,0,0,5.39,4.55c3.02,0,4.91-1.94,4.91-3.58,0-3.26-4.43-4.69-7.44-6.41-2.08-1.3-3.74-2.63-3.74-5.29,0-3.59,2.85-5.99,7.92-5.99a30.549,30.549,0,0,1,5.5.73l0.35,5.1Zm-18.45-6.06a11.831,11.831,0,0,0-1.33-.72c3.18-2.97,8.17-3.24,8.81-.37,0.53,2.38-2.44,3.36-4.15,1.01-0.98-1.34-2.73-.26-3.33.08m-11.3,16.47s-6.5-1.83-6.22-8.41c0.28-6.79,6.67-8.92,11.44-8.84,4.38,0.07,9.91,3.19,9.77,9.46-0.1,4.68-2.22,8.24-11.34,8.73-4.67.25-5.84,1.04-5.87,2.67-0.03,1.22,2,1.36,3.4,1.52,6.58,0.76,17.28-.94,16.95,8.72-0.36,10.47-12.79,9.52-14.26,9.55-2.42.03-11.87-1.58-10.82-8.16,0.82-5.2,5.65-4.78,6.63-3.16-3.46.06-6.22,9.85,5.34,9.97,9.34,0.09,9.23-5.63,9.24-6.43,0.11-6.51-10.09-5.26-14.29-5.61-5.95-.48-7.83-8,0.03-10.01m4.35-15.96c-3.72,0-5.74,3.49-5.74,7.81s1.91,7.81,5.74,7.81c3.72,0,5.74-3.5,5.74-7.81s-2.09-7.81-5.74-7.81m65.56-.19h2.07a1.988,1.988,0,0,1,1.8.99,3.077,3.077,0,0,1,.32,1.95,3.045,3.045,0,0,1-.33,1.97,2.133,2.133,0,0,1-1.85.97h-2.01v-5.88Zm0.9,5.04h1.07a1.236,1.236,0,0,0,1.1-.51,5.428,5.428,0,0,0-.04-3.19,1.148,1.148,0,0,0-1.06-.5h-1.07v4.2Zm5.11-5.04h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.19h-0.85v-4.19Zm2.93,2.91a1.741,1.741,0,0,0,1.33.54,0.676,0.676,0,0,0,.83-0.54,0.44,0.44,0,0,0-.52-0.41l-0.75-.07a1.185,1.185,0,0,1-1.21-1.19,1.353,1.353,0,0,1,1.57-1.29,2.431,2.431,0,0,1,1.65.57l-0.52.61a1.873,1.873,0,0,0-1.13-.38c-0.54,0-.72.21-0.72,0.5,0,0.18.13,0.36,0.55,0.4l0.7,0.05a1.158,1.158,0,0,1,1.22,1.25,1.483,1.483,0,0,1-1.74,1.29,2.626,2.626,0,0,1-1.85-.75Zm4.74-4.18h0.84v1.27h0.62v0.65h-0.62v2.44a0.261,0.261,0,0,0,.3.31h0.32v0.79h-0.44a0.958,0.958,0,0,1-1.02-1.03v-2.51h-0.43v-0.65h0.43v-1.27Zm3.11-.42h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.19h-0.85v-4.19Zm2.8,0h0.84v0.45h0.02a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.838,0.838,0,1,0-1.67,0v2.49h-0.84v-4.19Zm8.38,3.52a1.959,1.959,0,0,1-1.51.72,2.159,2.159,0,0,1,0-4.29,1.967,1.967,0,0,1,1.51.73l-0.62.55a1.126,1.126,0,0,0-.85-0.43,1.318,1.318,0,0,0,0,2.6,1.105,1.105,0,0,0,.85-0.44Zm1.47-4.79h0.85v1.27h0.61v0.65h-0.61v2.44a0.258,0.258,0,0,0,.3.31h0.31v0.79h-0.44a0.958,0.958,0,0,1-1.02-1.03v-2.51h-0.42v-0.65h0.42v-1.27Zm3.12-.42h0.84v0.84h-0.84v-0.84Zm0,1.69h0.84v4.19h-0.84v-4.19Zm2.2,0h0.89l0.99,2.94h0.02l0.99-2.94h0.89l-1.54,4.19h-0.7Zm5.68,2.42a0.938,0.938,0,0,0,1,1.03,1.3,1.3,0,0,0,.92-0.41l0.62,0.53a1.98,1.98,0,0,1-1.52.67c-0.87,0-1.87-.41-1.87-2.13,0-1.63.92-2.16,1.74-2.16a1.709,1.709,0,0,1,1.73,1.77v0.7h-2.62Zm1.77-.7a0.889,0.889,0,1,0-1.77,0h1.77Zm-42.28,4.86h0.84v2.14h0.02a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.838,0.838,0,1,0-1.67,0v2.49h-0.84v-5.88Zm5.31-.01h0.85v0.85h-0.85v-0.85Zm0,1.7h0.85v4.19h-0.85v-4.19Zm5.17,3.75a1.5,1.5,0,0,1-1.09.49,1.4,1.4,0,0,1-1.11-.51c-0.25-.32-0.32-0.47-0.32-1.63s0.07-1.32.32-1.64a1.4,1.4,0,0,1,1.11-.51,1.45,1.45,0,0,1,1.09.5v-0.45h0.84v4.09a1.716,1.716,0,0,1-1.82,1.85,2.03,2.03,0,0,1-1.47-.71l0.66-.52a1.194,1.194,0,0,0,.82.38,0.873,0.873,0,0,0,.97-0.91v-0.43Zm-1.51-.67a0.864,0.864,0,0,0,.68.32,0.852,0.852,0,0,0,.66-0.32,1.325,1.325,0,0,0,.17-0.98,1.31,1.31,0,0,0-.17-0.98,0.828,0.828,0,0,0-.66-0.33,0.839,0.839,0,0,0-.68.33,1.327,1.327,0,0,0-.16.98,1.343,1.343,0,0,0,.16.98m4.28-4.77h0.85v2.14h0.01a1.368,1.368,0,0,1,1.1-.5,1.415,1.415,0,0,1,1.4,1.46v2.78h-0.85v-2.49a0.834,0.834,0,1,0-1.66,0v2.49h-0.85v-5.88Zm5.93,4.1a0.941,0.941,0,0,0,1,1.04,1.32,1.32,0,0,0,.92-0.41l0.62,0.52a1.957,1.957,0,0,1-1.52.68c-0.87,0-1.87-.41-1.87-2.13,0-1.63.92-2.16,1.73-2.16a1.711,1.711,0,0,1,1.74,1.77v0.69h-2.62Zm1.77-.69a0.89,0.89,0,1,0-1.77,0h1.77Zm2.57-1.72h0.84v0.45h0.02a1.368,1.368,0,0,1,1.1-.5,1.4,1.4,0,0,1,.88.32l-0.62.73a0.829,0.829,0,0,0-.55-0.21,0.805,0.805,0,0,0-.83.88v2.52h-0.84v-4.19Zm-22.88,10.68a0.933,0.933,0,0,0,1,1.03,1.333,1.333,0,0,0,.92-0.4l0.62,0.52a1.957,1.957,0,0,1-1.52.68c-0.86,0-1.87-.42-1.87-2.14,0-1.63.92-2.15,1.74-2.15a1.694,1.694,0,0,1,1.73,1.76v0.7h-2.62Zm1.77-.7a0.889,0.889,0,1,0-1.77,0h1.77Zm5.09,2.04a1.5,1.5,0,0,1-1.09.49,1.355,1.355,0,0,1-1.13-.55,4.417,4.417,0,0,1,0-3.2,1.375,1.375,0,0,1,1.13-.54,1.553,1.553,0,0,1,1.09.49v-2.14h0.84v5.89h-0.84v-0.44Zm-1.67-1.66c0,0.65.04,1.3,0.84,1.3,0.78,0,.83-0.69.83-1.3s-0.05-1.3-.83-1.3c-0.8,0-.84.65-0.84,1.3m4.29-2.09h0.85v2.49a0.837,0.837,0,1,0,1.67,0v-2.49h0.84v4.19h-0.84v-0.45h-0.02a1.362,1.362,0,0,1-1.09.5,1.417,1.417,0,0,1-1.41-1.46v-2.78Zm8.38,3.51a1.967,1.967,0,0,1-1.51.73,2.159,2.159,0,0,1,0-4.29,1.959,1.959,0,0,1,1.51.72l-0.62.56a1.09,1.09,0,0,0-.85-0.44,1.318,1.318,0,0,0,0,2.6,1.09,1.09,0,0,0,.85-0.44Zm3.63,0.3h-0.01a1.067,1.067,0,0,1-1.04.43,1.322,1.322,0,0,1-1.49-1.29,1.24,1.24,0,0,1,1.37-1.24H3796v-0.43c0-.4-0.26-0.54-0.86-0.54a0.8,0.8,0,0,0-.8.32l-0.66-.5a1.583,1.583,0,0,1,1.42-.61c1.04,0,1.75.34,1.75,1.38v2.86H3796v-0.38Zm0-1.4h-1.01c-0.5,0-.73.2-0.73,0.5,0,0.28.22,0.53,0.8,0.53,0.7,0,.94-0.07.94-0.73v-0.3Zm2.83-3.69h0.84v1.27h0.62v0.65h-0.62v2.44a0.258,0.258,0,0,0,.3.31h0.32v0.8h-0.44a0.966,0.966,0,0,1-1.02-1.04v-2.51h-0.43v-0.65h0.43v-1.27Zm3.11-.42h0.85v0.84h-0.85v-0.84Zm0,1.69h0.85v4.2h-0.85v-4.2Zm3.05,0.49a1.8,1.8,0,0,1,2.55,0,3.047,3.047,0,0,1,0,3.22,1.775,1.775,0,0,1-2.55,0,3.047,3.047,0,0,1,0-3.22m1.95,0.61a0.858,0.858,0,0,0-.68-0.3,0.873,0.873,0,0,0-.68.3,2.6,2.6,0,0,0,0,2,0.873,0.873,0,0,0,.68.3,0.858,0.858,0,0,0,.68-0.3,1.426,1.426,0,0,0,.21-0.99,1.456,1.456,0,0,0-.21-1.01m2.78-1.09h0.84v0.44h0.02a1.36,1.36,0,0,1,1.1-.49,1.406,1.406,0,0,1,1.4,1.45v2.79h-0.85v-2.5a0.837,0.837,0,1,0-1.67,0v2.5h-0.84v-4.19Z" transform="translate(-3696.97 -1087)"></path>
+</svg>
+</a>
+        </div>
+
+        <script src="./assets/js/bundle.js"></script>
+        <script>
+            System['import'].call(System, 'app').catch(function(e){
+                // console.dir( e );
+            });
+        </script>
+
+    
+
+</body>
+</html>
