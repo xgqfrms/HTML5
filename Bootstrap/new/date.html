@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date</title>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>Date</h1>
+		</div>
+		<div class="time">
+			<span id="fullYear"></span>
+			<span id="year"></span>
+			<span id="month"></span>
+			<span id="date"></span>
+			<span id="day"></span>
+			<span id="hour"></span>
+			<span id="minute"></span>
+		</div>
+		<div class="localtime">
+			<span id="localtime"></span>
+		</div>	
+	</div>
+	<script>
+		var D, fullYear, year, month, date, day ,hour, minute, hello;
+		D = new Date();
+		fullYear = D.getFullYear();//2016
+		year = D.getYear();//116(1900+)
+		month = D.getMonth();//8 (0-11)
+		date = D.getDate();//10(31)
+		day = D.getDay();//6(week) 
+		hour = D.getHours();//14(24)
+		// minute
+		if(hour < 6){
+			hello = "凌晨好!";
+		}else if(hour < 9){
+			hello = "早上好!";
+		}else if(hour < 12){
+			hello = "上午好!";
+		}else if(hour < 14){
+			hello = "中午好!";
+		}else if(hour < 17){
+			hello = "下午好!";
+		}else if(hour < 19){
+			hello = "傍晚好!";
+		}else if(hour < 22){
+			hello = "晚上好!";
+		}else {
+			hello = "夜深了!";
+		}
+		//fullYear, year, month, date, day ,hour, minute
+		document.getElementById('fullYear').innerHTML = "FullYear=" + fullYear +"<br/>";
+		document.getElementById('year').innerHTML = "Year = " + year +"<br/>";
+		document.getElementById('month').innerHTML = "Month = " + month +"<br/>";
+		document.getElementById('date').innerHTML = "Date = " + date +"<br/>";
+		document.getElementById('day').innerHTML = "Day = " + day +"<br/>";
+		document.getElementById('hour').innerHTML = "Hours = " + hour +"<br/>";
+		document.write(' '+hello);
+	</script>
+	<script>
+		var D, year, month, week, day, WEEK,MSIE, TODAY, time;
+		D = new Date();
+		WEEK = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五","星期六"];// 0-6
+		MSIE = navigator.userAgent.indexOf("MSIE");
+		//MSIE != 0;
+		//!MSIE
+		if(MSIE != -1){
+			year = D.getFullYear();//2016
+			TODAY = year + "年";
+		}
+		else{
+			year = D.getFullYear();
+			month = D.getMonth() + 1;
+			day = D.getDate();
+			week = WEEK[D.getDay()];
+		　　TODAY = year+ "年" + month + "月" + day + "日" + week;
+		    // time = new Time();
+		}
+		document.write(TODAY);
+	</script>
+	<!--
+		<script>
+			jQuery(document).ready(function(){
+				jQuery('h2 a,').click(function(){
+				    jQuery(this).text('页面载入中,请稍后……');
+				    window.location = jQuery(this).attr('href');
+			    });
+			});
+		</script> 
+	 -->
+</body>
+</html>

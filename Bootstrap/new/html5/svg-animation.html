@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>svg-animation</title>
+	<!-- not free for use-->
+	<style>
+		/**/
+		body {
+		  background-color:black;
+		  text-align:center;
+		  color: #777;
+		}
+
+		#slider {
+		  width:400px;
+		  margin:30px auto;
+		  background-color: #222;
+		  display: inline-block;
+		}
+
+		#slider, #slider a {
+		  background-image: none;
+		  border: 1px solid #555;
+		}
+		#slider a {
+		  background-color: #444;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<!-- <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			 x="0px" y="0px" width="570px" height="150px" viewBox="0 0 570 150" xml:space="preserve">
+		<circle fill="none" cx="71.5" cy="77.5" r="51.5" stroke="#88CE02" stroke-width="4"/>
+		<ellipse fill="none" stroke="#88CE02" stroke-width="4" stroke-miterlimit="10" cx="241.4" cy="77.5" rx="78.9" ry="51.5"/>
+		<rect x="354" y="26" fill="none" stroke="#88CE02" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="103" height="103" id="rect" />
+		<polyline fill="none" stroke="#88CE02" stroke-width="4" stroke-miterlimit="10" points="536.1,129 487.3,74.2 536.1,26 "/>
+		</svg><br>
+		<div id="slider"></div>
+		<div id="replay" style="position:relative; display:inline-block; text-align:right; cursor:pointer; color:#999999; font-family:Arial, Verdana, sans-serif; font-size:12px; bottom: 35px; margin-left: 24px;">replay <img id="replayIcon" src="http://greensock.com/_img/codepen/allDevicesBanner/replay.png" width="19" height="19" style="margin-left:2px; vertical-align: middle;" />
+		</div> -->
+		<!--  -->
+		<svg id="svgR" class="svgloader" height="100" width="100">
+		        <circle id="pathR" cx="50" cy="50" r="35" stroke="#a71ce5" stroke-width="2" fill="transparent" transform="rotate(-90, 50, 50)" ></circle>
+		</svg>
+	</div>
+	<!-- 
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin.min.js"></script> 
+	-->	
+	<script src="./TweenMax.min.js"></script>
+	<script src="./DrawSVGPlugin.min.js"></script>
+	<!-- <script src="./jquery.min.js"></script>
+	<script src="./jquery-ui.min.js"></script>
+	
+	<script>
+		var shapes = $("rect, circle, ellipse, polyline"),
+				tl = new TimelineMax({onUpdate:updateSlider, repeat:1, yoyo:true}),
+		    $slider = $("#slider");
+		tl.staggerFromTo(shapes, 1, {drawSVG:"100%"}, {drawSVG:"50% 50%"}, 0.1)
+		  .fromTo(shapes, 0.1, {drawSVG:"0%"}, {drawSVG:"10%", immediateRender:false}, "+=0.1")
+		  .staggerTo(shapes, 1, {drawSVG:"90% 100%"}, 0.5)
+		  .to(shapes, 1, {rotation:360, scale:0.5, drawSVG:"100%", stroke:"white", strokeWidth:6, transformOrigin:"50% 50%"})
+		  .staggerTo(shapes, 0.5, {stroke:"red", scale:1.5, opacity:0}, 0.2)
+		/* --- controls --- */
+		$slider.slider({
+		  range: false,
+		  min: 0,
+		  max: 100,
+		  step: 0.02,
+		  value:0,
+		  slide: function ( event, ui ) {
+		    tl.progress( ui.value / 100 ).pause();
+		  }
+		});
+		function updateSlider() {
+			$slider.slider("value", tl.progress() * 100);
+		}
+		var $replayIcon = $("#replayIcon"),
+		    $replay = $("#replay").mouseenter(function(){
+		      TweenLite.to($replayIcon, 0.4, {rotation:"+=360"});
+		      TweenLite.to($replay, 0.4, {opacity:1});
+		    }).mouseleave(function(){
+		      TweenLite.to($replay, 0.4, {opacity:0.65});
+		    }).click(function(){
+		      tl.restart();
+		});
+	</script> -->
+
+</body>
+</html>
