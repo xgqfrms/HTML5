@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6 let</title>
+</head>
+<body>
+    <div>
+        <!--  -->
+    </div>
+    <script>
+        function getUsersAvatars(userNames, cb){
+            let url = "/userAvatars/";
+            
+            for(let index in userNames){
+                _fetchAvatar(url + userNames[index], function(avatarUrl){
+                    _displayAvatar(userNames[index], avatarUrl);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
