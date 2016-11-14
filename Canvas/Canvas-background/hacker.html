@@ -6,6 +6,7 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API -->
     <!-- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#drawImage%28%29 -->
     <!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL -->
+    <!-- http://www.w3schools.com/jsref/prop_style_backgroundrepeat.asp -->
     <style>
         body {
             margin: 0;
@@ -154,7 +155,14 @@
         window.onload = function () {
             var canv = document.getElementById('canvas'), ctx = canv.getContext('2d');
 
-            var dd = document.documentElement, cw = dd.clientWidth, ch = dd.clientHeight;
+            // canv.style.background-attachment = `fixed`;
+            canv.style.backgroundAttachment = `fixed`;
+            canv.style.backgroundRepeat = `repeat-y`
+            canv.style.border = `1px solid red`;
+
+            var dd = document.documentElement, 
+                cw = (canv.width =dd.clientWidth),
+                ch = (canv.height = dd.clientHeight);
 
             var bc = 120, bcIndex = 5, shadowBlur = 2, sbIndex = 0.4, fh = 110,fontSize = 12;
 
