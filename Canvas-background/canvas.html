@@ -6,6 +6,7 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API -->
     <!-- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#drawImage%28%29 -->
     <!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL -->
+    <!-- http://www.w3schools.com/tags/ref_canvas.asp -->
     <style>
           .canvas{
             margin-top: -100px;
@@ -106,13 +107,81 @@
     </canvas>
     <script>
         var canv = document.getElementById('canvas');
-        cw = document.documentElement.clientWidth/3;
+        cw = document.documentElement.clientWidth*0.8;
         ch = document.documentElement.clientHeight/3;
         canv.width = cw;
         canv.height = ch;
         var ctx = canv.getContext('2d');
-        ctx.fillStyle = "rgba(0,255,0,0.1)";
+        ctx.fillStyle = "rgba(0,255,0,0.3)";
+        ctx.strokeStyle="#f00";
+        ctx.strokeRect(0, 0, canv.width, canv.height);
         ctx.fillRect(0, 0, canv.width, canv.height);
+
+        var my_gradient=ctx.createLinearGradient(0,23,170,0.3);
+            my_gradient.addColorStop("0","magenta"),
+            my_gradient.addColorStop("0.5","blue"),
+            my_gradient.addColorStop("1.0","red");
+
+        ctx.beginPath();
+        ctx.moveTo(20,20);
+        ctx.lineTo(180,180);
+        ctx.strokeStyle = my_gradient;
+        ctx.lineWidth=5;
+        ctx.stroke();
+
+        ctx.font="20px Georgia";
+        ctx.lineWidth=1;
+        ctx.strokeStyle= my_gradient;
+        ctx.strokeText("Hello World!",50,200);
+        // strokeStyle & strokeText
+
+        ctx.font="30px Verdana";
+        ctx.lineWidth=1;
+        // ctx.strokeStyle= my_gradient;
+        ctx.fillStyle=my_gradient;
+        ctx.fillText("Big smile!",150,100);
+        // fillStyle & fillText
+
+        ctx.beginPath();
+        ctx.moveTo(180,20);
+        ctx.lineTo(20,180);
+        ctx.strokeStyle="red";
+        ctx.lineWidth=3;
+        ctx.stroke();
+        // ctx.closePath();
+        // ctx.save();
+        // ctx.clear();
+
+
+        ctx.beginPath();
+        ctx.moveTo(320,20);
+        // Start point(x, y)
+        ctx.bezierCurveTo(320,200,420,200,420,20);
+        // Control point 1(cp1x,cp1y), Control point 2(cp2x,cp2y), End point(x, y)
+        ctx.strokeStyle= my_gradient;
+        ctx.stroke();
+
+        ctx.beginPath(); 
+        ctx.moveTo(600,20);
+        ctx.lineTo(700,20);
+        ctx.arcTo(750,20,750,70,50); // Create an arc
+        ctx.lineTo(750,150);
+        ctx.strokeStyle= "#0f0";
+        ctx.stroke(); 
+
+        ctx.beginPath();
+        ctx.arc(550,75,50,Math.PI,1.5*Math.PI, true);
+        // x, y, Center, Start angle(), End angle(), [ture: counterclockwise/ false: clockwise(default)]
+        ctx.strokeStyle= "rgba(0,155,255,0.7)";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(820,20);
+        // Start point(x,y)
+        ctx.quadraticCurveTo(820,100,920,20);
+        // Control (cpx,cpy), End point(x,y)
+        ctx.strokeStyle= "rgba(155,0,255,0.7)";
+        ctx.stroke();
 
 
         var box = document.getElementById('body');
