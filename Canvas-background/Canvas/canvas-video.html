@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas-video</title>
+    <!-- http://www.w3schools.com/tags/canvas_drawimage.asp -->
+    <!-- http://www.w3schools.com/html/html5_video.asp -->
+    <!-- http://www.w3schools.com/tags/tag_video.asp -->
+    <!-- http://www.w3schools.com/tags/ref_av_dom.asp -->
+
+    <!-- http://www.w3schools.com/tags/ref_eventattributes.asp -->
+    <!-- http://www.w3schools.com/js/js_events.asp -->
+
+    <!-- http://www.w3schools.com/tags/ref_standardattributes.asp -->
+    <!--  -->
+
+    <!-- https://cdnjs.com/libraries/html5shiv -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+<body>
+    <div>
+        <h1>canvas-video</h1>
+    </div>
+    <!--
+        loop loop="" loop="loop" 
+        controls controls="" controls="controls" 
+        autoplay autoplay="" autoplay="autoplay" 
+        muted muted="" muted="muted"
+        preload="auto|metadata|none"
+        preload="metadata" (浏览器应该在网页加载时仅加载元数据, video description infomation)
+        preload="none" (浏览器在加载页面时不应加载视频)
+        preload="auto" (default: 浏览器应该在网页加载时加载整个视频)
+        poster="./scream.jpg" 
+    -->
+    <video id="video" width="270" loop="loop" controls="controls" preload="metadata" poster="./scream.jpg">
+        <source src="http://www.w3schools.com/tags/mov_bbb.mp4" type='video/mp4'>
+        <source src="http://www.w3schools.com/tags/mov_bbb.ogg" type='video/ogg'>
+        <source src="http://www.w3schools.com/tags/mov_bbb.webm" type='video/webm'>
+        Your browser does not support the video tag.
+    </video>
+    <script>
+        
+    </script>
+    <script>
+        let welcomeFunc = () => {
+            alert("Thank you for visiting xgqfrms's website!");
+        }
+        let byeFunc = () => {
+            alert("Bye Bye, hope you like xgqfrms's website!");
+        }
+        window.onload = () =>{
+            welcomeFunc();
+        }
+        window.onunload = () =>{
+            byeFunc();
+        }
+        let run = () => {
+            byeFunc();
+        }
+        // https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setInterval
+
+        for (let i = 0; i <= 3; i++) {
+            if(i === 3){
+                console.log(i);
+                window.clearInterval(timeoutID);
+            }else{
+               // var timeoutID = setInterval(run, 1000);
+            }
+        }
+        /*
+        let run = () => {
+            if(window.onload === true){
+                welcomeFunc();
+            }
+            if(window.onunload === true){
+                byeFunc();
+            }
+        }
+        // setTimeout() 和 setInterval() 本质区别在哪里？
+        setInterval(run, 1000);
+        // 设置间隔/定时器, 每隔一段时间调用指定函数（N次）, 持续占有独立线程的一个定时触发函数！, 推荐用内置方法（第一种）
+
+        setTimeout()
+        // 设置超时, 是在一段时间后调用指定函数（仅一次）,不会持续占有一个线程的资源，执行完当前的方法，会释放当然的线程资源，等待下次触发，会重新申请资源！, setTimeout时间不是标准的系统时间，是有误差的。
+        */
+    </script>
+</body>
+</html>

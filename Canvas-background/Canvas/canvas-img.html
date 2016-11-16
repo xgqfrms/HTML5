@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas images</title>
+    <!-- http://www.w3schools.com/tags/canvas_drawimage.asp -->
+    <style>
+        .canvas{
+             width: 240px;
+             height : 297px;
+             /*border:1px solid #d3d3d3;*/
+             border:5px solid #d3ffd3;
+             background: rgba(0,0,0,0);
+        }
+        #Canvas{
+            width: 240px;
+            height : 297px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>canvas images</h1>
+    </div>
+    <img src="scream.jpg" alt="scream.jpg" id="scream" width="220" height="277"/>
+    <canvas id="myCanvas" width="240" height="297" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <img src="scream.jpg" alt="scream.jpg" id="new_scream"/>
+    <canvas id="Canvas" class="canvas">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <p>
+        <strong>Note:</strong> 
+        The canvas tag is not supported in Internet Explorer 8 and earlier versions.
+    </p>
+    <script>
+        window.onload = function() {
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+            var img=document.getElementById("scream");
+            ctx.drawImage(img,10,10);
+            // context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);
+            // src , Optional: start_clipping(sx,sy), Optional: clipped_image(w,h), Position(x,y), Optional: size(w,h) 
+            var cc=document.getElementById("Canvas");
+            var cctx=cc.getContext("2d");
+            var img1=document.getElementById("new_scream");
+            ctx.drawImage(img1,10,10);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        .p{
+            position:relative;
+            left:50%;
+            float:left;
+            background: rgba(0,0,0,0.5);
+        }
+        .c{
+            position:relative;
+            float:left;
+            right:50%;
+            background: rgba(0,255,0,0.5);
+        }
+        .align-center{
+            position:absolute;
+            background: rgba(0,0,0,0.7);
+            left:50%;
+            top:50%;
+            width:400px;
+            height:400px;
+            margin-top:-200px;
+            margin-left:-200px;
+            border:1px dashed #333;
+            text-align: center;
+        }
+        .unfixed-align-center{
+            position:absolute;
+            background: rgba(0,255,0,0.7);
+            left:50%;
+            top:50%;
+            width:50%;
+            height:50%;
+            border:1px dashed #333;
+            text-align: center;
+            /*vertical-align: center;*/
+            transform: translate(-50%,-50%);
+        }
+        .left, .right{
+            height: 300px;
+            width: 200px;
+            box-sizing: border-box;
+        }
+        .left{
+            float: left;
+            background-color: #0f0;
+        }
+        .right{
+            /*float: right;*/
+            float: left;
+            background-color: #f0f;
+        }
+        .middle{
+            box-sizing: border-box;
+            height: 300px;
+            margin: 0 200px;
+            max-width: 500px;
+            width: 500px;
+            min-width: 300px;
+            /*没有这行，当宽度缩小到一定程度的时候，中间的内容可能换行*/
+            background-color: #0ff;
+            /*float: left;*/
+        }
+        /*.left, .right{
+            height: 300px;
+            width: 200px;
+            float: left;
+        }
+        .left{
+            margin-left: -100%;
+            background-color: #0f0;
+        }
+        .right{
+            margin-left: -200px;
+            background-color: red;
+        }
+        .middle{
+            height: 300px;
+            width: 100%;
+            float: left;
+            background-color: blue;
+        }*/
+    </style>
+</head>
+<body>
+    <div>
+        <h1>CSS3</h1>
+    </div>
+    <!-- 
+    <div class="p">
+        <h1 class="c">Test Float Element Center</h1>
+    </div>
+     -->
+    <!-- 
+    <div class="align-center">
+        <mark>css3 实现水平垂直居中</mark>
+    </div>
+    <div class="unfixed-align-center">
+        <mark>css3 实现水平垂直居中</mark>
+    </div>
+     -->
+     <div class="left">
+         <span>css实现三栏布局,中间自适应 </span>
+     </div>
+     <div class="middle">
+         <span>css实现三栏布局,中间自适应 </span>
+         <span>css实现三栏布局,中间自适应 </span>
+     </div>
+     <div class="right">
+         <span>css实现三栏布局,中间自适应 </span>
+     </div>
+</body>
+</html>

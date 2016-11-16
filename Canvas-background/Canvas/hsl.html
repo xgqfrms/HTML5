@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hsl</title>
+    <!-- http://codepen.io/jackrugile/pen/LCFxa -->
+    <!-- http://www.coding-dude.com/wp/web-design/create-dynamic-backgrounds-website-using-html5-canvas/ -->
+</head>
+<body>
+    <div>
+        <h1>hsl</h1>
+    </div>
+    <script>
+        var c = document.createElement('canvas'),
+            ctx = c.getContext('2d'),
+            cw = c.width = 200,
+            ch = c.height = 200;
+
+        for( var x = 0; x < cw; x++ ){
+            for( var y = 0; y < ch; y++ ){
+                ctx.fillStyle = 'hsl(0, 0%, ' + ( 100 - ( Math.random() * 15 ) ) + '%)';
+                ctx.fillRect(x, y, 1, 1);
+            }
+        }
+
+        document.body.style.background = 'url(' + c.toDataURL() + ')';
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FizzBuzzWhizz</title>
+    <!-- 
+        http://wiki.c2.com/?FizzBuzz
+        http://wiki.c2.com/?FizzBuzzTest
+    -->
+</head>
+<body>
+    <div>
+        <pre>
+            FizzBuzzWhizz 
+            你是一名体育老师，在某次课距离下课还有五分钟时，你决定搞一个游戏,此时有100名学生在上课。
+            游戏的规则是：
+            1. 你首先说出三个不同的特殊数，要求必须是个位数，比如3、5、7。
+            2. 让所有学生排成一队，然后按顺序报数。
+            3. 学生报数时，如果所报数字是第一个特殊数（3）的倍数，那么不能说该数字，而要说Fizz；
+               如果所报数字是第二个特殊数（5）的倍数，那么要说Buzz；
+               如果所报数字是第三个特殊数（7）的倍数，那么要说Whizz。
+            4. 学生报数时，如果所报数字同时是两个特殊数的倍数情况下，也要特殊处理，
+               比如第一个特殊数和第二个特殊数的倍数，那么不能说该数字，而是要说FizzBuzz, 以此类推。
+               如果同时是三个特殊数的倍数，那么要说FizzBuzzWhizz。 
+            5. 学生报数时，如果所报数字包含了第一个特殊数，那么也不能说该数字，而是要说相应的单词，
+               比如本例中第一个特殊数是3，那么要报13的同学应该说Fizz，
+               如果数字中包含了第一个特殊数，那么忽略规则3和规则4，比如要报35的同学只报Fizz，不报BuzzWhizz。
+        </pre>
+    </div>
+    <script>
+        let cd = (x, y, s) => {
+            if (x % y === 0){
+                 return s;
+            }
+            else{
+                return '';
+            }
+        }
+        let bs = (a, b, c) => {
+          for (let i = 1; i <= 10; i++) {
+            var d = [i.toString().indexOf(a) !== -1, cd(i, a, 'Fizz') + cd(i, b, 'Buzz') + cd(i, c, "Whizz")];
+            if (d[0]){
+                 console.log("Fizz"); 
+            }else if(d[1] !== ''){
+                console.log(d[1]);
+            }else{
+                console.log(i);
+            }
+          }
+        }
+        bs(3, 5, 7);
+    </script>
+</body>
+</html>

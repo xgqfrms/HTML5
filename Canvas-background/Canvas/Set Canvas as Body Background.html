@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Canvas as Body Background</title>
+    <!-- http://codepen.io/xgqfrms/pen/jVrPpK -->
+    <!-- https://coderwall.com/p/_ac7oa/set-canvas-as-body-background -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#drawImage%28%29 -->
+</head>
+<body>
+    <div>
+        <h1>Set Canvas as Body Background</h1>
+        <a href="http://codepen.io/xgqfrms/pen/jVrPpK">http://codepen.io/xgqfrms/pen/jVrPpK</a>
+        <div>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+            <p>ppppp</p>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            var run = () => {
+                var c = document.createElement('canvas'),
+                    ctx = c.getContext('2d'),
+                    cw = c.width = 52,
+                    ch = c.height = 52;
+                let x = 0, y = 0;
+                for( x; x < cw; x++ ){
+                    for( y; y < ch; y++ ){
+                        // ctx.fillStyle = 'hsl(1, 0%, ' + ( 100 - ( Math.random() * 15 ) ) + '%)';
+                        let r = parseInt((255 -(Math.random()* 200))),
+                            g = parseInt((255 -(Math.random()* 50))),
+                            b = parseInt((255 -(Math.random()* 200)))
+                            a = (1 -(Math.random()* 1));
+                        ctx.fillStyle = `rgba( ${r},${g},${b},${a})`;
+                        ctx.fillRect(0, 0, 50, 50);
+                    }
+                }
+                document.body.style.background = 'transparent url(' + c.toDataURL() + ') repeat fixed';
+            }
+            setInterval(run, 1000);
+        }
+    </script>
+</body>
+</html>
