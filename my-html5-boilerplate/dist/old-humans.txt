@@ -1,0 +1,17 @@
+/* TEAM */
+
+Your title: xgqfrms.
+Site: xgqfrms@xgqfrms.xyz, xgqfrms.xyz.
+Twitter: @xgqfrms.
+Location: Shanghai, China.
+
+/* THANKS */
+
+Name: xgqfrms.xyz
+
+/* SITE */
+
+Last update: 2016/08/08
+Standards: HTML5, CSS3, JavaScript, C#, PHP.
+Components: Modernizr, jQuery, Node.js, AngularJS, React, React-Native.
+Software: Software used for the development.

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <title>setTimeout() 和 setInterval() 本质区别</title>
+    <!-- http://kamranahmed.info/blog/2016/04/04/es6-in-depth/ -->
+    <!-- https://github.com/xgqfrms-GitHub/webgeeker/tree/gh-pages/job/front-end-interview -->
+    <style>
+        pre{
+            background: rgba(0,0,0,1);
+            color: rgba(0,255,0,0.7);
+            font-size: 1.5rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>setTimeout() 和 setInterval() 本质区别？</h1>
+        <pre>
+            setInterval(run, 1000);
+            设置间隔/定时器, 
+            每隔一段时间调用指定函数（N次）, 
+            setInterval 执行的时间间隔, 最小是设置的时间 ？()
+            持续占有独立线程的一个定时触发函数！, 
+            推荐用内置方法 ？;
+
+            setTimeout()
+            设置超时, 
+            是在一段时间后调用指定函数（仅一次）,
+            不会持续占有一个线程的资源，执行完当前的方法，会释放当然的线程资源，等待下次触发，会重新申请资源！,
+            setTimeout时间不是标准的系统时间，是有误差的。
+
+            delay可选:
+            时间，以毫秒（千分之一秒）计时器应该在执行指定的函数或代码之前等待。
+            如果省略此参数，则使用值0。注意，实际延迟可能更长;请参阅延迟时间长于以下规定的原因。
+            setTimeout(func, 0); === setTimeout(func);
+        </pre>
+    </div>
+    <script>
+        var n, m;
+        let run0 = (n = 0) =>{
+            console.log(`this is ${n}s`);
+        }
+        setTimeout(run0, 0);
+        let run = (m = 1) =>{
+            console.log(`this is ${m}s`);
+        }
+        run(1);
+        let siID = setInterval(run0(2), 0);
+        run(3);
+        setTimeout(() => {
+            clearInterval(siID);
+            console.log(`over!`);
+        }, 0);
+        /*
+        2016-11-15 23:55:34 this is 1s
+        2016-11-15 23:55:34 this is 2s
+        2016-11-15 23:55:34 this is 3s
+        2016-11-15 23:55:34 this is 0s
+        2016-11-15 23:55:34 over!
+        */
+    </script>
+</body>
+</html>

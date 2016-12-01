@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <title>黑客帝国01雨</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#drawImage%28%29 -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL -->
+    <!-- http://www.w3schools.com/jsref/prop_style_backgroundrepeat.asp -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /*background-attachment: fixed;
+            background-repeat: repeat-y;*/
+        }
+        .box{
+            position: relative;
+        }
+        /*.canvas{
+            z-index: -9999;
+            width: 500px;
+            height: 300px;
+            display: none;
+            border: 1px solid red;
+        }*/
+        .content{
+            z-index: 9999;
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            /*background: rgba(0,255,0,0.5);*/
+            /*background: url();*/
+            color: #f0f;
+            top: 0px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="box">
+        <div class="content">
+            <h1>Hacker</h1>
+            <pre>
+                var Canvas = document.createElement("canvas");
+                ... do your canvas drawing....
+                $('body').css({'background-image':"url(" + Canvas.toDataURL("image/png")+ ")" });
+            </pre>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+            <p>xxxxxxx</p>
+        </div>
+    </div>
+    <canvas id="canvas" class="canvas">
+        <!-- You browser is so old that it can't support Canvas API, you should upgrade it to a modern Browser (Chrome)! -->
+    </canvas>
+    <script>
+        window.onload = function () {
+            var canv = document.getElementById('canvas'), ctx = canv.getContext('2d');
+
+            // canv.style.background-attachment = `fixed`;
+            canv.style.backgroundAttachment = `fixed`;
+            canv.style.backgroundRepeat = `repeat-y`
+            canv.style.border = `1px solid red`;
+
+            var dd = document.documentElement, 
+                cw = (canv.width =dd.clientWidth),
+                ch = (canv.height = dd.clientHeight);
+
+            var bc = 120, bcIndex = 5, shadowBlur = 2, sbIndex = 0.4, fh = 110,fontSize = 12;
+
+            var columns = Math.ceil(cw / fontSize);
+            //计算适合的列数
+            var texts = "01".split("");
+            //字符源
+            var arr = [];
+            // let texts = "@#$%&?<>{}[]()~!ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ0123456789".split("");//字符源
+            for (let i = 0; i < columns; i++) {
+                arr[i] = 1;
+            }
+            function run() {
+                ctx.fillStyle = "rgba(0,0,0,0.08)";
+                ctx.fillRect(0, 0, cw, ch);
+                ctx.fillStyle = "#12ee46";
+                ctx.font = fontSize + "px Arial";
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                for (let i = 0; i < arr.length; i++) {
+                    let text = texts[Math.floor(Math.random() * texts.length)];
+                    ctx.fillText(text, i * fontSize, arr[i] * fontSize);
+                    if (arr[i] * fontSize > ch || Math.random() > 0.95) {
+                        arr[i] = 0;
+                    }
+                    arr[i]++;
+                }
+                drawText();
+                window.onresize = function () {
+                    columns = Math.ceil(cw / fontSize);
+                    arr=[];
+                    for (let i = 0; i < columns; i++) {
+                        arr[i] = 1;
+                    }
+                }
+            }
+            
+            var drawText = () => {
+                ctx.save();
+                let title = "HACKER", title2 = "EMPIRE";
+                ctx.fillStyle = "rgba(0,24,0,1)";
+                ctx.font = fh + "px Arial";
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fontWeight = 900;
+                ctx.shadowOffsetY = 0;
+
+                //字体阴影宽度变化
+                shadowBlur += sbIndex;
+                ctx.shadowBlur = shadowBlur;
+                if (shadowBlur >= 14) {
+                    sbIndex *= -1
+                } else if (shadowBlur <= 0) {
+                    sbIndex *= -1;
+                }
+                //字体阴影颜色变化
+                bc += bcIndex;
+                ctx.shadowColor = 'rgba(0,' + bc + ',0,1)';
+                if (bc >= 255) {
+                    bcIndex *= -1;
+                } else if (bc <= 115) {
+                    bcIndex *= -1;
+                }
+                ctx.fillText(title, cw / 2, ch / 2-55);
+                ctx.font = 80 + "px Arial";
+                ctx.fillText(title2, cw / 2, ch / 2+45);
+                ctx.restore();
+            }
+            setInterval(run, 90);
+        }
+        var canv = document.getElementById('canvas');
+        var box = document.getElementById('body');
+        var url = canv.toDataURL("image/png", 1.0);
+        //  background: #00ff00 url("smiley.gif") no-repeat fixed center; 
+        box.style.background = 'url(' + url + ') repeat-y fixed center';
+    </script>
+</body>
+</html>

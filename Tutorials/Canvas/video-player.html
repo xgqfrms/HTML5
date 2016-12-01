@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <title>video-player</title>
+    <!-- https://developer.mozilla.org/zh-CN/docs/DOM/Using_fullscreen_mode -->
+    <!-- http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_video_js_prop -->
+    <style>
+        :-webkit-full-screen #myvideo {
+          width: 100%;
+          height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>video-player</h1>
+    </div>
+    <div style="text-align:center">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <button onclick="fullScreen()">fullScreen</button>
+        <br><br>
+        <video id="videoId" width="420">
+            <source src="http://www.w3schools.com/tags/mov_bbb.mp4" type='video/mp4'>
+            <source src="http://www.w3schools.com/tags/mov_bbb.ogg" type='video/ogg'>
+            <source src="http://www.w3schools.com/tags/mov_bbb.webm" type='video/webm'>
+            Your browser does not support HTML5 video.
+        </video>
+        <p>Video courtesy of <a href="http://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a></p>
+    </div>
+    <script>
+        var myVideo = document.getElementById("videoId");
+
+        let playPause = () => {
+            if(myVideo.paused){
+                myVideo.play();
+            }else{
+                myVideo.pause();
+            }
+        }
+        let makeBig = () => {
+            myVideo.width = 560;
+        }
+        let makeSmall = () => {
+            myVideo.width = 320;
+        }
+        let makeNormal = () => {
+            myVideo.width = 420;
+        }
+        let fullScreen = () => {
+            if (myVideo.requestFullscreen) {
+              myVideo.requestFullscreen();
+            } else if (myVideo.mozRequestFullScreen) {
+              myVideo.mozRequestFullScreen();
+            } else if (myVideo.webkitRequestFullscreen) {
+              myVideo.webkitRequestFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

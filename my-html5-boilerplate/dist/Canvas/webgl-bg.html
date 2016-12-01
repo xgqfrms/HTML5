@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <title>webgl-bg</title>
+    <!-- http://jsbin.com/odimig/269/edit?html,output -->
+    <style>
+        canvas {
+        display: none;
+        }
+        div {
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+        }
+        .canvas-bg {
+        background: -webkit-canvas(animation) repeat 50% 50% / 10%;
+        width: 300px;
+        height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>WebGL bg</h1>
+        <canvas id="canvas"></canvas>
+        <div class="canvas-bg">I'm a div. My background is drawn by shaders!</div>
+    </div>
+    <!-- js -->
+    <script id="2d-vertex-shader" type="x-shader/x-vertex">
+        attribute vec2 a_position;
+        void main() {
+            gl_Position = vec4(a_position, 0, 1);
+        }
+    </script>
+    <script id="2d-fragment-shader" type="x-shader/x-fragment">
+        void main() {
+          gl_FragColor = vec4(0,1,0,1);// green
+        }
+    </script>
+    <script src="http://rawgit.com/html5rocks/www.html5rocks.com/master/content/tutorials/webgl/webgl_fundamentals/static/webgl/resources/webgl-utils.js"></script>
+    <script>
+        var canvas = document.getElementById("canvas");
+        //var gl = canvas.getContext("experimental-webgl");
+        var gl = document.getCSSCanvasContext("webgl", 'animation', 300, 150);
+
+        // setup a GLSL program
+        var vertexShader = createShaderFromScriptElement(gl, "2d-vertex-shader");
+        var fragmentShader = createShaderFromScriptElement(gl, "2d-fragment-shader");
+        var program = createProgram(gl, [vertexShader, fragmentShader]);
+        gl.useProgram(program);
+
+        // look up where the vertex data needs to go.
+        var positionLocation = gl.getAttribLocation(program, "a_position");
+
+        // Create a buffer and put a single clipspace rectangle in
+        // it (2 triangles)
+        var buffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.bufferData(
+        gl.ARRAY_BUFFER, 
+        new Float32Array([
+            -1.0, -1.0, 
+             1.0, -0.0, 
+            -0.0,  1.0, 
+            -1.0,  0.0, 
+             1.0, -1.0, 
+             0.0,  1.0]), 
+        gl.STATIC_DRAW);
+        gl.enableVertexAttribArray(positionLocation);
+        gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+
+        // draw
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+    </script>
+</body>
+</html>

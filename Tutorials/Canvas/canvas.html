@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <title>canvas</title>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#drawImage%28%29 -->
+    <!-- https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL -->
+    <!-- http://www.w3schools.com/tags/ref_canvas.asp -->
+    <!-- http://www.w3schools.com/tags/canvas_font.asp -->
+    <style>
+          .canvas{
+            margin-top: -100px;
+            /*overflow: hidden;*/
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            display: none;
+          }
+          body{
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+          }
+          .Animate{
+            animation: Animation;
+            transition: all 0.5s ease 0s;
+          }
+          @keyframes Animation{
+            0%{
+                transform :rotate(180deg);
+            }
+            50%{
+                transform :rotate(180deg);
+            }
+            100%{
+                transform :rotate(-180deg);
+            }
+          }
+          h1{
+            display: inline-block;
+            height: 50px;
+            width: 300px;
+            background: rgba(0,255,0,0.5);
+            color: #f0f;
+          }
+    </style>
+</head>
+<body id="body">
+    <div class="box">
+        <div class="content">
+            <h1 class="Animate">this is a box</h1>
+        </div>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+        <p>ppppppppp</p>
+    </div>
+    <canvas id="canvas" class="canvas">
+         <!-- You browser is so old that it can't support Canvas API, you should upgrade it to a modern Browser (Chrome)! -->
+    </canvas>
+    <script>
+        var canv = document.getElementById('canvas');
+        cw = document.documentElement.clientWidth*0.8;
+        ch = document.documentElement.clientHeight/3;
+        canv.width = cw;
+        canv.height = ch;
+        var ctx = canv.getContext('2d');
+        ctx.fillStyle = "rgba(0,255,0,0.3)";
+        ctx.strokeStyle="#f00";
+        ctx.strokeRect(0, 0, canv.width, canv.height);
+        ctx.fillRect(0, 0, canv.width, canv.height);
+
+        var my_gradient=ctx.createLinearGradient(0,23,170,0.3);
+            my_gradient.addColorStop("0","magenta"),
+            my_gradient.addColorStop("0.5","blue"),
+            my_gradient.addColorStop("1.0","red");
+
+        ctx.beginPath();
+        ctx.moveTo(20,20);
+        ctx.lineTo(180,180);
+        ctx.strokeStyle = my_gradient;
+        ctx.lineWidth=5;
+        ctx.stroke();
+
+        ctx.font="20px Georgia";
+        ctx.lineWidth=1;
+        ctx.strokeStyle= my_gradient;
+        ctx.strokeText("Hello World!",50,200, 200);
+        // maxWidth
+        // strokeStyle & strokeText
+
+        ctx.font="30px Verdana";
+        ctx.lineWidth=1;
+        // ctx.strokeStyle= my_gradient;
+        ctx.fillStyle=my_gradient;
+        ctx.fillText("Big smile!",150,100);
+        // fillStyle & fillText
+
+        ctx.beginPath();
+        ctx.moveTo(180,20);
+        ctx.lineTo(20,180);
+        ctx.strokeStyle="red";
+        ctx.lineWidth=3;
+        ctx.stroke();
+        // ctx.closePath();
+        // ctx.save();
+        // ctx.clear();
+
+
+        ctx.beginPath();
+        ctx.moveTo(320,20);
+        // Start point(x, y)
+        ctx.bezierCurveTo(320,200,420,200,420,20);
+        // Control point 1(cp1x,cp1y), Control point 2(cp2x,cp2y), End point(x, y)
+        ctx.strokeStyle= my_gradient;
+        ctx.stroke();
+
+        ctx.beginPath(); 
+        ctx.moveTo(600,20);
+        ctx.lineTo(700,20);
+        ctx.arcTo(750,20,750,70,50); // Create an arc
+        ctx.lineTo(750,150);
+        ctx.strokeStyle= "#0f0";
+        ctx.stroke(); 
+
+        ctx.beginPath();
+        ctx.arc(550,75,50,Math.PI,1.5*Math.PI, true);
+        // x, y, Center, Start angle(), End angle(), [ture: counterclockwise/ false: clockwise(default)]
+        ctx.strokeStyle= "rgba(0,155,255,0.7)";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(820,20);
+        // Start point(x,y)
+        ctx.quadraticCurveTo(820,100,920,20);
+        // Control (cpx,cpy), End point(x,y)
+        ctx.strokeStyle= "rgba(155,0,255,0.7)";
+        ctx.stroke();
+
+
+        var box = document.getElementById('body');
+        var url = canv.toDataURL("image/png", 1.0);
+        var fullQuality = canvas.toDataURL("image/jpeg", 1.0);
+        //  background: #00ff00 url("smiley.gif") no-repeat fixed center; 
+        // box.style.background = '#00ff00 url(' + url + ') repeat-x fixed center';
+        canv.style.border = "1px solid red";
+        box.style.background = 'url(' + url + ') repeat-y fixed center';
+</script>
+</body>
+</html>
