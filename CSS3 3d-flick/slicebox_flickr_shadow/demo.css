@@ -1,0 +1,46 @@
+/*
+	sliceBoxFlickr written by Sean Clark, Square Bracket LLC
+	http://square-bracket.com @optikalefx
+	
+	SliceBox written by Pedro Botelho
+	http://tympanus.net/ @o_telho
+
+*/
+
+body{
+	background:#eee;
+	color:#000;
+	font-family: 'PT Sans Narrow', Arial, sans-serif;
+	font-size:12px;
+	min-height:800px;
+}
+
+h1{
+	margin:20px 20px 10px 20px;
+	font-size:20px;
+	color:#fff;
+	font-family: 'Volkhov', sans-serif;
+	text-align:center;
+	font-weight:700;
+	text-shadow:1px 1px 3px #333;
+}
+
+/* we overwrite the hidden images so we can show our fake image */
+.sb-slider img {
+	display: block;
+	margin:auto;
+}
+/* we add a new class to differentiate the loaded in images vs the the fake one */
+.sb-slider img.loaded {
+	display:none;
+}
+/* we don't want the shadow on a black background 
+.sb-shadow {
+	background:none;
+}
+*/
+/* instead of the png shadow, we make a webkit box reflection 
+.sb-slider > div:first-child {
+	  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.2)));
+}
+*/

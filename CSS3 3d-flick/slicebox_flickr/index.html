@@ -1,0 +1,49 @@
+<!--
+	sliceBoxFlickr written by Sean Clark, Square Bracket LLC
+	http://square-bracket.com @optikalefx
+	
+	SliceBox written by Pedro Botelho
+	http://tympanus.net/ @o_telho
+-->
+
+<html>
+	<head>
+		<!-- slice box css required -->
+		<link rel="stylesheet" href="slicebox.css">
+		<!-- my style changes requried for the demo -->
+		<link rel="stylesheet" href="demo.css">
+		<!-- modernizer required for slicebox :/ -->
+		<script type="text/javascript" src="modernizer.js"></script>
+		<!-- jquery 1.6 or higher -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<!-- the main slicebox js file -->
+		<script type="text/javascript" src="slicebox.js"></script>
+		<!-- required for fallback -->
+		<script type="text/javascript" src="easing.js"></script>
+		<!-- my plugin -->
+		<script type="text/javascript" src="sliceBoxFlickr.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Slicebox</h1>
+			
+			<!-- main guy -->
+			<div id="sb-slider" class="sb-slider">
+				<!-- first image as a fake loader -->
+				<img src="http://farm7.staticflickr.com/6096/6342651855_37b5daa36f_z.jpg"/>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			$(function() {
+				
+				// main js call
+				$("#sb-slider").sliceBoxFlickr({
+					rss : "http://api.flickr.com/services/feeds/photos_public.gne?id=67736566@N04&lang=en-us&format=rss_200"
+				});
+
+			});
+		</script>
+	</body>
+</html>	

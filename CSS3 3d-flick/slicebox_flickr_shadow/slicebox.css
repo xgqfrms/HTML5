@@ -1,0 +1,119 @@
+/* Slicebox Style */
+.sb-slider{
+	margin:10px auto;
+	position:relative;
+}
+.sb-slider img{ 
+	display:none; 
+}
+.sb-nav span{
+	width:42px;
+	height:42px;
+	background:#28241f url(images/nav.png) no-repeat top left;
+	position:absolute;
+	top:50%;
+	left:-50px;
+	text-indent:-9000px;
+	cursor:pointer;
+	margin-top:-21px;
+	opacity:0.9;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px 3px 3px 3px;
+}
+.sb-nav span.sb-nav-next{
+	left:auto;
+	right:-50px;
+	background-position:top right;
+}
+.sb-nav span:hover{
+	opacity:1.0;
+}
+.sb-options{
+	width:65px;
+	height:30px;
+	position:absolute;
+	right:4px;
+	bottom:4px;
+	z-index:20;
+}
+.sb-options span{
+	width:30px;
+	height:30px;
+	background:#28241f url(images/options.png) no-repeat top left;
+	text-indent:-9000px;
+	cursor:pointer;
+	opacity:0.9;
+	margin-right:3px;
+	float:left;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px 3px 3px 3px;
+}
+.sb-options span.sb-nav-play{
+	background-position:-30px 0px;
+}
+.sb-options span.sb-nav-info{
+	background-position:-60px 0px;
+	margin:0;
+}
+.sb-options span.sb-nav-noinfo{
+	background-position:-90px 0px;
+	margin:0;
+}
+.sb-side {
+  margin:0;
+  display: block;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+}
+.sb-shadow{
+  position:absolute;
+  bottom:-70px;
+  left:50%;
+  margin-left:-368px;
+  background:transparent url(images/shadow.png) no-repeat top left;
+  height:168px;
+  width:736px;
+  z-index:1;
+}
+.sb-title{
+	color: white;
+	bottom: 0px;
+	position: absolute;
+	z-index: 15;
+	background: black;
+	height: 0px;
+	width: 100%;
+	left:0px;
+	overflow:hidden;
+	opacity:0.8;
+}
+.sb-title span{
+	font-size: 18px;
+	font-family: 'Volkhov', Georgia, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 38px;
+	display:block;
+	padding:0 20px;
+}
+/* Fallback Style */
+.sb-slider-fb-wrapper{
+	overflow:hidden;
+}
+.sb-slider-fb img{
+	display:none;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* Message */
+#sb-note{
+	font-size:18px;
+	padding: 10px;
+}
+#sb-note span{
+	background: #e0bb84;
+	padding: 5px 10px;
+}
