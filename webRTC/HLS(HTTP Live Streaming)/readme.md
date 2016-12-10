@@ -2,4 +2,4 @@
 
 
 
-[Can I use HLS](http://caniuse.com/#search=HLS)
+[Can I use HLS](https//caniuse.com/#search=HLS)
