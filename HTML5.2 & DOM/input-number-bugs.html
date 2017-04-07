@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input type="number" bugs</title>
+    <!-- https://gist.github.com/xgqfrms-GitHub/41ef1ad64a7467c3d520ecadaaeaa5c8 -->
+    <style>
+        input[name="points"]{
+            min-width: 200px;
+            float: left;
+            clear:both;
+        }
+        input:invalid{
+            border: 1px solid red;
+        }
+        input:valid{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--input  type="number" size="23" bugs-->
+        <form>
+            <input type="number" name="points"  step="100" min="0" max="2000"minlength="3" maxlength="3" placeholder="请输入0或100的倍数的增豆" />
+            <input type="number" name="points" size="36" step="100" min="0" max="2000"minlength="3" maxlength="3" placeholder="请输入0或100的倍数的增豆" />
+            <input type="submit" name="points" value="submit" />
+        </form>
+    </div>
+</body>
+</html>
