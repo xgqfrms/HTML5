@@ -41,7 +41,8 @@
             </p>
         </article>
     </section>
-    <section>
+    
+    <section id="history-api">
         <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123">myAnchor</a>
         <!-- 
         location.hash;
