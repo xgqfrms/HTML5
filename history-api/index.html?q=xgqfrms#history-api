@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 history api</title>
+    <style>
+        span.statcounter {
+            display: none;
+        }
+    </style>
+    <script>
+        const HIDE = () => {
+            let hide = document.querySelector('.statcounter');
+            hide.style.display = 'none';
+        }
+        window.document.onload = HIDE();
+    </script>
+</head>
+<body>
+    <div>
+        <h1>
+            html5 history api
+        </h1>
+        <a href="https://html5.xgqfrms.xyz/index.html?q=xgqfrms#history-api">https://html5.xgqfrms.xyz/index.html?q=xgqfrms#history-api</a>
+    </div>
+    <section>
+        <pre>
+            window.history.replaceState(argument1, argument2);
+            window.history.pushState(argument1, argument2);
+        </pre>
+    </section>
+    <section>
+        <h2>Window.location</h2>
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/location" target="_blank">https://developer.mozilla.org/zh-CN/docs/Web/API/Window/location</a>
+        <article>
+            <h3>Window.location 只读属性，返回一个 {{domxref("Location")}}  对象，提供有关文档当前地址的信息。</h3>
+            <p>
+                尽管 Window.location 是一个只读 Location 对象，你仍然可以赋给它一个 {{domxref("DOMString")}}。
+                这意味着您可以在大多数情况下处理 location，就像它是一个字符串一样：
+                window.location = 'http://www.example.com'，是 window.location.href = 'http://www.example.com' 的同义词 。
+            </p>
+        </article>
+    </section>
+    <section>
+        <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123">myAnchor</a>
+        <!-- 
+        location.hash;
+        // "#hash"
+        location.search; 
+        // "?q=123"
+         -->
+    </section>
+    <!-- js -->
+    <script>
+        "1" == 1;
+        // true
+        "1" === 1;
+        // false
+        "1" === "1";
+        // true
+    </script>
+    <script>
+        "string".localeCompare("");
+        // 1
+        "string".localeCompare("string");
+        // 0
+        "string".localeCompare("0");
+        // 1
+        "string".localeCompare("xyz");
+        // -1
+        "string".localeCompare("1");
+        // 1
+    </script>
+    <script>
+        if (!!(window.history && history.pushState)){
+            console.log(`支持 History API`, history.pushState(null, `history.pushState: title`, `https://javascript.xgqfrms.xyz/html5-history-api.html#pushState` ));
+            /*
+            state：
+                一个与指定网址相关的状态对象，popstate事件触发时，该对象会传入回调函数。
+                如果不需要这个对象，此处可以填null。
+            title：
+                新页面的标题，但是所有浏览器目前都忽略这个值，因此这里可以填null。
+            url：
+                新的网址，必须与当前页面处在同一个域。
+                浏览器的地址栏将显示这个网址。
+            */
+            history.pushState(
+                {
+                    page: 1, 
+                    page: 2, 
+                    page: 3, 
+                    page: 4
+                }, 
+                'title x', 
+                '?page=x'
+            );
+            // undefined
+            history.state;
+            // Object {page: 4} 
+            // page: 4 
+            // __proto__: Object
+            history.pushState(
+                {
+                    page: 1
+                }, 
+                'title 1', 
+                '#page=1'
+            );
+            // undefined
+            history.state;
+            // Object {page: 1}
+            // page: 1
+            // __proto__: Object
+            location.hash
+            // "#page=1"
+            location.search
+            // "?page=x"
+        } else {
+            console.log(`%c 不支持 History API`, `color: red; font-size: 32px;`);
+        }
+        !!false
+        // false
+        !!(false);
+        // false
+        !!0
+        // false
+        !!1
+        // true
+        !0
+        // true
+        !1
+        // false
+        0 == false
+        // true
+        0 === false
+        // false
+        1 == true
+        // true
+        1 === true
+        // false
+        "0" == false
+        // true
+        "0" === false
+        // false
+        "1" == true
+        // true
+        "1" === true
+        // false
+    </script>
+    <script>
+        const somecoolfeature = () =>{
+            console.log(`somecoolfeature()`, this);
+        }
+        if ("onhashchange" in window) {
+            alert("该浏览器支持hashchange事件!");
+        }
+        function locationHashChanged() {
+            if (location.hash === "#somecoolfeature") {
+                somecoolfeature();
+            }
+        }
+        window.onhashchange = locationHashChanged;
+    </script>
+    <script>
+        window.history
+        History {
+            length: 14, 
+            scrollRestoration: "auto", 
+            state: 0
+        }
+        length: 14
+        scrollRestoration: "auto"
+        state: 0
+        __proto__: History
+            back: function back()
+            forward: function forward()
+            go: function go()
+            length: (...)
+            pushState: function pushState()
+            replaceState: function replaceState()
+            scrollRestoration: (...)
+            state: (...)
+            constructor: function History()
+            Symbol(Symbol.toStringTag): "History"
+            get length: function ()
+            get scrollRestoration: function ()
+            set scrollRestoration: function ()
+            get state: function ()
+            __proto__: Object
+    </script>
+</body>
+</html>
