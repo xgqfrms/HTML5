@@ -1,0 +1,27 @@
+# html5 history api
+
+
+https://gist.github.com/xgqfrms-GitHub/1ba83e991eb358338151f54e5805ac5d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
