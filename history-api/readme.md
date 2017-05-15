@@ -9,8 +9,7 @@ https://html5.xgqfrms.xyz/index.html?q=xgqfrms#history-api
 
 
 
-
-
+https://html5.xgqfrms.xyz/history-api/index.html?q=xgqfrms#history-api
 
 
 
