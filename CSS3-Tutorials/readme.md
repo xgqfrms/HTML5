@@ -1,23 +1,21 @@
 # CSS3  
 
 > CSS3 (High-level advice and guidelines for writing sane, manageable, scalable CSS)
+ 
+ [https://css3.webgeeker.xyz](https://css3.webgeeker.xyz)  
 
 
 
-[https://css3.webgeeker.xyz](https://css3.webgeeker.xyz)  
+***
 
-> CSS3: High-level advice and guidelines for writing sane, manageable, scalable CSS  
+## Contents  
 
-*********************************************************************************************************
-
-# Contents  
-
-## Introduction  
+### Introduction  
 
 #### The Importance of a Styleguide  
 #### Disclaimers  
 
-## Syntax and Formatting  
+### Syntax and Formatting  
 
 #### Multiple Files  
 #### Table of Contents  
@@ -42,7 +40,7 @@
 #### Preprocessor Comments  
 #### Removing Comments   
 
-## Naming Conventions  
+### Naming Conventions  
 
 #### Hyphen Delimited  
 #### BEM-like Naming  
@@ -58,7 +56,7 @@
 
 #### Taking It Further   
 
-## CSS Selectors  
+### CSS Selectors  
 
 #### Selector Intent  
 #### Reusability  
@@ -74,14 +72,14 @@
 
 #### General Rules  
 
-## Specificity  
+### Specificity  
 
 #### IDs in CSS  
 #### Nesting  
 #### !important  
 #### Hacking Specificity  
 
-## Architectural Principles  
+### Architectural Principles  
 
 #### High-level Overview  
 #### Object-orientation  
