@@ -1,5 +1,12 @@
 # HTML5 DnD
 
+
+https://github.com/gildata/WCAIO/blob/master/000-xyz/F10-Components-Framework/F10_APP-2018-07-27.rar
+
+https://www.cnblogs.com/xgqfrms/p/9380220.html
+
+***
+
 https://developer.mozilla.org/zh-CN/docs/Web/Events/drag
 
 
